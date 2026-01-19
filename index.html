@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de IA y Ciencia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @layer base {
+            html { font-family: 'Merriweather', serif; }
+            h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+        }
+        body {
+            background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+            color: #e0e0e0;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(139, 233, 253, 0.15);
+            border-color: #8be9fd;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #8be9fd, #bd93f9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accent-cyan': '#8be9fd',
+                        'accent-purple': '#bd93f9',
+                        'secondary-dark': '#1a1a1a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header / Menú Principal -->
+    <header class="sticky top-0 z-50 bg-[#1a1a1a]/90 backdrop-blur-sm border-b border-gray-700 py-4">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold font-sans gradient-text tracking-wider">
+                NEXUS IA
+            </a>
+            <!-- Aquí podrías poner enlaces a Redes Sociales en el futuro -->
+            <span class="text-sm text-gray-400 font-sans">Ciencia • Tecnología • Futuro</span>
+        </div>
+    </header>
+
+    <!-- Sección Hero (Bienvenida) -->
+    <section class="py-16 px-4 text-center border-b border-gray-800 bg-gradient-to-b from-transparent to-black/30">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-white font-sans">
+            Explorando la <span class="text-accent-cyan">Inteligencia Artificial</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light">
+            Análisis profundo sobre matemáticas, ciencia y el impacto de la tecnología en nuestra sociedad.
+        </p>
+    </section>
+
+    <!-- Grid de Artículos -->
+    <main class="flex-grow max-w-6xl mx-auto px-4 py-12 w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- ARTÍCULO 1: Grok -->
+            <article class="bg-secondary-dark rounded-xl overflow-hidden border border-gray-700 card-hover flex flex-col">
+                <!-- Imagen enlazada -->
+                <a href="grok-pentagono.html" class="block h-48 overflow-hidden relative">
+                    <!-- Usamos la misma imagen que ya subiste -->
+                    <img src="grok-pentagono.jpg" alt="Grok en el Pentágono" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </a>
+                
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="text-xs font-bold text-accent-purple mb-2 uppercase tracking-wide">Noticia IA</div>
+                    <h2 class="text-xl font-bold mb-3 text-white leading-tight">
+                        <a href="grok-pentagono.html" class="hover:text-accent-cyan transition-colors">
+                            Grok llega al Pentágono: la IA integrada en redes militares
+                        </a>
+                    </h2>
+                    <p class="text-gray-400 text-sm mb-4 line-clamp-3 flex-grow">
+                        El Pentágono integra el modelo de IA de Elon Musk en sus operaciones. Un análisis sobre las implicaciones éticas y estratégicas.
+                    </p>
+                    <a href="grok-pentagono.html" class="inline-flex items-center text-accent-cyan font-bold text-sm hover:underline font-sans">
+                        LEER ARTÍCULO →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Aquí se irán agregando las futuras noticias automáticamente cuando editemos este archivo -->
+
+        </div>
+    </main>
+
+    <footer class="bg-black py-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+        <p>&copy; 2024 Nexus IA Blog. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
