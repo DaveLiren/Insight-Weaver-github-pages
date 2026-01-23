@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es-419" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Origin lanzará una red de satélites para competir con Starlink</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Outfit for display, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles for scrollbar and selected text */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0d1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a0d92; /* Purple gradient part */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6a1aae;
+        }
+        ::selection {
+            background-color: #8b5cf6; /* A vibrant purple */
+            color: #ffffff;
+        }
+        ::-moz-selection {
+            background-color: #8b5cf6;
+            color: #ffffff;
+        }
+
+        /* Keyframe for subtle background animation */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Micro-animation for interactive elements */
+        .interactive-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .interactive-card:hover {
+            transform: translateY(-5px) scale(1.005);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 40px rgba(139, 92, 246, 0.4);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Enable dark mode
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-dark-primary': '#0a0a1a', // Dark blue-purple almost black
+                        'bg-dark-secondary': '#120f29', // Slightly lighter dark
+                        'text-light': '#e0e0f0', // Off-white for readability
+                        'text-muted': '#a0a0c0', // Muted grey-blue
+                        'accent-purple': '#8b5cf6', // Vibrant purple
+                        'accent-blue': '#3b82f6', // Bright blue
+                        'accent-green': '#10b981', // Emerald green
+                        'glass-border': 'rgba(255, 255, 255, 0.1)',
+                        'glass-bg': 'rgba(255, 255, 255, 0.05)',
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial-space': 'radial-gradient(at 50% 10%, #1a0833, #0a0a1a 70%)',
+                        'gradient-angular-glass': 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0))',
+                    },
+                    animation: {
+                        gradientShift: 'gradientShift 15s ease infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body bg-bg-dark-primary text-text-light min-h-screen flex flex-col justify-center items-center overflow-x-hidden relative">
+
+    <!-- Background gradient animation overlay -->
+    <div class="absolute inset-0 z-0 bg-gradient-radial-space opacity-50 animate-gradientShift"></div>
+
+    <div class="relative z-10 w-full max-w-5xl px-4 py-8 md:p-10 lg:p-12">
+        <header class="text-center mb-10 lg:mb-16">
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-accent-purple to-accent-blue tracking-tight drop-shadow-lg">
+                Blue Origin lanzará una red de satélites para competir con Starlink
+            </h1>
+            <p class="font-body text-text-muted text-lg sm:text-xl lg:text-2xl italic max-w-3xl mx-auto">
+                <span class="text-accent-green pr-2">»</span> La Nueva Carrera Espacial: Órbitas Bajas, Altas Apuestas
+            </p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-3">
+                <!-- Visual Concept Card -->
+                <div class="interactive-card bg-glass-bg border border-glass-border rounded-xl p-6 mb-8 text-center backdrop-blur-md shadow-2xl">
+                    <h2 class="font-display text-2xl lg:text-3xl font-bold mb-4 text-accent-purple leading-snug">Concepto Visual</h2>
+                    <p class="text-text-light text-base md:text-lg italic leading-relaxed">
+                        Una escena dinámica y futurista que representa la órbita de la Tierra llena de numerosos satélites avanzados.
+                        Starlink con formas de plato reconocibles, Amazon Leo más elegante con posible marca Amazon, y Blue Origin TeraWave
+                        más robusto, destacando enlaces láser. Debajo, rastros de luz abstractos conectan a los usuarios terrestres con la
+                        red de satélites, simbolizando la conectividad global. La escena transmite una competencia intensa, alta tecnología
+                        y una nueva era en las telecomunicaciones, con sutiles guiños a paisajes o ciudades latinoamericanas de fondo.
+                        <span class="block mt-2 text-text-muted text-sm">Aspect Ratio: 16:9</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Date Display -->
+            <div class="lg:col-span-3 text-center text-text-muted text-sm md:text-base mb-8 italic">
+                <span class="inline-block px-4 py-2 bg-bg-dark-secondary rounded-full border border-glass-border shadow-md">
+                    Publicado el 21 de Enero, 2026
+                </span>
+            </div>
+
+            <!-- Main Content Sections -->
+            <section class="lg:col-span-2 interactive-card bg-bg-dark-secondary border border-glass-border rounded-xl p-6 sm:p-8 backdrop-blur-md shadow-lg flex flex-col justify-between">
+                <div>
+                    <h2 class="font-display text-3xl font-bold mb-4 text-accent-blue leading-tight border-b border-glass-border pb-3">
+                        Starlink: Pionero y Dominador del Cielo
+                    </h2>
+                    <p class="text-text-light text-lg mb-6 leading-relaxed">
+                        SpaceX, a través de Starlink, ha establecido una ventaja significativa en el mercado de internet satelital LEO.
+                    </p>
+                    <h3 class="font-display text-2xl font-semibold mb-3 text-accent-green">
+                        Un Imperio en Órbita
+                    </h3>
+                    <p class="text-text-light text-lg mb-6 leading-relaxed">
+                        Para enero de 2026, la constelación de Starlink superaba los <strong>9,000 satélites</strong> activos, un crecimiento
+                        desde los más de 5,000 en el primer trimestre de 2024. Para diciembre de 2025, contaba con más de <strong>9 millones
+                        de suscriptores</strong>. Las mejoras en 2025 aumentaron las velocidades promedio de descarga global un 50%
+                        (superando los 200 Mbps en horas pico, a menudo excediendo los 400 Mbps en menor demanda) y las de subida se
+                        mantuvieron por encima de los 30 Mbps, con una latencia global promedio de 26 ms.
+                    </p>
+                    <h3 class="font-display text-2xl font-semibold mb-3 text-accent-green">
+                        La Revolución <em class="italic font-normal">Direct-to-Cell</em>
+                    </h3>
+                    <p class="text-text-light text-lg leading-relaxed">
+                        En 2025, Starlink completó su red de satélites <em class="italic font-normal">Direct-to-Cell</em> (DTC)
+                        con más de 650 unidades en órbita, buscando cobertura 4G en 22 países. Los servicios de mensajería de texto se
+                        implementaron desde 2024, con voz y datos esperados para 2025. Las pruebas exitosas de mensajería de texto con T-Mobile
+                        en enero de 2024 fueron un preludio. Starlink expande su alcance a mercados verticales como aviación, transporte
+                        marítimo, energía y servicios de emergencia, con la meta de un "ecosistema de comunicaciones planetario".
+                    </p>
+                </div>
+            </section>
+
+            <section class="lg:col-span-1 interactive-card bg-bg-dark-secondary border border-glass-border rounded-xl p-6 sm:p-8 backdrop-blur-md shadow-lg flex flex-col justify-between">
+                <div>
+                    <h2 class="font-display text-3xl font-bold mb-4 text-accent-blue leading-tight border-b border-glass-border pb-3">
+                        Amazon Leo (Ex-Kuiper): El Gigante Acelera el Ritmo
+                    </h2>
+                    <p class="text-text-light text-lg mb-6 leading-relaxed">
+                        Amazon, con su Project Kuiper, ahora Amazon Leo desde noviembre de 2025, compite con una constelación inicial de
+                        3,236 satélites LEO. Para cumplir con la FCC, al menos <strong>1,616 satélites</strong> deben estar en órbita para
+                        el 30 de julio de 2026, exigiendo un ritmo de más de 95 satélites por mes.
+                    </p>
+                    <h3 class="font-display text-2xl font-semibold mb-3 text-accent-green">
+                        Despliegue Bajo Presión
+                    </h3>
+                    <p class="text-text-light text-lg mb-6 leading-relaxed">
+                        Tras pruebas de prototipos en 2023, Amazon programó el lanzamiento de sus primeros satélites operacionales para
+                        principios de 2025, con servicio comercial anticipado para finales de 2025. Se espera una cobertura inicial en
+                        EE. UU. para 2026-2027 y despliegue mundial para 2029. Para finales de marzo de 2026, Amazon Leo aspira a ofrecer
+                        servicios en Reino Unido, Francia, Alemania, Canadá y EE. UU.
+                    </p>
+                    <p class="text-text-light text-lg leading-relaxed">
+                        Amazon ha asegurado 92 lanzamientos con Blue Origin, ULA y Arianespace, además de tres lanzamientos adicionales
+                        de SpaceX adquiridos en 2023. En abril de 2025, desplegó 27 satélites de producción en un cohete Atlas V de ULA,
+                        elevando la constelación Leo a unos 180 satélites. El siguiente lanzamiento, con 32 satélites en un Ariane 6 de
+                        Arianespace, está programado para el mes posterior a enero de 2026.
+                    </p>
+                </div>
+            </section>
+
+            <section class="lg:col-span-3 interactive-card bg-bg-dark-secondary border border-glass-border rounded-xl p-6 sm:p-8 backdrop-blur-md shadow-lg">
+                <h3 class="font-display text-2xl font-semibold mb-3 text-accent-green">
+                    Promesas de Conectividad y Estrategia
+                </h3>
+                <p class="text-text-light text-lg leading-relaxed">
+                    Amazon Leo operará en LEO entre 590 km y 630 km, buscando latencias inferiores a 50 ms y velocidades de descarga de hasta 400 Mbps.
+                    Se proyecta que las terminales de usuario cuesten menos de $500, con una antena de matriz en fase de banda Ka de unos 30 cm.
+                    La estrategia se enfoca en ofrecer internet de alta velocidad asequible en regiones desatendidas, mediante alianzas con
+                    proveedores como Verizon.
+                </p>
+            </section>
+
+            <section class="lg:col-span-2 interactive-card bg-bg-dark-secondary border border-glass-border rounded-xl p-6 sm:p-8 backdrop-blur-md shadow-lg flex flex-col justify-between">
+                <div>
+                    <h2 class="font-display text-3xl font-bold mb-4 text-accent-blue leading-tight border-b border-glass-border pb-3">
+                        TeraWave de Blue Origin: La Apuesta por la Alta Capacidad
+                    </h2>
+                    <p class="text-text-light text-lg mb-6 leading-relaxed">
+                        Blue Origin entra al mercado con TeraWave, cuyo despliegue comenzará en el cuarto trimestre de 2027.
+                        Proyecta una constelación de más de <strong>5,400 satélites</strong>: 5,280 en LEO y 128 en órbita media (MEO).
+                    </p>
+                    <h3 class="font-display text-2xl font-semibold mb-3 text-accent-green">
+                        Un Actor Tardío, una Visión Diferente
+                    </h3>
+                    <p class="text-text-light text-lg mb-6 leading-relaxed">
+                        El diseño multiórbita de TeraWave busca una capacidad de red total de hasta <strong>6 Tbps</strong>.
+                        Los satélites LEO usarán enlaces de radiofrecuencia (RF) para velocidades de hasta 144 Gbps, mientras que
+                        las naves MEO emplearán láseres para velocidades de hasta 6 Tbps. Esta combinación busca conexiones de alto
+                        rendimiento entre centros globales y usuarios remotos.
+                    </p>
+                    <h3 class="font-display text-2xl font-semibold mb-3 text-accent-green">
+                        El Nicho Empresarial y Gubernamental
+                    </h3>
+                    <p class="text-text-light text-lg leading-relaxed">
+                        A diferencia de Starlink y Amazon Leo, TeraWave se centra en clientes empresariales, centros de datos y entidades
+                        gubernamentales. Su propuesta de valor incluye alto rendimiento, velocidades simétricas de carga/descarga,
+                        redundancia y escalabilidad rápida, diferenciándose por su capacidad para manejar grandes volúmenes de datos
+                        y resiliencia de red superior.
+                    </p>
+                </div>
+            </section>
+
+            <section class="lg:col-span-1 interactive-card bg-bg-dark-secondary border border-glass-border rounded-xl p-6 sm:p-8 backdrop-blur-md shadow-lg flex flex-col justify-between">
+                <div>
+                    <h2 class="font-display text-3xl font-bold mb-4 text-accent-blue leading-tight border-b border-glass-border pb-3">
+                        El Campo de Batalla Celeste: Implicaciones y Futuro
+                    </h2>
+                    <h3 class="font-display text-2xl font-semibold mb-3 text-accent-green">
+                        Ventaja del Pionero vs. Poder Financiero
+                    </h3>
+                    <p class="text-text-light text-lg mb-6 leading-relaxed">
+                        Starlink lidera con su ventaja de pionero y agresiva estrategia de lanzamiento. Amazon Leo acelera para cumplir
+                        plazos regulatorios y se espera que lance servicios clave a principios de 2026. Blue Origin, aunque un actor
+                        tardío con despliegues a partir de finales de 2027, apunta al segmento premium empresarial con alta capacidad.
+                        La vasta capacidad financiera de Amazon y Blue Origin sugiere una contienda a largo plazo.
+                    </p>
+                    <h3 class="font-display text-2xl font-semibold mb-3 text-accent-green">
+                        Desafíos y Oportunidades
+                    </h3>
+                    <p class="text-text-light text-lg leading-relaxed">
+                        La creciente competencia podría generar una guerra de precios y una posible consolidación en el sector LEO.
+                        La industria enfrenta desafíos como la gestión de desechos orbitales y la necesidad de regulaciones internacionales.
+                        Sin embargo, las oportunidades son mayores: cerrar la brecha digital en regiones remotas, impulsar el desarrollo
+                        económico y social, y habilitar nuevas vías para telemedicina, educación a distancia, agricultura de precisión y
+                        respuesta a emergencias.
+                    </p>
+                </div>
+            </section>
+
+            <section class="lg:col-span-3 interactive-card bg-bg-dark-secondary border border-glass-border rounded-xl p-6 sm:p-8 backdrop-blur-md shadow-lg text-center">
+                <h2 class="font-display text-3xl font-bold mb-4 text-accent-blue leading-tight border-b border-glass-border pb-3">
+                    Más Allá de la Competencia, una Revolución en Marcha
+                </h2>
+                <p class="text-text-light text-xl italic leading-relaxed">
+                    El futuro del internet satelital es vibrante y transformador. Starlink, Amazon Leo y TeraWave de Blue Origin
+                    son arquitectos de una infraestructura global que alterará radicalmente nuestra relación con la información
+                    y entre nosotros. La conectividad será omnipresente y fluida, redefiniendo lo que significa estar verdaderamente conectado.
+                </p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
