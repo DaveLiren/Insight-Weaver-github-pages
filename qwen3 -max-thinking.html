@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qwen3 Max Thinking | La Nueva Era de la IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#030712',
+                            dark: '#0f172a',
+                            primary: '#6366f1',
+                            secondary: '#a855f7',
+                            accent: '#22d3ee',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #030712;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+
+        .glow-text {
+            text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+        }
+
+        .gradient-border {
+            position: relative;
+            border-radius: 24px;
+            padding: 1px;
+            background: linear-gradient(to right, #6366f1, #a855f7, #22d3ee);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #818cf8, #c084fc, #67e8f9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bento-item {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .bento-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.3);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #030712; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-900/20 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-900/20 blur-[120px] rounded-full"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 py-12 lg:py-20">
+        
+        <!-- Hero Section -->
+        <header class="text-center mb-20">
+            <div class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 animate-pulse-slow">
+                Lanzamiento Global: Enero 2026
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tight">
+                Qwen3 Max <span class="gradient-text">Thinking</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
+                El debut de Alibaba Cloud redefine el razonamiento algorítmico, dominando matemáticas complejas y el desarrollo de código autónomo.
+            </p>
+        </header>
+
+        <!-- Visual Concept Hero -->
+        <div class="relative mb-24 group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+            <div class="relative glass-card overflow-hidden">
+                <div class="p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="w-full md:w-1/2 space-y-4">
+                            <h3 class="text-brand-accent font-mono text-sm uppercase tracking-widest">Thought Visualization</h3>
+                            <p class="text-slate-300 italic text-lg leading-relaxed border-l-4 border-brand-primary pl-6">
+                                "Un nexo de energía analítica pura... donde vías de redes neuronales interconectadas se entrelazan con flujos dinámicos de símbolos matemáticos y código luminoso."
+                            </p>
+                            <div class="flex gap-4 pt-4">
+                                <div class="h-1 w-12 bg-indigo-500 rounded-full"></div>
+                                <div class="h-1 w-8 bg-purple-500/50 rounded-full"></div>
+                                <div class="h-1 w-4 bg-cyan-500/30 rounded-full"></div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 bg-brand-dark/50 rounded-2xl p-6 border border-white/5 font-mono text-xs text-brand-accent/80 overflow-hidden relative min-h-[250px]">
+                            <div class="animate-pulse space-y-2">
+                                <p class="text-indigo-400">>> Initializing Qwen3-Max-Thinking...</p>
+                                <p>> Loading 1.2 Trillion Parameters</p>
+                                <p>> 36 Trillion Tokens pre-trained</p>
+                                <p>> Adaptive Tool Calling: ENABLED</p>
+                                <p>> Test-time Scaling: ACTIVE</p>
+                                <p class="text-white">// Reasoning Step 1: Breakdown complexity</p>
+                                <p class="ml-4">IF (problem == "math_competition") {</p>
+                                <p class="ml-8">Execute(AIME_25_Logic_Tree);</p>
+                                <p class="ml-4">}</p>
+                                <p class="text-green-400">> Result: 100% Accuracy achieved.</p>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent pointer-events-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bento Grid Content -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24">
+            
+            <!-- Main Editorial -->
+            <div class="md:col-span-8 bento-item glass-card p-8 md:p-10 flex flex-col justify-center">
+                <span class="text-indigo-400 font-bold mb-4 block">IASimov Technologies | Mayo 2024</span>
+                <h2 class="text-3xl font-bold mb-6">El Amanecer de una Nueva Razón</h2>
+                <div class="space-y-4 text-slate-300 leading-relaxed text-lg">
+                    <p>
+                        El lanzamiento de <strong class="text-white">Qwen3-Max-Thinking</strong> marca un hito en la evolución de la IA. Por primera vez, un modelo no solo entrega una respuesta, sino que exhibe su razonamiento paso a paso, desglosando problemas con una transparencia que antes era exclusiva de la cognición humana.
+                    </p>
+                    <p>
+                        Con más de un billón de parámetros, se posiciona como el rival directo de gigantes como GPT-5.2 y Claude Opus 4.5, elevando el estándar de lo que esperamos de una inteligencia artificial generativa.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stats Column -->
+            <div class="md:col-span-4 grid grid-rows-2 gap-6">
+                <div class="bento-item glass-card p-6 border-l-4 border-cyan-500">
+                    <div class="text-4xl font-extrabold text-white mb-2">100%</div>
+                    <p class="text-sm text-slate-400 uppercase tracking-wider font-semibold">Precisión en AIME 25</p>
+                    <p class="mt-2 text-xs text-slate-500">Matemáticas de competición nivel experto.</p>
+                </div>
+                <div class="bento-item glass-card p-6 border-l-4 border-purple-500">
+                    <div class="text-4xl font-extrabold text-white mb-2">91.4</div>
+                    <p class="text-sm text-slate-400 uppercase tracking-wider font-semibold">LiveCodeBench</p>
+                    <p class="mt-2 text-xs text-slate-500">Dominio superior en lenguajes de programación.</p>
+                </div>
+            </div>
+
+            <!-- Technology Deep Dive -->
+            <div class="md:col-span-12 lg:col-span-5 bento-item glass-card p-8 bg-gradient-to-br from-brand-dark to-indigo-900/20">
+                <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <span class="p-2 bg-indigo-500/20 rounded-lg text-indigo-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    </span>
+                    Arquitectura del Pensamiento
+                </h3>
+                <ul class="space-y-6">
+                    <li class="flex gap-4">
+                        <div class="text-indigo-400 font-mono font-bold">01</div>
+                        <div>
+                            <p class="font-bold text-white mb-1">Adaptive Tool Calling</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">Capacidad para invocar intérpretes de código y herramientas externas de forma autónoma.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="text-indigo-400 font-mono font-bold">02</div>
+                        <div>
+                            <p class="font-bold text-white mb-1">Test-time Scaling</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">Refinamiento iterativo de inferencias expandiendo dinámicamente recursos computacionales.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="text-indigo-400 font-mono font-bold">03</div>
+                        <div>
+                            <p class="font-bold text-white mb-1">Memoria Contextual</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">Reducción drástica de la "amnesia" para mantener coherencia en razonamientos largos.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Content Area: Math & Coding -->
+            <div class="md:col-span-12 lg:col-span-7 bento-item glass-card p-8 md:p-10">
+                <h3 class="text-2xl font-bold mb-6">Maestría en Lógica y Código</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <div class="h-1 w-12 bg-cyan-400 mb-4"></div>
+                        <h4 class="text-lg font-bold text-white">Sinfonía Numérica</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Qwen3 alcanzó una precisión del 100% en el AIME 25 y el HMMT. Esto sugiere un cambio paradigmático: la IA como colaboradora indispensable en la investigación matemática avanzada.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="h-1 w-12 bg-purple-400 mb-4"></div>
+                        <h4 class="text-lg font-bold text-white">Lenguaje de la Lógica</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Con una puntuación de 75.3 en SWE-Bench Verified, el modelo no solo escribe código; lo depura, lo optimiza y comprende la arquitectura del sistema.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-10 p-4 bg-white/5 rounded-xl border border-white/10 flex items-center justify-between group cursor-pointer hover:bg-white/10 transition">
+                    <span class="text-sm font-mono text-slate-400">Ver benchmarks detallados</span>
+                    <svg class="w-5 h-5 text-indigo-400 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
+            </div>
+
+            <!-- Footer Analysis -->
+            <div class="md:col-span-12 bento-item glass-card p-10 bg-gradient-to-r from-brand-dark to-slate-900">
+                <h3 class="text-3xl font-bold mb-8 text-center">El Futuro del Pensamiento</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                    <div class="space-y-3">
+                        <h5 class="text-brand-accent font-bold uppercase text-xs tracking-widest">IA Explicable</h5>
+                        <p class="text-sm text-slate-400 leading-relaxed">Crucial para la adopción en campos críticos como medicina, finanzas y defensa nacional.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <h5 class="text-brand-accent font-bold uppercase text-xs tracking-widest">Desafío Humano</h5>
+                        <p class="text-sm text-slate-400 leading-relaxed">Plantea preguntas sobre la delegación de responsabilidad y la atrofia de habilidades humanas.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <h5 class="text-brand-accent font-bold uppercase text-xs tracking-widest">Creatividad Ética</h5>
+                        <p class="text-sm text-slate-400 leading-relaxed">La distinción final reside en la intencionalidad y comprensión ética que define a nuestra especie.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action / Quote -->
+        <div class="text-center py-10 px-6 glass-card border-none bg-indigo-500/5 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 flex items-center justify-center font-mono text-[10rem] select-none">QWEN3</div>
+            <p class="text-2xl md:text-3xl font-light text-slate-200 relative z-10">
+                "¿Qué distingue al intelecto humano si una máquina puede razonar y construir código con fluidez?"
+            </p>
+            <div class="mt-8 flex justify-center gap-6 relative z-10">
+                <a href="https://www.alibabacloud.com" target="_blank" class="px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-full transition shadow-lg shadow-indigo-500/25">Explorar Qwen3</a>
+                <a href="#" class="px-8 py-3 border border-white/20 hover:bg-white/5 text-white font-bold rounded-full transition">Documentación Técnica</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Micro-animations Script -->
+    <script>
+        document.querySelectorAll('.bento-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.borderColor = 'rgba(99, 102, 241, 0.4)';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+            });
+        });
+    </script>
+</body>
+</html>
