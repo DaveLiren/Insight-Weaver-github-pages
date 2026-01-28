@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TongGeometry: El Futuro de la IA Creativa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    colors: {
+                        geometry: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            600: '#0284c7',
+                            800: '#075985',
+                            950: '#082f49',
+                        },
+                        jade: {
+                            400: '#34d399',
+                            600: '#059669',
+                            900: '#064e3b',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #020617; /* Dark Slate 950 */
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        .glass {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #38bdf8, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-mesh {
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(52, 211, 153, 0.15) 0, transparent 50%);
+        }
+        .geometric-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2v-4h4v-2H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-geometry-400/30">
+
+    <!-- Background Decoration -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-geometry-600/10 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-jade-600/10 blur-[120px] rounded-full"></div>
+        <div class="absolute inset-0 geometric-bg"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-6 lg:px-8">
+        
+        <!-- Header / Hero Section -->
+        <header class="pt-20 pb-16 text-center hero-mesh rounded-3xl mt-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-geometry-400/30 bg-geometry-400/10 text-geometry-400 text-xs font-bold uppercase tracking-widest mb-6 animate-pulse">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-geometry-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-geometry-400"></span>
+                </span>
+                Avance AGI: China
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
+                TongGeometry: <span class="text-gradient">La IA que Inventa</span> Matemáticas
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
+                Más allá de resolver problemas, la nueva frontera de la Inteligencia General Artificial reside en la capacidad de <span class="text-white italic">crear</span>.
+            </p>
+        </header>
+
+        <!-- Visual Concept Card -->
+        <section class="mb-24">
+            <div class="glass p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-40 transition-opacity">
+                    <svg width="120" height="120" viewBox="0 0 100 100" class="text-geometry-400 animate-spin-slow" style="animation-duration: 20s">
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="10 5" />
+                        <rect x="25" y="25" width="50" height="50" fill="none" stroke="currentColor" stroke-width="0.5" transform="rotate(45 50 50)" />
+                    </svg>
+                </div>
+                
+                <h3 class="text-sm font-bold text-geometry-400 uppercase tracking-widest mb-6 flex items-center gap-3">
+                    <span class="h-[1px] w-8 bg-geometry-400"></span>
+                    Concepto Visual de la Innovación
+                </h3>
+                
+                <div class="space-y-6 relative">
+                    <p class="text-lg md:text-xl text-slate-300 font-serif leading-relaxed italic border-l-4 border-jade-600 pl-6 py-2">
+                        "Una ilustración editorial abstracta con iluminación cinematográfica, presentando un colosal constructo neuro-geométrico etéreo... el hemisferio izquierdo representa la resolución con redes de azul cobalto, mientras el derecho encarna la creación con tonos dorados y jade, evocando motivos arquitectónicos chinos antiguos."
+                    </p>
+                    <div class="flex flex-wrap gap-4 text-xs font-medium uppercase tracking-tighter text-slate-500">
+                        <span class="px-3 py-1 bg-slate-800/50 rounded-full border border-slate-700">16:9 Aspect Ratio</span>
+                        <span class="px-3 py-1 bg-slate-800/50 rounded-full border border-slate-700">Chiaroscuro Lighting</span>
+                        <span class="px-3 py-1 bg-slate-800/50 rounded-full border border-slate-700">Aesthetic Standard</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Narrative Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-24">
+            
+            <!-- Left Column: Context -->
+            <div class="md:col-span-7 space-y-8">
+                <div class="prose prose-invert prose-lg max-w-none font-serif text-slate-300 leading-relaxed">
+                    <p class="first-letter:text-7xl first-letter:font-bold first-letter:text-geometry-400 first-letter:mr-3 first-letter:float-left">
+                        Mientras el escrutinio global se posaba en los debates cada vez más elocuentes entre <em>chatbots</em> de IA, un evento mucho más sutil se desarrollaba en los laboratorios de Pekín. Lejos del ruido mediático, un equipo de investigadores chinos presentó un sistema lo suficientemente inteligente como para <strong>escribir sus propias preguntas</strong>.
+                    </p>
+                    <p>
+                        La gesta, fruto de la colaboración entre el Instituto de Pekín para la Inteligencia Artificial General (BIGAI) y la Universidad de Pekín, no es solo un avance técnico; es un cambio de paradigma. Hemos cruzado el umbral de la IA como mera herramienta de resolución de problemas para adentrarnos en la era de la IA como un <strong>agente creativo</strong>.
+                    </p>
+                </div>
+
+                <!-- Bento Card: TongGeometry Highlights -->
+                <div class="glass rounded-3xl p-8 border-l-4 border-geometry-400">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-geometry-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        TongGeometry: El Genio Creador
+                    </h3>
+                    <p class="text-slate-400 mb-6 font-serif italic">
+                        "Su distinción no radica en hallar soluciones, sino en proponer problemas originales de alta calidad con un estándar estético humano."
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 group">
+                            <div class="h-6 w-6 rounded-md bg-geometry-400/20 text-geometry-400 flex items-center justify-center shrink-0 group-hover:bg-geometry-400 group-hover:text-white transition-colors">1</div>
+                            <span class="text-slate-200">Preguntas aceptadas en la <strong>Liga Nacional de Matemáticas 2024</strong> (Pekín) y en la Olimpiada Ersatz (EE.UU.).</span>
+                        </li>
+                        <li class="flex items-start gap-3 group">
+                            <div class="h-6 w-6 rounded-md bg-geometry-400/20 text-geometry-400 flex items-center justify-center shrink-0 group-hover:bg-geometry-400 group-hover:text-white transition-colors">2</div>
+                            <span class="text-slate-200">Resuelve el <strong>100%</strong> de los problemas IMO-AG-30, superando incluso a medallistas humanos.</span>
+                        </li>
+                        <li class="flex items-start gap-3 group">
+                            <div class="h-6 w-6 rounded-md bg-geometry-400/20 text-geometry-400 flex items-center justify-center shrink-0 group-hover:bg-geometry-400 group-hover:text-white transition-colors">3</div>
+                            <span class="text-slate-200">Eficiencia extrema: Opera en una sola GPU <strong>RTX 4090</strong> en menos de 38 minutos.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Comparative Data -->
+            <div class="md:col-span-5 space-y-8">
+                <!-- Comparison Card -->
+                <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-6 border border-slate-700 shadow-2xl relative overflow-hidden">
+                    <div class="absolute -right-8 -top-8 w-24 h-24 bg-geometry-400/5 rounded-full blur-2xl"></div>
+                    
+                    <h4 class="text-center text-xs font-bold uppercase tracking-widest text-slate-500 mb-8">Comparativa de Titanes</h4>
+                    
+                    <div class="space-y-12">
+                        <!-- AlphaGeometry -->
+                        <div class="relative">
+                            <div class="flex justify-between items-end mb-2">
+                                <span class="text-lg font-bold text-slate-200">AlphaGeometry</span>
+                                <span class="text-xs text-slate-500 font-mono">Google DeepMind</span>
+                            </div>
+                            <div class="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-slate-600 w-[70%]"></div>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-2 uppercase italic tracking-tighter">"El Solucionador Pasivo"</p>
+                            <p class="text-sm text-slate-400 mt-2">Requiere 246 núcleos de CPU y 4 GPUs industriales.</p>
+                        </div>
+
+                        <!-- TongGeometry -->
+                        <div class="relative">
+                            <div class="flex justify-between items-end mb-2">
+                                <span class="text-lg font-bold text-gradient">TongGeometry</span>
+                                <span class="text-xs text-geometry-400 font-mono">BIGAI / PKU</span>
+                            </div>
+                            <div class="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-geometry-400 to-jade-400 w-full animate-pulse"></div>
+                            </div>
+                            <p class="text-xs text-geometry-400 mt-2 uppercase italic tracking-tighter font-bold">"El Creador Activo"</p>
+                            <p class="text-sm text-slate-400 mt-2">Opera en hardware doméstico (1x RTX 4090).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Small Aesthetic Sidebar -->
+                <div class="p-6 rounded-3xl bg-jade-950/20 border border-jade-900/30">
+                    <h5 class="text-jade-400 font-bold text-sm mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-jade-400"></span>
+                        Dualidad de Diseño
+                    </h5>
+                    <p class="text-sm text-slate-400 font-serif italic">
+                        TongGeometry modela la dificultad de la prueba junto a la complejidad de la construcción para identificar el "valor estético" del problema.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Paradigm Shift -->
+        <section class="mb-24 relative">
+            <div class="absolute inset-0 bg-geometry-600/5 rounded-[3rem] -rotate-1"></div>
+            <div class="relative glass p-10 md:p-16 rounded-[3rem] border-t border-white/10">
+                <h2 class="text-4xl font-extrabold mb-10">La Batalla de los Paradigmas: <span class="text-geometry-400 italic">Creación vs. Solución</span></h2>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="space-y-4">
+                        <h4 class="text-xl font-bold text-slate-200">Máquinas de Optimización</h4>
+                        <p class="text-slate-400 font-serif leading-relaxed">
+                            AlphaGeometry representa el pináculo de la IA de resolución. Es un prodigio en la navegación por espacios de búsqueda complejos para encontrar soluciones existentes mediante sistemas neuro-simbólicos.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-xl font-bold text-jade-400">IA Generativa Profunda</h4>
+                        <p class="text-slate-400 font-serif leading-relaxed">
+                            TongGeometry no solo comprende las reglas del juego matemático, sino que puede diseñar nuevos juegos, con sus propias reglas implícitas y su belleza inherente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Implications -->
+        <section class="mb-24 space-y-12">
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold mb-4">El Horizonte de la AGI</h2>
+                <div class="h-1 w-20 bg-geometry-400 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="group p-8 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-geometry-400/50 transition-all duration-500 hover:-translate-y-2">
+                    <div class="w-12 h-12 rounded-2xl bg-geometry-400/10 text-geometry-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Revolución Educativa</h4>
+                    <p class="text-slate-400 text-sm font-serif">Capacidad de generar exámenes personalizados adaptados al nivel y estilo de cada estudiante.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="group p-8 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-jade-400/50 transition-all duration-500 hover:-translate-y-2">
+                    <div class="w-12 h-12 rounded-2xl bg-jade-400/10 text-jade-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Ciencia Autónoma</h4>
+                    <p class="text-slate-400 text-sm font-serif">Desvelo de ramas enteras de teoremas y construcciones matemáticas aún no exploradas por humanos.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="group p-8 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-white/50 transition-all duration-500 hover:-translate-y-2">
+                    <div class="w-12 h-12 rounded-2xl bg-white/10 text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9h18"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Geopolítica de la IA</h4>
+                    <p class="text-slate-400 text-sm font-serif">China invierte en dimensiones sutiles como la creatividad, mientras Occidente prioriza la escala.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <footer class="pb-24 border-t border-slate-800 pt-16">
+            <div class="max-w-3xl">
+                <p class="text-2xl md:text-3xl font-serif text-slate-200 leading-snug italic">
+                    "La carrera hacia la AGI no es solo por la eficiencia, sino por la esencia de lo que significa ser inteligente. TongGeometry nos muestra que esa esencia reside en la capacidad de imaginar y crear."
+                </p>
+                <div class="mt-8 flex items-center gap-4">
+                    <div class="h-12 w-12 rounded-full bg-gradient-to-tr from-geometry-600 to-jade-600"></div>
+                    <div>
+                        <p class="font-bold text-white tracking-wide">Redacción Científica</p>
+                        <p class="text-slate-500 text-sm">Laboratorios de Investigación Avanzada</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Micro-interaction script -->
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const blobs = document.querySelectorAll('.blur-[120px]');
+            const x = (e.clientX / window.innerWidth) * 30;
+            const y = (e.clientY / window.innerHeight) * 30;
+            
+            blobs[0].style.transform = `translate(${x}px, ${y}px)`;
+            blobs[1].style.transform = `translate(${-x}px, ${-y}px)`;
+        });
+    </script>
+</body>
+</html>
