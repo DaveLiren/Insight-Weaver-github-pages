@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es-419" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moltbot: La Dualidad de la IA Agéntica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        cyber: {
+                            black: '#0a0a0c',
+                            darker: '#111116',
+                            card: '#1a1a24',
+                            accent: '#3b82f6',
+                            danger: '#ef4444',
+                            success: '#10b981',
+                            text: '#e2e8f0'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(26, 26, 36, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #60a5fa, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-border {
+            position: relative;
+            border-radius: 1rem;
+            background: rgba(26, 26, 36, 0.8);
+        }
+        .gradient-border::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            border-radius: 1rem;
+            padding: 1px;
+            background: linear-gradient(45deg, #3b82f6, transparent, #ef4444);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        body {
+            background-color: #0a0a0c;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(59, 130, 246, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            pointer-events: none;
+            animation: scan 8s linear infinite;
+        }
+        @keyframes scan {
+            0% { top: -2%; }
+            100% { top: 102%; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="scanline"></div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 pb-12 overflow-hidden px-6">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-red-600/10 rounded-full blur-[120px] animate-pulse-slow"></div>
+        
+        <div class="max-w-5xl w-full relative z-10">
+            <div class="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-blue-500/30 text-blue-400 text-sm font-semibold tracking-wider uppercase mx-auto md:mx-0">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                Reporte de Inteligencia 2026
+            </div>
+            
+            <h1 class="font-serif text-5xl md:text-8xl font-bold leading-tight mb-8">
+                Moltbot: El <span class="text-gradient">Doble Filo</span> de la IA Agéntica
+            </h1>
+            
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <div class="flex-1">
+                    <p class="text-xl md:text-2xl text-slate-400 leading-relaxed font-light mb-8">
+                        Un análisis profundo sobre el asistente personal que prometió liberarnos, pero terminó abriendo una grieta en nuestra seguridad digital.
+                    </p>
+                    <div class="flex items-center gap-4 text-sm text-slate-500 border-t border-white/10 pt-6">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center font-bold text-white shadow-lg">IAS</div>
+                        <div>
+                            <p class="text-slate-200 font-semibold">IASimov Technologies</p>
+                            <p>Enero 21, 2026 • 8 min de lectura</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Concept Card -->
+                <div class="w-full md:w-80 gradient-border p-6 group cursor-default transition-all duration-500 hover:scale-[1.02]">
+                    <p class="text-xs uppercase tracking-widest text-blue-400 font-bold mb-3">Concepto Visual</p>
+                    <p class="text-sm text-slate-400 italic leading-relaxed">
+                        Una interfaz holográfica luminosa de color azul que irradia eficiencia, mientras que en sus profundidades se filtran líneas de código rojo y lentes de vigilancia sombríos, simbolizando una caja de Pandora digital.
+                    </p>
+                    <div class="mt-4 flex gap-1">
+                        <div class="h-1 w-12 bg-blue-500 rounded-full"></div>
+                        <div class="h-1 w-4 bg-red-500 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Grid -->
+    <main class="max-w-6xl mx-auto px-6 py-20">
+        
+        <!-- Feature Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+            <!-- Large Feature -->
+            <div class="md:col-span-2 glass p-8 rounded-3xl relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <h2 class="font-serif text-3xl font-bold mb-6 text-blue-400">El Amanecer de una Nueva Era</h2>
+                <div class="space-y-4 text-slate-300 text-lg leading-relaxed">
+                    <p>
+                        Moltbot, originalmente <span class="text-blue-300 font-semibold">Clawdbot</span>, nació de la mente de Peter Steinberger como la respuesta definitiva a la centralización de la IA. A diferencia de los modelos tradicionales, reside localmente, integrándose en las venas de tu comunicación digital: WhatsApp, Telegram y Signal.
+                    </p>
+                    <p>
+                        Su naturaleza "agéntica" le permite no solo sugerir, sino <span class="italic">ejecutar</span>. Desde limpiar bandejas de entrada hasta reservar vuelos y ejecutar comandos de shell, se posiciona como el alter ego digital definitivo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Side Card -->
+            <div class="bg-blue-600/10 border border-blue-500/20 p-8 rounded-3xl flex flex-col justify-center">
+                <div class="text-4xl font-bold text-blue-400 mb-2">100k+</div>
+                <div class="text-slate-400 font-semibold uppercase tracking-tighter mb-4">Estrellas en GitHub</div>
+                <p class="text-sm text-slate-400">
+                    Una adopción viral que demuestra la sed global por la soberanía de datos y la democratización de la inteligencia artificial personal.
+                </p>
+            </div>
+        </div>
+
+        <!-- Danger Section -->
+        <div class="mb-24 relative">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-red-500/50 to-transparent"></div>
+                <h2 class="font-serif text-4xl font-bold text-center px-4">La Sombra en el Código</h2>
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-red-500/50 to-transparent"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="glass p-6 rounded-2xl border-l-4 border-red-500 transform transition hover:-translate-x-2">
+                        <h3 class="text-xl font-bold mb-2 text-red-400 uppercase tracking-wide">Vulnerabilidad Crítica</h3>
+                        <p class="text-slate-400">Almacenamiento de contraseñas y claves de API en texto plano (archivos Markdown y JSON), convirtiéndolo en un festín para el malware infostealer.</p>
+                    </div>
+                    <div class="glass p-6 rounded-2xl border-l-4 border-red-500 transform transition hover:-translate-x-2">
+                        <h3 class="text-xl font-bold mb-2 text-red-400 uppercase tracking-wide">Privilegios Elevados</h3>
+                        <p class="text-slate-400">Investigadores de Cisco han detectado paneles expuestos que otorgan acceso de root a entidades no verificadas, permitiendo la ejecución de comandos arbitrarios.</p>
+                    </div>
+                    <div class="glass p-6 rounded-2xl border-l-4 border-red-500 transform transition hover:-translate-x-2">
+                        <h3 class="text-xl font-bold mb-2 text-red-400 uppercase tracking-wide">Inyección de Prompts</h3>
+                        <p class="text-slate-400">Capacidad de ser manipulado mediante ataques de prompt injection para extraer información privada o tomar control de redes sociales vinculadas.</p>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-red-600/20 blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div class="relative glass p-10 rounded-[2rem] border-red-500/30">
+                        <div class="mb-6 text-red-500">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                        </div>
+                        <h3 class="text-3xl font-serif font-bold mb-6">"Una pesadilla de seguridad"</h3>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-6">
+                            Así lo definen los expertos. El problema no es solo el código, sino la ilusión de privacidad que ofrece. Peter Steinberger admite que es un "pasatiempo", pero el mundo lo está usando como una herramienta de producción masiva.
+                        </p>
+                        <div class="flex items-center gap-2 text-red-400 font-mono text-sm">
+                            <span class="animate-pulse">●</span> ERROR_SYSTEM_EXPOSED_ROOT
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Privacy & Ethics -->
+        <section class="mb-24 py-16 px-8 rounded-[3rem] bg-gradient-to-b from-cyber-card to-cyber-black border border-white/5">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="font-serif text-4xl font-bold mb-10 text-center">El Espectro de la Vigilancia</h2>
+                
+                <div class="prose prose-invert max-w-none text-slate-300 space-y-8">
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="flex-1">
+                            <p class="text-xl leading-relaxed italic border-l-4 border-blue-500 pl-6">
+                                "¿Estamos abriendo una caja de Pandora digital bajo el pretexto de la eficiencia?"
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <p>
+                                La normalización de una IA siempre activa crea un perfil de datos exhaustivo. No es solo lo que haces, es lo que tu agente sabe que harás. Existe el temor latente de que estos agentes personales interconectados formen redes susceptibles a manipulaciones coordinadas a gran escala.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                        <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
+                            <h4 class="text-blue-400 font-bold mb-4 flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-10V4m0 10V4m0 10h1m-1 4h1m-7 10l1.22-12.22a2 2 0 00-1.78-2.22h-.88a2 2 0 00-1.78 2.22L7 21m12 0h-1.22a2 2 0 00-1.78-2.22h-.88a2 2 0 00-1.78 2.22L17 21"/></svg>
+                                Hilos Corporativos
+                            </h4>
+                            <p class="text-sm">El cambio de Clawdbot a Moltbot fue una imposición de Anthropic. A pesar de ser local, sigue atado a los modelos (LLM) de los gigantes tecnológicos.</p>
+                        </div>
+                        <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
+                            <h4 class="text-red-400 font-bold mb-4 flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                                Dilema Ético
+                            </h4>
+                            <p class="text-sm">Dario Amodei (CEO de Anthropic) advierte sobre la IA "superhumana" habilitando vigilancia y propaganda sin precedentes por gobiernos autoritarios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="text-center max-w-3xl mx-auto mb-20">
+            <h2 class="font-serif text-5xl font-bold mb-8">¿Un Futuro Abierto?</h2>
+            <p class="text-xl text-slate-400 leading-relaxed mb-10">
+                Moltbot es el espejo de nuestra ambición digital. Representa un salto hacia la autonomía, pero nos recuerda que la comodidad tiene un precio. La base de código abierto permite auditorías, pero la responsabilidad recae en quienes deciden invitar a este agente a su hogar digital.
+            </p>
+            <div class="inline-flex items-center gap-6">
+                <button class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-blue-600/20" onclick="window.open('https://github.com/','_blank')">
+                    Explorar Repositorio
+                </button>
+                <div class="text-slate-500 text-sm italic">Última actualización: v2.0.4-beta</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactivity: Scroll indicator -->
+    <div class="fixed bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 hover:opacity-100 transition-opacity">
+        <div class="w-1 h-12 bg-gradient-to-b from-blue-500 to-transparent rounded-full relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1/2 bg-white animate-[move_2s_linear_infinite]"></div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes move {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(200%); }
+        }
+        
+        /* Custom selection color */
+        ::selection {
+            background: rgba(59, 130, 246, 0.3);
+            color: #fff;
+        }
+
+        /* Smooth reveal for cards */
+        .glass {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass:hover {
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 20px 40px -20px rgba(0,0,0,0.5);
+        }
+    </style>
+
+    <script>
+        // Simple scroll reveal effect
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass, h2, p').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
