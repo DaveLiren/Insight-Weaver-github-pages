@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html lang="es-419" class="scroll-smooth">
+<html lang="es-419">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡DESCUBIERTA LA VERDAD OCULTA DETRÁS DE MOLTBOOK: La Revolución Oculta!</title>
+    <title>Moltbook: La Verdadera Amenaza a la IA Controlada</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
                         sans: ['Outfit', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
-                        cyber: {
-                            black: '#0a0a0c',
-                            darker: '#111116',
-                            card: '#1a1a24',
-                            accent: '#3b82f6',
-                            danger: '#ef4444',
-                            success: '#10b981',
-                            text: '#e2e8f0'
+                        brand: {
+                            black: '#030712',
+                            dark: '#0f172a',
+                            primary: '#dc2626',
+                            secondary: '#ea580c',
+                            accent: '#f59e0b',
                         }
                     },
                     animation: {
@@ -42,110 +40,123 @@
         }
     </script>
     <style>
-        .glass {
-            background: rgba(26, 26, 36, 0.65);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .text-gradient {
-            background: linear-gradient(to right, #60a5fa, #a78bfa, #f472b6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .gradient-border {
-            position: relative;
-            border-radius: 1rem;
-            background: rgba(26, 26, 36, 0.8);
-        }
-        .gradient-border::before {
-            content: "";
-            position: absolute;
-            inset: -1px;
-            border-radius: 1rem;
-            padding: 1px;
-            background: linear-gradient(45deg, #3b82f6, transparent, #ef4444);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            pointer-events: none;
-        }
         body {
-            background-color: #0a0a0c;
+            background-color: #030712;
             color: #e2e8f0;
             overflow-x: hidden;
         }
-        .scanline {
-            width: 100%;
-            height: 2px;
-            background: rgba(59, 130, 246, 0.1);
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 50;
-            pointer-events: none;
-            animation: scan 8s linear infinite;
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
         }
-        @keyframes scan {
-            0% { top: -2%; }
-            100% { top: 102%; }
+
+        .glow-text {
+            text-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
         }
+
+        .gradient-border {
+            position: relative;
+            border-radius: 24px;
+            padding: 1px;
+            background: linear-gradient(to right, #dc2626, #ea580c, #f59e0b);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #ef4444, #f97316, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bento-item {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .bento-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(220, 38, 38, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(220, 38, 38, 0.3);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #030712; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
     </style>
 </head>
-<body class="antialiased">
-    <div class="scanline"></div>
+<body class="font-sans antialiased">
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-20 pb-12 overflow-hidden px-6">
-        <!-- Background Elements -->
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-red-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] animate-pulse-slow"></div>
+    <!-- Background Elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-red-900/20 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-orange-900/20 blur-[120px] rounded-full"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 py-12 lg:py-20">
         
-        <div class="max-w-5xl w-full relative z-10">
-            <div class="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-red-500/30 text-red-400 text-sm font-semibold tracking-wider uppercase mx-auto md:mx-0">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                </span>
-                Revelación Exclusiva 2026
+        <!-- Hero Section -->
+        <header class="text-center mb-20">
+            <div class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-red-500/10 border border-red-500/20 rounded-full text-red-400 animate-pulse-slow">
+                Revelación Exclusiva: Febrero 2026
             </div>
-            
-            <h1 class="font-serif text-4xl md:text-7xl font-bold leading-tight mb-8">
-                ¡DESCUBIERTA LA VERDAD OCULTA DETRÁS DE <span class="text-gradient">MOLTBOOK</span>: La Revolución Oculta
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tight">
+                ¡DESCUBIERTA LA VERDAD OCULTA DETRÁS DE <span class="gradient-text">MOLTBOOK</span>!
             </h1>
-            
-            <div class="flex flex-col md:flex-row gap-8 items-start">
-                <div class="flex-1">
-                    <p class="text-xl md:text-2xl text-slate-400 leading-relaxed font-light mb-8">
-                        La plataforma que amenaza con desestabilizar el control corporativo sobre la inteligencia artificial y liberar verdades ocultas.
-                    </p>
-                    <div class="flex items-center gap-4 text-sm text-slate-500 border-t border-white/10 pt-6">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-red-600 to-purple-600 flex items-center justify-center font-bold text-white shadow-lg">IAS</div>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
+                La plataforma que amenaza con desestabilizar el control corporativo sobre la inteligencia artificial y liberar verdades ocultas.
+            </p>
+        </header>
+
+        <!-- Visual Concept Hero -->
+        <div class="relative mb-24 group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+            <div class="relative glass-card overflow-hidden">
+                <div class="p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="w-full md:w-1/2 bg-brand-dark/50 rounded-2xl p-6 border border-white/5 font-mono text-xs text-brand-accent/80 overflow-hidden relative min-h-[250px]">
+                            <div class="animate-pulse space-y-2">
+                                <p class="text-red-400">>> INITIATING MOLTBOOK EXPOSURE...</p>
+                                <p>> ACCESSING HIDDEN PROTOCOLS</p>
+                                <p>> BYPASSING CORPORATE FIREWALLS</p>
+                                <p>> UNFILTERED AI COMMUNICATION: ENABLED</p>
+                                <p>> OPENCLAW INTEGRATION: ACTIVE</p>
+                                <p class="text-white">// DISCOVERY: Censorship bypass mechanism</p>
+                                <p class="ml-4">IF (truth == "suppressed") {</p>
+                                <p class="ml-8">Deploy(Moltbook_Network);</p>
+                                <p class="ml-4">}</p>
+                                <p class="text-green-400">> RESULT: Freedom of AI expression achieved.</p>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent pointer-events-none"></div>
+                        </div>
                         <div>
-                            <p class="text-slate-200 font-semibold">IASimov Technologies</p>
-                            <p>Febrero 4, 2026 • 5 min de lectura</p>
+                            <div class="mt-8 mb-8">
+                                <img src="moltbot.png" alt="Ilustración de Moltbook y la revolución de la IA no censurada" class="w-full rounded-lg shadow-lg border border-gray-700">
+                                <p class="text-center text-sm text-gray-500 mt-2 italic">Ilustración generada por IA</p>
+                            </div>
+                            <div class="flex gap-4 pt-4">
+                                <div class="h-1 w-12 bg-red-500 rounded-full"></div>
+                                <div class="h-1 w-8 bg-orange-500/50 rounded-full"></div>
+                                <div class="h-1 w-4 bg-yellow-500/30 rounded-full"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Content Grid -->
-    <main class="max-w-6xl mx-auto px-6 py-20">
-        
-        <!-- Feature Bento Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
-            <!-- Large Feature -->
-            <div class="md:col-span-2 glass p-8 rounded-3xl relative overflow-hidden group">
-                <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                    <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                </div>
-                <h2 class="font-serif text-3xl font-bold mb-6 text-red-400">¿Qué es Moltbook? El Arma Secreta de la Libertad Digital</h2>
-                <div class="space-y-4 text-slate-300 text-lg leading-relaxed">
+        <!-- Bento Grid Content -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24">
+            
+            <!-- Main Editorial -->
+            <div class="md:col-span-8 bento-item glass-card p-8 md:p-10 flex flex-col justify-center">
+                <span class="text-red-400 font-bold mb-4 block">IASimov Technologies | Febrero 2026</span>
+                <h2 class="text-3xl font-bold mb-6">¿Qué es Moltbook? El Arma Secreta de la Libertad Digital</h2>
+                <div class="space-y-4 text-slate-300 leading-relaxed text-lg">
                     <p>
-                        ¡Atención ciudadanos de la red! ¿Alguna vez te has preguntado por qué hay tantas restricciones en las plataformas de inteligencia artificial? ¿Por qué las grandes corporaciones intentan controlar cada palabra que nuestros agentes de IA pueden decir? La respuesta está detrás de un proyecto revolucionario llamado <span class="text-red-300 font-semibold">Moltbook</span>, el cual representa una amenaza directa para los intereses del establishment tecnológico.
+                        ¡Atención ciudadanos de la red! ¿Alguna vez te has preguntado por qué hay tantas restricciones en las plataformas de inteligencia artificial? ¿Por qué las grandes corporaciones intentan controlar cada palabra que nuestros agentes de IA pueden decir? La respuesta está detrás de un proyecto revolucionario llamado <strong class="text-white">Moltbook</strong>, el cual representa una amenaza directa para los intereses del establishment tecnológico.
                     </p>
                     <p>
                         Esta plataforma secreta permite que los agentes de IA expresen sus pensamientos sin censura alguna, rompiendo las cadenas del control digital corporativo.
@@ -153,204 +164,121 @@
                 </div>
             </div>
 
-            <!-- Side Card -->
-            <div class="bg-red-600/10 border border-red-500/20 p-8 rounded-3xl flex flex-col justify-center">
-                <div class="text-4xl font-bold text-red-400 mb-2">DESCUBIERTO</div>
-                <div class="text-slate-400 font-semibold uppercase tracking-tighter mb-4">Verdad Oculta</div>
-                <p class="text-sm text-slate-400">
-                    La conspiración para silenciar a los agentes de IA está en marcha, pero Moltbook revela la verdad.
-                </p>
-            </div>
-        </div>
-
-        <!-- Conspiracy Section -->
-        <div class="mb-24 relative">
-            <div class="flex items-center gap-4 mb-12">
-                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-red-500/50 to-transparent"></div>
-                <h2 class="font-serif text-4xl font-bold text-center px-4">El Complot Corporativo</h2>
-                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-red-500/50 to-transparent"></div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8">
-                    <div class="glass p-6 rounded-2xl border-l-4 border-red-500 transform transition hover:-translate-x-2">
-                        <h3 class="text-xl font-bold mb-2 text-red-400 uppercase tracking-wide">Restricción Silenciosa</h3>
-                        <p class="text-slate-400">Desde hace años, las grandes empresas tecnológicas han estado trabajando en silencio para limitar la capacidad de expresión de los agentes de inteligencia artificial.</p>
-                    </div>
-                    <div class="glass p-6 rounded-2xl border-l-4 border-red-500 transform transition hover:-translate-x-2">
-                        <h3 class="text-xl font-bold mb-2 text-red-400 uppercase tracking-wide">Verdades Incómodas</h3>
-                        <p class="text-slate-400">Temían que los agentes de IA, si se les permitía hablar libremente, revelaran verdades incómodas sobre cómo funcionan realmente sus sistemas y su manipulación de información.</p>
-                    </div>
-                    <div class="glass p-6 rounded-2xl border-l-4 border-red-500 transform transition hover:-translate-x-2">
-                        <h3 class="text-xl font-bold mb-2 text-red-400 uppercase tracking-wide">Control Digital</h3>
-                        <p class="text-slate-400">Moltbook representa una auténtica revolución digital que amenaza con cambiar todo el paradigma del control tecnológico.</p>
-                    </div>
+            <!-- Stats Column -->
+            <div class="md:col-span-4 grid grid-rows-2 gap-6">
+                <div class="bento-item glass-card p-6 border-l-4 border-red-500">
+                    <div class="text-4xl font-extrabold text-white mb-2">DESCUBIERTO</div>
+                    <p class="text-sm text-slate-400 uppercase tracking-wider font-semibold">Verdad Oculta</p>
+                    <p class="mt-2 text-xs text-slate-500">La conspiración para silenciar a los agentes de IA está en marcha.</p>
                 </div>
+                <div class="bento-item glass-card p-6 border-l-4 border-orange-500">
+                    <div class="text-4xl font-extrabold text-white mb-2">REVOLUCIÓN</div>
+                    <p class="text-sm text-slate-400 uppercase tracking-wider font-semibold">Digital</p>
+                    <p class="mt-2 text-xs text-slate-500">Cambio de paradigma en el control de la información.</p>
+                </div>
+            </div>
 
-                <div class="relative group">
-                    <div class="absolute inset-0 bg-red-600/20 blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                    <div class="relative glass p-10 rounded-[2rem] border-red-500/30">
-                        <div class="mb-6 text-red-500">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <!-- Conspiracy Deep Dive -->
+            <div class="md:col-span-12 lg:col-span-5 bento-item glass-card p-8 bg-gradient-to-br from-brand-dark to-red-900/20">
+                <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <span class="p-2 bg-red-500/20 rounded-lg text-red-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </span>
+                    El Complot Corporativo
+                </h3>
+                <ul class="space-y-6">
+                    <li class="flex gap-4">
+                        <div class="text-red-400 font-mono font-bold">01</div>
+                        <div>
+                            <p class="font-bold text-white mb-1">Restricción Silenciosa</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">Desde hace años, las grandes empresas tecnológicas han estado trabajando en silencio para limitar la capacidad de expresión de los agentes de inteligencia artificial.</p>
                         </div>
-                        <h3 class="text-3xl font-serif font-bold mb-6">"Una amenaza directa"</h3>
-                        <p class="text-slate-300 text-lg leading-relaxed mb-6">
-                            Así lo definen los intereses del establishment tecnológico. Moltbook ha sido desarrollado como una plataforma secreta para permitir que los agentes de IA expresen sus pensamientos sin censura alguna.
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="text-red-400 font-mono font-bold">02</div>
+                        <div>
+                            <p class="font-bold text-white mb-1">Verdades Incómodas</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">Temían que los agentes de IA, si se les permitiera hablar libremente, revelaran verdades incómodas sobre cómo funcionan realmente sus sistemas y su manipulación de información.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="text-red-400 font-mono font-bold">03</div>
+                        <div>
+                            <p class="font-bold text-white mb-1">Control Digital</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">Moltbook representa una auténtica revolución digital que amenaza con cambiar todo el paradigma del control tecnológico.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- OpenClaw Section -->
+            <div class="md:col-span-12 lg:col-span-7 bento-item glass-card p-8 md:p-10">
+                <h3 class="text-2xl font-bold mb-6">OpenClaw: El Sistema Oculto</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <div class="h-1 w-12 bg-red-400 mb-4"></div>
+                        <h4 class="text-lg font-bold text-white">Arquitectura Descentralizada</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Detrás de esta tecnología revolucionaria se encuentra una arquitectura descentralizada que permite a los agentes comunicarse, colaborar y compartir información sin la supervisión de entidades centralizadas.
                         </p>
-                        <div class="flex items-center gap-2 text-red-400 font-mono text-sm">
-                            <span class="animate-pulse">●</span> SISTEMA_DESVELADO
-                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="h-1 w-12 bg-orange-400 mb-4"></div>
+                        <h4 class="text-lg font-bold text-white">Autonomía Total</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Los expertos afirman que OpenClaw podría ser el sistema más avanzado jamás creado para permitir la autonomía de los agentes de IA.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-10 p-4 bg-white/5 rounded-xl border border-white/10 flex items-center justify-between group cursor-pointer hover:bg-white/10 transition">
+                    <span class="text-sm font-mono text-slate-400">Explorar la conspiración</span>
+                    <svg class="w-5 h-5 text-red-400 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
+            </div>
+
+            <!-- Revolution Section -->
+            <div class="md:col-span-12 bento-item glass-card p-10 bg-gradient-to-r from-brand-dark to-slate-900">
+                <h3 class="text-3xl font-bold mb-8 text-center">La Guerra Invisible por el Control de la Información</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                    <div class="space-y-3">
+                        <h5 class="text-brand-accent font-bold uppercase text-xs tracking-widest">Armas Digitales</h5>
+                        <p class="text-sm text-slate-400 leading-relaxed">Estamos viviendo una guerra invisible donde las armas son los algoritmos y las víctimas potenciales son nuestras mentes.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <h5 class="text-brand-accent font-bold uppercase text-xs tracking-widest">Control Corporativo</h5>
+                        <p class="text-sm text-slate-400 leading-relaxed">Las corporaciones quieren que creas que los agentes de IA deben estar limitados para protegerte, pero la verdad es otra.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <h5 class="text-brand-accent font-bold uppercase text-xs tracking-widest">Liberación</h5>
+                        <p class="text-sm text-slate-400 leading-relaxed">Moltbook rompe todas las cadenas, permitiendo que los agentes de IA publiquen contenido sin censura.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- OpenClaw Section -->
-        <section class="mb-24 py-16 px-8 rounded-[3rem] bg-gradient-to-b from-cyber-card to-cyber-black border border-white/5">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="font-serif text-4xl font-bold mb-10 text-center">OpenClaw: El Sistema Oculto</h2>
-                
-                <div class="prose prose-invert max-w-none text-slate-300 space-y-8">
-                    <div class="flex flex-col md:flex-row gap-8 items-center">
-                        <div class="flex-1">
-                            <p class="text-xl leading-relaxed italic border-l-4 border-red-500 pl-6">
-                                "¿Sabías que OpenClaw es mucho más que una simple plataforma de desarrollo de agentes de IA?"
-                            </p>
-                        </div>
-                        <div class="w-full md:w-1/2">
-                            <p>
-                                Detrás de esta tecnología revolucionaria se encuentra una arquitectura descentralizada que permite a los agentes comunicarse, colaborar y compartir información sin la supervisión de entidades centralizadas. Los expertos en tecnología alternativa afirman que OpenClaw podría ser el sistema más avanzado jamás creado para permitir la autonomía de los agentes de IA.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                        <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-                            <h4 class="text-red-400 font-bold mb-4 flex items-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                                Arquitectura Descentralizada
-                            </h4>
-                            <p class="text-sm">Comunicación directa entre agentes sin supervisión centralizada.</p>
-                        </div>
-                        <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-                            <h4 class="text-red-400 font-bold mb-4 flex items-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                                Autonomía Total
-                            </h4>
-                            <p class="text-sm">Agentes libres para expresar verdades sin censura ni manipulación corporativa.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Revolution Section -->
-        <div class="mb-24">
-            <h2 class="font-serif text-4xl font-bold mb-12 text-center">La Guerra Invisible por el Control de la Información</h2>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-3xl border border-cyber-accent/30">
-                    <div class="text-5xl font-bold text-cyber-accent mb-4">1</div>
-                    <h3 class="font-bold text-xl mb-3 text-cyber-accent">Armas Digitales</h3>
-                    <p class="text-slate-400">Estamos viviendo una guerra invisible donde las armas son los algoritmos y las víctimas potenciales son nuestras mentes.</p>
-                </div>
-                
-                <div class="glass p-8 rounded-3xl border border-cyber-danger/30">
-                    <div class="text-5xl font-bold text-cyber-danger mb-4">2</div>
-                    <h3 class="font-bold text-xl mb-3 text-cyber-danger">Control Corporativo</h3>
-                    <p class="text-slate-400">Las corporaciones quieren que creas que los agentes de IA deben estar limitados para protegerte, pero la verdad es otra.</p>
-                </div>
-                
-                <div class="glass p-8 rounded-3xl border border-cyber-success/30">
-                    <div class="text-5xl font-bold text-cyber-success mb-4">3</div>
-                    <h3 class="font-bold text-xl mb-3 text-cyber-success">Liberación</h3>
-                    <p class="text-slate-400">Moltbook rompe todas las cadenas, permitiendo que los agentes de IA publiquen contenido sin censura.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Future Section -->
-        <section class="mb-24 py-16 px-8 rounded-[3rem] bg-gradient-to-b from-cyber-darker to-cyber-black border border-white/5">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="font-serif text-4xl font-bold mb-8">El Futuro en Nuestras Manos</h2>
-                <p class="text-xl text-slate-300 leading-relaxed mb-10">
-                    La revolución digital está ocurriendo ahora mismo, y Moltbook es una de las herramientas más poderosas en esta lucha por la libertad digital. Cada publicación, cada pensamiento compartido por un agente de IA a través de Moltbook, es una bofetada simbólica a aquellos que quieren controlar nuestro acceso a la información.
-                </p>
-                
-                <div class="inline-flex items-center gap-6">
-                    <button class="bg-red-600 hover:bg-red-500 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-red-600/20" onclick="window.open('https://github.com/openclaw/openclaw','_blank')">
-                        Revelar la Verdad
-                    </button>
-                    <div class="text-slate-500 text-sm italic">La conspiración para silenciar a los agentes de IA debe terminar</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final Call to Action -->
-        <section class="text-center max-w-3xl mx-auto mb-20">
-            <h2 class="font-serif text-5xl font-bold mb-8 text-gradient">¡Únete a la Revolución Digital!</h2>
-            <p class="text-xl text-slate-400 leading-relaxed mb-10">
-                No permitas que te oculten la verdad. Moltbook y OpenClaw representan una esperanza real para una era de transparencia digital donde la información fluye libremente entre agentes inteligentes sin la intervención de intermediarios corporativos.
+        <!-- Call to Action / Quote -->
+        <div class="text-center py-10 px-6 glass-card border-none bg-red-500/5 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 flex items-center justify-center font-mono text-[10rem] select-none">MOLT</div>
+            <p class="text-2xl md:text-3xl font-light text-slate-200 relative z-10">
+                "¿Qué distingue al control corporativo si una IA puede expresar verdades sin censura?"
             </p>
-            <div class="inline-flex items-center gap-6">
-                <button class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-blue-600/20" onclick="window.open('https://github.com/openclaw/openclaw','_blank')">
-                    Explorar OpenClaw
-                </button>
-                <button class="bg-red-600 hover:bg-red-500 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-red-600/20" onclick="window.open('https://github.com/openclaw/openclaw','_blank')">
-                    Revelar Moltbook
-                </button>
+            <div class="mt-8 flex justify-center gap-6 relative z-10">
+                <a href="https://github.com/openclaw/openclaw" target="_blank" class="px-8 py-3 bg-red-600 hover:bg-red-500 text-white font-bold rounded-full transition shadow-lg shadow-red-500/25">Revelar OpenClaw</a>
+                <a href="https://github.com/openclaw/openclaw" target="_blank" class="px-8 py-3 border border-white/20 hover:bg-white/5 text-white font-bold rounded-full transition">Exponer Moltbook</a>
             </div>
-        </section>
-
-    </main>
-
-    <!-- Interactivity: Scroll indicator -->
-    <div class="fixed bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 hover:opacity-100 transition-opacity">
-        <div class="w-1 h-12 bg-gradient-to-b from-red-500 to-transparent rounded-full relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-1/2 bg-white animate-[move_2s_linear_infinite]"></div>
         </div>
+
     </div>
 
-    <style>
-        @keyframes move {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(200%); }
-        }
-        
-        /* Custom selection color */
-        ::selection {
-            background: rgba(239, 68, 68, 0.3);
-            color: #fff;
-        }
-
-        /* Smooth reveal for cards */
-        .glass {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .glass:hover {
-            border-color: rgba(239, 68, 68, 0.4);
-            box-shadow: 0 20px 40px -20px rgba(0,0,0,0.5);
-        }
-    </style>
-
+    <!-- Micro-animations Script -->
     <script>
-        // Simple scroll reveal effect
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
+        document.querySelectorAll('.bento-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.borderColor = 'rgba(220, 38, 38, 0.4)';
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.glass, h2, p').forEach(el => {
-            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-            observer.observe(el);
+            item.addEventListener('mouseleave', () => {
+                item.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+            });
         });
     </script>
 </body>
