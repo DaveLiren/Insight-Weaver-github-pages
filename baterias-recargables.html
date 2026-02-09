@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATL: Revolución Energética 5C</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlue: '#0a0f1e',
+                        electricBlue: '#3b82f6',
+                        neonCyan: '#22d3ee',
+                        surface: 'rgba(255, 255, 255, 0.03)',
+                        borderLight: 'rgba(255, 255, 255, 0.1)',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #05070a;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .glass {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #60a5fa, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(34, 211, 238, 0.3), transparent);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-neonCyan/30 selection:text-white">
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-electricBlue/10 rounded-full blur-[120px] animate-pulse-slow"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-neonCyan/10 rounded-full blur-[120px] animate-pulse-slow" style="animation-delay: 2s;"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[80vh] flex flex-col items-center justify-center px-6 pt-20 pb-12 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-semibold tracking-widest uppercase transition-all duration-300 border rounded-full border-neonCyan/30 text-neonCyan bg-neonCyan/5 hover:bg-neonCyan/10">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neonCyan opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-neonCyan"></span>
+            </span>
+            Tecnología Energética 2026
+        </div>
+        <h1 class="max-w-5xl mb-8 text-5xl font-extrabold leading-tight tracking-tight lg:text-7xl font-sans">
+            CATL debuta una nueva <span class="text-gradient">batería 5C</span> que carga en 12 minutos
+        </h1>
+        <p class="max-w-2xl mx-auto mb-10 text-lg md:text-xl text-slate-400 font-light font-serif italic">
+            "Una ciudad futurista al anochecer, donde la energía fluye como redes etéreas entre la tecnología y el poder político..."
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <button class="px-8 py-4 font-semibold text-black transition-all rounded-full bg-neonCyan glow-button">
+                Explorar Innovación
+            </button>
+            <div class="flex items-center gap-3 px-6 py-4 text-sm font-medium border rounded-full glass border-white/10">
+                <span class="text-slate-500">Publicado:</span>
+                <span class="text-slate-200">21 de Enero, 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container max-w-6xl px-6 mx-auto mb-24">
+        
+        <!-- Bento Grid Feature Layout -->
+        <div class="grid grid-cols-1 gap-6 mb-20 lg:grid-cols-12">
+            
+            <!-- Lead Text -->
+            <div class="p-8 lg:col-span-8 glass rounded-3xl">
+                <h3 class="mb-4 text-2xl font-semibold text-white">El Salto Cuántico</h3>
+                <p class="mb-6 text-lg leading-relaxed text-slate-300 font-serif">
+                    La promesa de un futuro electrificado ha dado un salto significativo. CATL, el gigante chino de baterías, ha presentado un prototipo de carga ultrarrápida 5C, capaz de alcanzar el <strong class="text-neonCyan">80% en tan solo 12 minutos</strong>. 
+                </p>
+                <p class="text-lg leading-relaxed text-slate-300 font-serif">
+                    Este avance supera a sus predecesores 4C en eficiencia y velocidad, abriendo la puerta a una transformación radical en la movilidad global. Sin embargo, detrás del brillo técnico, se vislumbran intereses poderosos y redes de influencia que nos obligan a una pausa reflexiva sobre quiénes serán los verdaderos beneficiarios.
+                </p>
+            </div>
+
+            <!-- Stats/Metrics -->
+            <div class="flex flex-col justify-between p-8 lg:col-span-4 glass rounded-3xl border-t-neonCyan/20 border-t-2">
+                <div>
+                    <div class="text-5xl font-extrabold text-neonCyan mb-2">12m</div>
+                    <div class="text-sm tracking-widest uppercase text-slate-500 font-bold mb-6">Tiempo de Carga</div>
+                </div>
+                <div class="section-divider mb-6"></div>
+                <div>
+                    <div class="text-5xl font-extrabold text-electricBlue mb-2">5C</div>
+                    <div class="text-sm tracking-widest uppercase text-slate-500 font-bold">Estándar de Eficiencia</div>
+                </div>
+            </div>
+
+            <!-- Context Card -->
+            <div class="p-8 lg:col-span-12 glass rounded-3xl bg-gradient-to-br from-surface to-transparent">
+                <h2 class="mb-6 text-3xl font-bold tracking-tight text-white lg:text-4xl">Las Sombras del Progreso: ¿Quién Gana Realmente?</h2>
+                <div class="grid gap-8 md:grid-cols-2">
+                    <div class="space-y-4">
+                        <h4 class="text-xl font-semibold text-electricBlue italic">Intereses Ocultos</h4>
+                        <p class="text-slate-400 font-serif leading-relaxed">
+                            Las políticas energéticas son un terreno fértil para la consolidación de poder. Cuando se diseñan sin participación pública, quedan expuestas a corporaciones con vastos recursos y élites políticas que priorizan beneficios personales sobre el bien común.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-xl font-semibold text-neonCyan italic">El Dilema de la Transparencia</h4>
+                        <p class="text-slate-400 font-serif leading-relaxed">
+                            La transparencia puede ser meramente performática. El "paradigma de la transparencia" sugiere que la ciudadanía a menudo basa sus percepciones en señales externas mediáticas, en lugar de una evaluación directa de la información técnica compleja.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deep Dive Section -->
+        <article class="max-w-3xl mx-auto space-y-12">
+            
+            <section class="relative p-1">
+                <div class="absolute inset-0 bg-gradient-to-r from-electricBlue/20 to-neonCyan/20 rounded-[2rem] blur-xl opacity-20"></div>
+                <div class="relative p-10 glass rounded-[2rem]">
+                    <h3 class="mb-6 text-2xl font-bold text-white border-l-4 border-neonCyan pl-4">Impacto Social: La Receta para un Futuro Incierto</h3>
+                    <div class="space-y-6 text-slate-300 font-serif text-lg leading-relaxed">
+                        <p>
+                            La transición a la movilidad eléctrica exigirá inversiones monumentales en infraestructura y redes inteligentes. ¿Cómo se financiarán estas inversiones? ¿Qué comunidades quedarán rezagadas?
+                        </p>
+                        <p>
+                            Las políticas sin participación pública pueden llevar a asignaciones ineficientes de recursos y un aumento del descontento ciudadano. El énfasis exclusivo en vehículos eléctricos podría desviar recursos de otras soluciones más equitativas como el transporte público masivo.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-12 border-y border-white/5">
+                <h3 class="mb-8 text-3xl font-bold text-center text-white">Consideraciones Éticas</h3>
+                <div class="grid gap-8 md:grid-cols-2">
+                    <div class="p-6 transition-transform hover:-translate-y-2">
+                        <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-electricBlue/20 text-electricBlue">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                            </svg>
+                        </div>
+                        <h5 class="mb-3 text-lg font-bold text-white uppercase tracking-wider">Cadenas de Suministro</h5>
+                        <p class="text-slate-400 font-serif leading-relaxed">
+                            La producción depende de minerales como el litio y cobalto. ¿Se garantizarán prácticas éticas o quedarán los derechos laborales supeditados a la vorágine de la demanda global?
+                        </p>
+                    </div>
+                    <div class="p-6 transition-transform hover:-translate-y-2">
+                        <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-neonCyan/20 text-neonCyan">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h5 class="mb-3 text-lg font-bold text-white uppercase tracking-wider">Gobernanza y Consenso</h5>
+                        <p class="text-slate-400 font-serif leading-relaxed">
+                            La investigación subraya la necesidad de pautas éticas para asegurar que el impacto tecnológico sea positivo, abordando la justicia y la rendición de cuentas pública.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="text-center pb-12">
+                <h3 class="mb-6 text-2xl font-bold text-white">Hacia un Futuro con Carga Consciente</h3>
+                <p class="mb-8 text-xl leading-relaxed text-slate-300 font-serif italic">
+                    "Para que esta revolución sea beneficiosa, necesitamos una vigilancia constante sobre los intereses entre bambalinas y una participación ciudadana robusta que garantice el bien de todos."
+                </p>
+                <div class="inline-block p-[2px] rounded-full bg-gradient-to-r from-electricBlue to-neonCyan">
+                    <button class="px-12 py-4 font-bold text-white transition-all bg-black rounded-full hover:bg-transparent">
+                        Únete a la Conversación
+                    </button>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- Visual Concept Tooltip/Footer (Implicit) -->
+    <div class="fixed bottom-6 right-6 z-50 group">
+        <div class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-full shadow-lg cursor-pointer bg-neonCyan/20 border border-neonCyan/40 backdrop-blur-md group-hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-neonCyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        </div>
+        <div class="absolute bottom-16 right-0 w-64 p-4 text-xs leading-relaxed transition-all duration-300 opacity-0 pointer-events-none glass rounded-2xl group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 text-slate-300">
+            <span class="block mb-2 font-bold text-neonCyan uppercase tracking-tighter">Nota de Diseño:</span>
+            Inspirado en la estética Cyber-Corporate. Uso de Glassmorphism para representar la "transparencia esquiva" y acentos neón para la energía 5C.
+        </div>
+    </div>
+
+    <script>
+        // Subtle scroll reveal effect
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.glass');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight - 100;
+                if (isVisible) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
