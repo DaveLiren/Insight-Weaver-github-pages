@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avance en Alzheimer: El Gen PHGDH y la IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinical: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        neural: {
+                            light: '#818cf8',
+                            dark: '#4338ca',
+                            accent: '#22d3ee'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+        
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #e0f2fe, #f0f9ff, #ffffff);
+        }
+
+        .neural-line {
+            background: linear-gradient(90deg, transparent, #22d3ee, transparent);
+            height: 2px;
+            width: 100%;
+        }
+
+        .text-balance {
+            text-wrap: balance;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Decorative Background Elements -->
+    <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-blue-100 rounded-full blur-[120px] opacity-50 animate-pulse-slow"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-indigo-100 rounded-full blur-[150px] opacity-40 animate-pulse-slow"></div>
+    </div>
+
+    <!-- Navigation/Top Bar -->
+    <nav class="sticky top-0 z-50 px-6 py-4 glass-card border-b border-slate-200/50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-clinical-900 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-xs">IA</span>
+                </div>
+                <span class="font-extrabold tracking-tight text-slate-900">IASimov <span class="text-clinical-800">Technologies</span></span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
+                <span class="hover:text-clinical-800 cursor-pointer transition-colors uppercase tracking-widest text-[10px]">Genética 3D</span>
+                <span class="hover:text-clinical-800 cursor-pointer transition-colors uppercase tracking-widest text-[10px]">Investigación</span>
+                <span class="hover:text-clinical-800 cursor-pointer transition-colors uppercase tracking-widest text-[10px]">IA Médica</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-12 lg:py-24">
+        
+        <!-- Hero Section -->
+        <header class="text-center mb-20">
+            <div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-clinical-100 text-clinical-900 text-xs font-bold tracking-widest uppercase animate-bounce">
+                Especial Reporte Científico
+            </div>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-8 text-balance">
+                Descubrimiento de causas de Alzheimer vía <span class="text-transparent bg-clip-text bg-gradient-to-r from-clinical-800 to-indigo-600">Modelado 3D con IA</span>
+            </h1>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-slate-500 font-medium mb-12">
+                <div class="flex items-center gap-2 italic">
+                    <span class="w-8 h-[1px] bg-slate-300"></span>
+                    Por IASimov Technologies
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-clinical-800"></span>
+                    21 de Enero, 2026
+                </div>
+            </div>
+
+            <!-- Concept Visual Placeholder Representation (CSS Styled) -->
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 shadow-2xl flex items-center justify-center">
+                    <!-- Abstract representation of the brain/protein with IA lines -->
+                    <div class="absolute inset-0 opacity-30">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] border-[1px] border-cyan-400 rounded-full animate-pulse"></div>
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] border-[1px] border-indigo-400 rounded-full animate-pulse-slow"></div>
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] h-[40%] border-[1px] border-blue-400 rounded-full animate-pulse"></div>
+                    </div>
+                    <div class="z-10 text-center p-8">
+                        <div class="w-24 h-24 mx-auto mb-6 bg-cyan-400 rounded-full blur-2xl opacity-50 animate-pulse"></div>
+                        <h2 class="text-white text-xl md:text-2xl font-light tracking-widest italic font-serif max-w-2xl text-balance">
+                            "Visualización del gen PHGDH: Un elemento luminoso y disruptivo en la arquitectura neuronal"
+                        </h2>
+                        <div class="mt-6 flex justify-center gap-4">
+                            <div class="h-1 w-12 bg-cyan-500 rounded-full"></div>
+                            <div class="h-1 w-4 bg-indigo-500 rounded-full"></div>
+                            <div class="h-1 w-2 bg-white rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 text-sm text-slate-400 font-medium flex items-center justify-center gap-2 italic">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Representación conceptual: Análisis estructural de proteínas asistido por IA (Relación 16:9)
+                </div>
+            </div>
+        </header>
+
+        <!-- Bento Grid Content -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8">
+            
+            <!-- Intro Paragraph - Wide -->
+            <div class="md:col-span-8 glass-card p-8 lg:p-12 rounded-3xl">
+                <p class="text-lg md:text-xl font-serif text-slate-700 leading-relaxed first-letter:text-5xl first-letter:font-extrabold first-letter:text-clinical-900 first-letter:mr-3 first-letter:float-left">
+                    Durante décadas, la enfermedad de Alzheimer ha permanecido como uno de los enigmas más persistentes y desgarradores de la medicina, una fuerza implacable que despoja la memoria y la identidad. Si bien las placas amiloides y los ovillos de tau han sido los villanos principales en esta narrativa, la comprensión de sus orígenes y desencadenantes ha sido un camino sinuoso, plagado de hipótesis y callejones sin salida.
+                </p>
+                <div class="my-8 h-px bg-slate-100"></div>
+                <p class="text-slate-600 font-serif leading-relaxed italic">
+                    Sin embargo, en un giro trascendental que recalibra nuestra visión de la neurodegeneración, la inteligencia artificial (AI) ha irrumpido en el escenario, no solo como una herramienta, sino como una mente exploradora capaz de desvelar secretos moleculares que antes eran invisibles al ojo humano y a las metodologías convencionales.
+                </p>
+            </div>
+
+            <!-- Stats/Callout Card - Small -->
+            <div class="md:col-span-4 bg-clinical-900 rounded-3xl p-8 text-white flex flex-col justify-between shadow-xl overflow-hidden relative group">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:rotate-12 transition-transform duration-700">
+                    <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                </div>
+                <div>
+                    <span class="text-cyan-400 text-xs font-bold tracking-widest uppercase">Fuente Destacada</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-4 leading-tight">Revista Cell</h3>
+                    <p class="text-clinical-100/80 text-sm leading-relaxed">Publicado por científicos de la Universidad de California San Diego en Abril de 2025.</p>
+                </div>
+                <div class="mt-8">
+                    <div class="text-4xl font-extrabold text-cyan-400">PHGDH</div>
+                    <p class="text-xs uppercase tracking-tighter opacity-60">Fosfoglicerato Deshidrogenasa</p>
+                </div>
+            </div>
+
+            <!-- Main Content Section 1 -->
+            <section class="md:col-span-12 grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-extrabold text-slate-900 flex items-center gap-3">
+                        <span class="text-clinical-800">01.</span> De Biomarcador a Orquestador
+                    </h2>
+                    <div class="neural-line"></div>
+                    <p class="text-slate-700 font-serif leading-relaxed text-lg">
+                        Hasta hace poco, el gen <strong class="text-clinical-900">PHGDH</strong> era conocido principalmente por su papel enzimático en la producción del aminoácido serina, vital para la salud celular. Su presencia elevada en cerebros de pacientes era vista como un indicador, una señal, pero no como un motor primario de la patología.
+                    </p>
+                    <div class="p-6 bg-white border-l-4 border-indigo-500 rounded-r-2xl shadow-sm italic text-slate-600">
+                        "La AI catapultó al PHGDH de una simple correlación a una causalidad fundamental."
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-extrabold text-slate-900 italic">El fenómeno del "Moonlighting"</h3>
+                    <p class="text-slate-700 font-serif leading-relaxed">
+                        La verdadera genialidad de esta investigación radica en cómo la AI permitió visualizar la estructura tridimensional de la proteína con una resolución inalcanzable. Esta reconstrucción digital reveló una subestructura hasta entonces desconocida: un <strong>dominio de unión al ADN</strong>.
+                    </p>
+                    <p class="text-slate-700 font-serif leading-relaxed">
+                        Al unirse directamente al ADN, activa genes específicos en las células cerebrales, desestabilizando el equilibrio de la regulación génica. Este desajuste molecular inicia una cascada de problemas que desembocan en las etapas tempranas de la enfermedad.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Therapeutic Section - Full Width High Impact -->
+            <div class="md:col-span-12 mt-16 relative">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-900 to-clinical-900 rounded-[3rem] -rotate-1 scale-[1.02] shadow-2xl"></div>
+                <div class="relative bg-white rounded-[3rem] p-8 md:p-16 border border-slate-100 flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-1/2">
+                        <span class="text-indigo-600 text-xs font-black tracking-[0.2em] uppercase">Intervención de Próxima Generación</span>
+                        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mt-4 mb-8 leading-tight">La Promesa de <span class="text-indigo-600">NCT-503</span></h2>
+                        <p class="text-slate-600 text-lg font-serif mb-6">
+                            El modelado por AI predijo que la molécula NCT-503 tiene la capacidad de bloquear específicamente la capacidad de la PHGDH para unirse al ADN, sin interferir con su función enzimática esencial.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <span class="text-slate-700 font-medium">Ralentización significativa de la progresión.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <span class="text-slate-700 font-medium">Mejora de la memoria y reducción de ansiedad.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <span class="text-slate-700 font-medium">Estrategia preventiva antes de la formación de placas.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-1/2 w-full">
+                        <div class="aspect-square glass-card rounded-full p-12 flex flex-col items-center justify-center text-center relative overflow-hidden group">
+                            <div class="absolute inset-0 bg-indigo-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-10">
+                                <div class="text-6xl font-black text-indigo-600 mb-2">3D</div>
+                                <div class="text-sm font-bold text-slate-400 tracking-widest uppercase mb-4">Mapeo Molecular</div>
+                                <p class="text-slate-500 text-sm leading-relaxed px-4">
+                                    Precisión de altísima resolución permitida por redes neuronales profundas para el diseño de fármacos específicos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conclusion Section -->
+            <section class="md:col-span-12 mt-20 text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-8">Un Nuevo Paradigma en la Medicina</h2>
+                <div class="space-y-6 text-slate-600 font-serif text-lg leading-relaxed">
+                    <p>
+                        La saga del gen PHGDH y el Alzheimer es mucho más que un avance aislado; es un testimonio elocuente de la convergencia de la biología molecular, la neurología y la inteligencia artificial. La AI no es solo una herramienta, sino un catalizador para la creatividad científica.
+                    </p>
+                    <p class="font-bold text-slate-800">
+                        Nos encontramos en el umbral de una era en la que la medicina personalizada, predictiva y preventiva, impulsada por algoritmos inteligentes, podría transformar radicalmente la salud humana.
+                    </p>
+                    <p>
+                        Aun cuando el camino desde el laboratorio hasta la clínica es largo, la revelación del PHGDH y la identificación de NCT-503 son faros de esperanza, iluminando una ruta más clara hacia un futuro donde el Alzheimer ya no sea una sentencia ineludible.
+                    </p>
+                </div>
+                
+                <div class="mt-16 pt-12 border-t border-slate-200 flex flex-wrap justify-center gap-12">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-slate-900">100%</div>
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">Precisión IA</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-slate-900">2026</div>
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">Era de Innovación</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-slate-900">PHGDH</div>
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">Blanco Terapéutico</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Interactive CTA / Element -->
+        <div class="mt-24 p-12 bg-slate-900 rounded-[2rem] text-center shadow-2xl relative overflow-hidden group">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500"></div>
+            <h3 class="text-2xl font-bold text-white mb-6">¿Interesado en los detalles técnicos del modelo?</h3>
+            <p class="text-slate-400 mb-8 max-w-xl mx-auto">Descargue el resumen ejecutivo de IASimov Technologies sobre la implementación de NCT-503 en entornos clínicos.</p>
+            <button class="px-8 py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-clinical-100 transition-all active:scale-95 shadow-lg flex items-center gap-3 mx-auto">
+                Ver Documentación Técnica
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Script for subtle interactions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            // Adding classes for animation if they aren't already handled by Tailwind
+            document.querySelectorAll('section, .glass-card').forEach(el => {
+                el.classList.add('transition-all', 'duration-1000', 'ease-out', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
