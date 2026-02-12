@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar AI Foundations | The New Cosmic Frontier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        space: {
+                            950: '#020617',
+                            900: '#0f172a',
+                            800: '#1e293b',
+                        },
+                        lunar: {
+                            light: '#f1f5f9',
+                            blue: '#38bdf8',
+                            glow: '#7dd3fc',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(to bottom right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, #1e293b 0%, #020617 100%);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        .bento-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-space-950 text-slate-300 selection:bg-lunar-blue/30 overflow-x-hidden">
+
+    <!-- Cinematic Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden py-20 px-6">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-[120px] animate-pulse-slow"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl w-full text-center space-y-8">
+            <div class="inline-block px-4 py-1.5 rounded-full border border-lunar-blue/30 bg-lunar-blue/10 text-lunar-blue text-sm font-semibold tracking-wider uppercase mb-4">
+                Future Tech Analysis
+            </div>
+            <h1 class="text-6xl md:text-8xl font-serif font-bold text-white leading-tight">
+                AI Satellite <span class="italic text-gradient">Foundries</span> on the Moon
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
+                Elon Musk's vision of extraterrestrial silicon architects: Redefining sovereignty, intelligence, and the future of human expansion.
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 pt-10">
+                <a href="#vision" class="px-8 py-4 bg-white text-space-950 rounded-full font-bold hover:bg-lunar-blue transition-colors duration-300">Explorar Visión</a>
+                <a href="#geopolitics" class="px-8 py-4 border border-slate-700 rounded-full font-bold hover:border-lunar-blue hover:text-white transition-all duration-300">Análisis Geopolítico</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Concept Breakout -->
+    <section class="px-6 py-12">
+        <div class="max-w-6xl mx-auto glass-panel p-8 md:p-12 rounded-3xl relative overflow-hidden group">
+            <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-white animate-float">
+                    <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.38 5.38 0 0 1-4.4 2.26 5.4 5.4 0 0 1-4.14-1.9 5.38 5.38 0 0 1 2.26-4.4c-.44-.06-.9-.1-1.36-.1Z"/>
+                </svg>
+            </div>
+            <h2 class="text-sm font-bold uppercase tracking-[0.2em] text-lunar-blue mb-6">Visual Concept: Project Moonshot</h2>
+            <p class="text-xl md:text-2xl font-serif italic text-white leading-relaxed">
+                "Un complejo industrial ultra-moderno anidado en cráteres lunares, donde brazos robóticos ensamblan satélites de IA bajo el brillo de la Tierra. Un 'mass driver' electromagnético lanza pulsos de tecnología al vacío, mientras redes holográficas de vigilancia envuelven el globo terrestre."
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content Bento Grid -->
+    <main class="max-w-7xl mx-auto px-6 py-24 space-y-24">
+        
+        <!-- Section 1: The Vision -->
+        <section id="vision" class="space-y-12">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-slate-800 pb-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">El Sueño de Silicio</h2>
+                    <p class="text-slate-400 text-lg">La convergencia de SpaceX y xAI para trascender las limitaciones terrestres.</p>
+                </div>
+                <div class="text-6xl font-serif text-slate-800 hidden md:block">01</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <div class="md:col-span-7 glass-panel p-10 rounded-3xl bento-card">
+                    <h3 class="text-2xl font-semibold text-white mb-6">Arquitectos en el Cráter</h3>
+                    <p class="leading-relaxed mb-6">
+                        El núcleo del proyecto reside en fabricar hardware de computación de IA directamente en la Luna. ¿Por qué? Para escapar de la crisis de recursos en la Tierra. El espacio ofrece energía solar inagotable y un vacío térmico ideal para procesadores de alto rendimiento.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="p-4 bg-slate-900/50 rounded-xl border border-slate-800">
+                            <span class="block text-lunar-blue text-2xl font-bold mb-1">Mass Driver</span>
+                            <span class="text-xs text-slate-500 uppercase">Catapulta Electromagnética</span>
+                        </div>
+                        <div class="p-4 bg-slate-900/50 rounded-xl border border-slate-800">
+                            <span class="block text-lunar-blue text-2xl font-bold mb-1">Starship</span>
+                            <span class="text-xs text-slate-500 uppercase">Logística Interplanetaria</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-5 bg-gradient-to-br from-blue-600 to-indigo-900 p-10 rounded-3xl flex flex-col justify-end relative overflow-hidden bento-card">
+                    <div class="absolute top-0 right-0 p-6 opacity-20">
+                        <svg width="100" height="100" fill="white" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Escala Kardashev</h3>
+                    <p class="text-blue-100/80">Musk visualiza a la humanidad ascendiendo niveles de civilización, utilizando la energía solar espacial para alimentar una red de inteligencia que supere cualquier capacidad terrestre actual.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Geopolitics & Militarization -->
+        <section id="geopolitics" class="space-y-12">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-slate-800 pb-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Militarización Silente</h2>
+                    <p class="text-slate-400 text-lg">La Luna como el nuevo tablero de ajedrez geopolítico global.</p>
+                </div>
+                <div class="text-6xl font-serif text-slate-800 hidden md:block">02</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Geopolitical Card -->
+                <div class="glass-panel p-8 rounded-3xl border-l-4 border-red-500/50 bento-card">
+                    <h4 class="text-xl font-bold text-white mb-4">Zonas Estratégicas</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        A pesar del Tratado de 1967, el acceso al agua helada en los polos lunares está creando una nueva "fiebre del oro". La soberanía en el espacio cislunar es la prioridad de las potencias actuales.
+                    </p>
+                </div>
+                <!-- Surveillance Card -->
+                <div class="glass-panel p-8 rounded-3xl border-l-4 border-lunar-blue/50 bento-card">
+                    <h4 class="text-xl font-bold text-white mb-4">Vigilancia Total</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Nodos de IA en órbita lunar podrían procesar datos de vigilancia global con una latencia mínima y una resolución sin precedentes, eliminando la privacidad a escala planetaria.
+                    </p>
+                </div>
+                <!-- Energy Weapons Card -->
+                <div class="glass-panel p-8 rounded-3xl border-l-4 border-amber-500/50 bento-card">
+                    <h4 class="text-xl font-bold text-white mb-4">Energía Dirigida</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Láseres y microondas de alta potencia (DEW) se perfilan como las herramientas para mantener la superioridad espacial, capaces de cegar satélites o interrumpir comunicaciones.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Environmental & Ethics -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-block px-3 py-1 rounded bg-red-500/10 text-red-400 text-xs font-bold tracking-widest uppercase">Critical Risks</div>
+                <h2 class="text-4xl font-bold text-white">La Huella en un Mundo Virgen</h2>
+                <div class="space-y-6 text-slate-400 leading-relaxed">
+                    <p>
+                        La industrialización lunar no es gratuita. La minería de regolito alterará visualmente la Luna para siempre. Sin atmósfera ni viento, cada desecho y cada cicatriz industrial permanecerá inmutable por milenios.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <span class="w-1.5 h-1.5 rounded-full bg-lunar-blue mt-2 shrink-0"></span>
+                            <span><strong>Pérdida de Sitios Científicos:</strong> La radioastronomía depende del silencio de la cara oculta de la Luna, ahora amenazado por interferencias de IA.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="w-1.5 h-1.5 rounded-full bg-lunar-blue mt-2 shrink-0"></span>
+                            <span><strong>Dilema de Recursos:</strong> Inversiones billonarias en el espacio mientras la Tierra enfrenta crisis climáticas y desigualdades sistémicas.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="aspect-square glass-panel rounded-full flex items-center justify-center p-12 border-dashed border-slate-700">
+                    <div class="text-center space-y-4">
+                        <span class="text-6xl">🌍</span>
+                        <div class="h-24 w-px bg-gradient-to-b from-lunar-blue to-transparent mx-auto"></div>
+                        <span class="text-6xl">🌑</span>
+                    </div>
+                </div>
+                <div class="absolute -top-4 -right-4 bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-2xl max-w-[200px]">
+                    <p class="text-xs text-slate-300 font-medium">"La Luna tiene un significado cultural incalculable. Su industrialización es una cuestión ética de patrimonio cósmico."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: The Fork in the Road -->
+        <section class="py-20 border-t border-slate-800">
+            <div class="text-center max-w-3xl mx-auto space-y-6">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white">El Alba de una Era Incierta</h2>
+                <p class="text-slate-400 text-lg">
+                    Estamos en una encrucijada. La Luna puede ser el trampolín hacia las estrellas o el espejo de nuestras peores ambiciones terrestres. La decisión de cómo proceder con esta frontera definirá el siguiente siglo de historia humana.
+                </p>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-10 rounded-3xl bg-emerald-950/20 border border-emerald-500/20 group hover:border-emerald-500/50 transition-all">
+                    <h3 class="text-emerald-400 font-bold text-2xl mb-4 italic">El Camino de la Luz</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Ciudades autosuficientes, investigación científica compartida, materiales puros y el fin de la dependencia de los recursos terrestres limitados.</p>
+                </div>
+                <div class="p-10 rounded-3xl bg-red-950/20 border border-red-500/20 group hover:border-red-500/50 transition-all">
+                    <h3 class="text-red-400 font-bold text-2xl mb-4 italic">La Trampa de Tucídides</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Conflictos por hegemonía espacial, fortalezas orbitales de vigilancia y la extensión de las guerras terrestres al vacío del espacio.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive CTA -->
+    <div class="max-w-7xl mx-auto px-6 pb-20">
+        <div class="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-space-900 to-space-800 p-12 text-center border border-white/5">
+            <div class="relative z-10 space-y-6">
+                <h2 class="text-3xl md:text-5xl font-bold text-white">¿Hacia dónde miramos?</h2>
+                <p class="text-slate-400 max-w-xl mx-auto">La innovación sin ética global clara es un salto al vacío. El tiempo de la gobernanza espacial es hoy.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="px-8 py-3 bg-lunar-blue text-space-950 rounded-full font-bold hover:scale-105 transition-transform" onclick="window.open('https://wikipedia.org/wiki/Moon_landing', '_blank')">Documentación Lunar</button>
+                    <button class="px-8 py-3 bg-white/10 text-white rounded-full font-bold hover:bg-white/20 transition-colors" onclick="window.open('https://google.com/search?q=SpaceX+Starship+Moon', '_blank')">Últimas Noticias</button>
+                </div>
+            </div>
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+                <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(56,189,248,0.3),transparent)]"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
