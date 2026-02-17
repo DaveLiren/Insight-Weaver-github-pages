@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elon Musk: El Ocaso del Código</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        void: '#030712',
+                        nebula: '#4f46e5',
+                        neural: '#06b6d4',
+                        circuit: '#10b981',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #030712;
+            color: #e5e7eb;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(6, 182, 212, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #fff 30%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .accent-gradient {
+            background: linear-gradient(90deg, #4f46e5, #06b6d4, #10b981);
+        }
+
+        .glow {
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.2);
+        }
+
+        .binary-bg {
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="selection:bg-neural selection:text-void">
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 binary-bg font-mono text-xs overflow-hidden z-0 select-none">
+        01101110 01100101 01110101 01110010 01100001 01101100 01101001 01101110 01101011 <br>
+        10101010 11001101 00010101 11110000 10101010 11001101 00010101 11110000 <br>
+        01110100 01101000 01100101 00100000 01100101 01101110 01100100 00100000 01101111 01100110 <br>
+        01100011 01101111 01100100 01100101 00100000 01101001 01110011 00100000 01101110 01100101 01100001 01110010 <br>
+        <!-- Repeat content -->
+        01101110 01100101 01110101 01110010 01100001 01101100 01101001 01101110 01101011 <br>
+        10101010 11001101 00010101 11110000 10101010 11001101 00010101 11110000 <br>
+        01110100 01101000 01100101 00100000 01100101 01101110 01100100 00100000 01101111 01100110 <br>
+        01100011 01101111 01100100 01100101 00100000 01101001 01110011 00100000 01101110 01100101 01100001 01110010
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20 overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-nebula/20 blur-[120px] rounded-full"></div>
+        
+        <div class="z-10 text-center max-w-5xl">
+            <span class="inline-block px-4 py-1.5 rounded-full border border-neural/30 bg-neural/10 text-neural text-sm font-semibold mb-6 tracking-widest uppercase animate-pulse">
+                Futuro de la IA 2024-2026
+            </span>
+            <h1 class="font-display text-5xl md:text-8xl font-extrabold tracking-tight mb-8 leading-[1.1]">
+                <span class="gradient-text">La Programación</span><br>
+                <span class="text-neural">Muere Este Año</span>
+            </h1>
+            <p class="font-sans text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12">
+                Elon Musk predice el fin de la sintaxis y el surgimiento de la <span class="text-white italic">"imaginación aplicada al software"</span>.
+            </p>
+            
+            <!-- Visual Concept Placeholder Replacement (Styled Card) -->
+            <div class="glass-card rounded-3xl p-6 md:p-8 max-w-4xl mx-auto mb-16 overflow-hidden relative group">
+                <div class="absolute inset-0 bg-gradient-to-br from-neural/20 via-transparent to-nebula/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                <div class="relative z-10">
+                    <div class="aspect-video bg-void/50 rounded-xl border border-white/10 flex items-center justify-center p-8 text-center">
+                        <div class="animate-float">
+                            <svg class="w-16 h-16 text-neural mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 21l-1 1h8l-1-1-.75-4M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <p class="text-slate-400 font-mono text-sm uppercase tracking-widest mb-4">Concepto Visual</p>
+                            <div class="mt-8 mb-8">
+                            <img src="programacion-muere.png" alt="Ilustración de El Crepúsculo del Programador y el fin del código tradicional" class="w-full rounded-lg shadow-lg border border-gray-700">
+                            <p class="text-center text-sm text-gray-500 mt-2 italic">Ilustración generada por IA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 animate-bounce">
+            <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </header>
+
+    <main class="relative z-10 px-6 max-w-7xl mx-auto pb-32">
+        
+        <!-- Bento Grid Section -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24">
+            <!-- Main Content 1 -->
+            <div class="md:col-span-8 glass-card rounded-3xl p-8 md:p-12 scroll-reveal">
+                <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 text-white">El Crepúsculo del Programador</h2>
+                <div class="prose prose-invert max-w-none text-slate-300 space-y-6 text-lg">
+                    <p>
+                        Elon Musk ha generado un debate global al predecir que para <span class="text-neural font-bold">diciembre de 2026</span>, la programación tradicional dejará de existir. Su premisa es que la inteligencia artificial trascenderá los lenguajes de programación y compiladores, generando directamente instrucciones de máquina.
+                    </p>
+                    <p>
+                        Esto marcaría el fin de la sintaxis y la depuración de scripts, convirtiendo la <span class="text-white font-semibold">imaginación humana</span> en la única interfaz necesaria para la creación de software.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Side Card 1 -->
+            <div class="md:col-span-4 glass-card rounded-3xl p-8 bg-nebula/10 border-nebula/20 flex flex-col justify-center scroll-reveal">
+                <div class="text-5xl font-extrabold text-nebula mb-4">2026</div>
+                <p class="text-slate-300 font-medium">El año en que la Inteligencia Artificial General (IAG) superará por completo las capacidades cognitivas humanas en tareas de desarrollo.</p>
+            </div>
+
+            <!-- Full Width Quote -->
+            <div class="md:col-span-12 glass-card rounded-3xl p-10 text-center scroll-reveal">
+                <p class="font-display text-2xl md:text-4xl font-light italic text-slate-200">
+                    "La programación se democratizaría enormemente, permitiendo a cualquier persona con una idea materializarla sin necesidad de años de estudio."
+                </p>
+            </div>
+
+            <!-- Side Card 2 -->
+            <div class="md:col-span-4 glass-card rounded-3xl p-8 bg-circuit/10 border-circuit/20 scroll-reveal">
+                <h3 class="font-display text-2xl font-bold text-circuit mb-4">Eficiencia Suprema</h3>
+                <p class="text-slate-300">El código generado directamente por IA en binario podría ser intrínsecamente más optimizado que el escrito por humanos, eliminando abstracciones innecesarias.</p>
+            </div>
+
+            <!-- Main Content 2 -->
+            <div class="md:col-span-8 glass-card rounded-3xl p-8 md:p-12 scroll-reveal">
+                <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 text-white">Cuando la Imaginación se Vuelve Binario</h2>
+                <p class="text-slate-300 text-lg leading-relaxed">
+                    Actualmente, concebir una aplicación implica traducir una idea a un lenguaje intermedio (Python, Java, C++). Musk postula que la IA podrá tomar un concepto abstracto o una descripción simple y convertirla <span class="text-neural">instantáneamente</span> en el binario más eficiente.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                    <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+                        <span class="text-circuit font-bold block mb-2">Ciclos Acelerados</span>
+                        <p class="text-sm text-slate-400">Proyectos de años se completarán en horas, impulsando una innovación sin precedentes.</p>
+                    </div>
+                    <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+                        <span class="text-neural font-bold block mb-2">Zero Bugs</span>
+                        <p class="text-sm text-slate-400">La eliminación del factor humano en la escritura de sintaxis reduce el error a cero.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Neuralink Section -->
+        <div class="mb-24 scroll-reveal">
+            <div class="relative overflow-hidden rounded-[40px] glass-card p-12 group">
+                <div class="absolute -right-20 -top-20 w-80 h-80 bg-neural/10 blur-[100px] group-hover:bg-neural/20 transition-all duration-700"></div>
+                
+                <div class="relative z-10 flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2">
+                        <h2 class="font-display text-4xl md:text-5xl font-extrabold mb-6">Neuralink: <span class="text-neural">El Eslabón Perdido</span></h2>
+                        <p class="text-slate-300 text-lg mb-6 leading-relaxed">
+                            Si la IA puede generar binarios directamente de un concepto, la entrada ideal sería el pensamiento puro. Neuralink proporciona la interfaz definitiva: la capacidad de controlar dispositivos o "programar" software eliminando las barreras físicas del teclado.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="mt-1 w-6 h-6 rounded-full bg-neural/20 flex items-center justify-center flex-shrink-0">
+                                    <div class="w-2 h-2 rounded-full bg-neural"></div>
+                                </div>
+                                <p class="text-slate-400"><strong class="text-white">Cerebro como Interfaz:</strong> La cúspide de la interacción humano-computadora.</p>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="mt-1 w-6 h-6 rounded-full bg-neural/20 flex items-center justify-center flex-shrink-0">
+                                    <div class="w-2 h-2 rounded-full bg-neural"></div>
+                                </div>
+                                <p class="text-slate-400"><strong class="text-white">Desafíos Éticos:</strong> Autonomía y privacidad mental en un mundo de mentes interconectadas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 w-full">
+                        <div class="aspect-square rounded-3xl bg-void border border-white/10 relative overflow-hidden flex items-center justify-center group">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-neural/20 to-transparent"></div>
+                            <div class="font-mono text-[10px] text-neural/30 leading-tight">
+                                <!-- Simulated Neural Map -->
+                                <pre>
+                                    0110101011010101010101
+                                    1010101011010101010101
+                                    0101  010101010101  10
+                                    1010  101101010101  01
+                                    0110101011010101010101
+                                    1010101011010101010101
+                                    0110101011010101010101
+                                    1010101011010101010101
+                                </pre>
+                            </div>
+                            <div class="absolute w-48 h-48 rounded-full border border-neural/50 animate-pulse flex items-center justify-center">
+                                <div class="w-32 h-32 rounded-full border border-neural/30 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-neural/20 glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Implications Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 scroll-reveal">
+            <div class="glass-card p-8 rounded-3xl border-t-4 border-t-neural">
+                <h3 class="font-display text-xl font-bold mb-4 text-white">El Dilema de la Caja Negra</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Una IA que genera binarios sin lenguajes legibles crea un sistema imposible de auditar por humanos, planteando riesgos de seguridad y sesgos invisibles.</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl border-t-4 border-t-nebula">
+                <h3 class="font-display text-xl font-bold mb-4 text-white">Redefinición Creativa</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">El valor migra de la ejecución mecánica a la originalidad de la idea. Nace la economía del "pensamiento puro" y la intención estratégica.</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl border-t-4 border-t-circuit">
+                <h3 class="font-display text-xl font-bold mb-4 text-white">Nuevo Paradigma</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">La abundancia de software gratuito y perfecto obligará a reestructurar modelos económicos y sistemas educativos globales.</p>
+            </div>
+        </div>
+
+        <!-- Closing Section -->
+        <section class="text-center max-w-3xl mx-auto scroll-reveal">
+            <h2 class="font-display text-4xl font-extrabold mb-8 text-white">Hacia un Futuro Indescifrable</h2>
+            <p class="text-slate-400 text-xl leading-relaxed mb-12">
+                Nos encontramos al borde de un precipicio tecnológico. La "muerte de la programación" no es solo el fin de una disciplina, es el amanecer de un nuevo modo de existencia donde la línea entre el pensamiento humano y la acción de la máquina se desvanece.
+            </p>
+            <div class="h-px w-full accent-gradient mb-12"></div>
+            <p class="font-mono text-neural text-sm tracking-widest uppercase">
+                Fin del código. Inicio de la intención.
+            </p>
+        </section>
+
+    </main>
+
+    <script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
+
