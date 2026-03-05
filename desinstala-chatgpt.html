@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#UninstallChatGPT | La Rebelión Ética</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0a0a0c',
+                            accent: '#ff3b3b',
+                            ethical: '#10b981',
+                            neutral: '#1f2937',
+                            void: '#000000'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0c;
+            color: #e5e7eb;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient-red {
+            background: linear-gradient(to right, #ff4b2b, #ff416c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gradient-green {
+            background: linear-gradient(to right, #00b09b, #96c93d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-mesh {
+            background-image: radial-gradient(at 0% 0%, hsla(0,100%,15%,0.15) 0, transparent 50%), 
+                              radial-gradient(at 100% 100%, hsla(150,100%,15%,0.15) 0, transparent 50%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 1.5rem;
+        }
+        @media (max-width: 1024px) {
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 640px) {
+            .bento-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-brand-accent selection:text-white">
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 pb-12 hero-mesh px-6 overflow-hidden">
+        <!-- Visual Concept Background representation -->
+        <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-red-600 rounded-full blur-[120px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-600 rounded-full blur-[120px] animate-pulse-slow"></div>
+        </div>
+
+        <div class="max-w-6xl w-full relative z-10 text-center">
+            <div class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-brand-accent/10 border border-brand-accent/30 text-brand-accent rounded-full animate-bounce">
+                Movimiento Global #UninstallChatGPT
+            </div>
+            <h1 class="font-display text-5xl md:text-8xl mb-8 leading-tight tracking-tight">
+                El Dilema de <span class="italic text-gradient-red">Prometeo Digital</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
+                Cuando la inteligencia artificial se viste de guerra, la humanidad responde. Una crónica del sismo ético que fracturó a OpenAI.
+            </p>
+            
+            <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <div class="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10 glass-card">
+                    <div class="text-3xl font-bold text-brand-accent">+295%</div>
+                    <div class="text-left text-xs text-gray-400 uppercase tracking-tighter leading-none">Desinstalaciones<br>en 24 Horas</div>
+                </div>
+                <div class="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10 glass-card">
+                    <div class="text-3xl font-bold text-brand-ethical">#1</div>
+                    <div class="text-left text-xs text-gray-400 uppercase tracking-tighter leading-none">Claude en la<br>App Store</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+        
+        <div class="bento-grid">
+            <!-- Article Intro -->
+            <div class="col-span-1 lg:col-span-2 glass-card p-10 rounded-3xl">
+                <h2 class="text-3xl font-display font-bold mb-6 text-white leading-snug">Cuando la IA se Viste de Guerra</h2>
+                <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                    <p>
+                        La revelación de un pacto entre <span class="text-white font-semibold">OpenAI y el Departamento de Defensa de Estados Unidos</span> ha generado un "sismo ético". Este acuerdo discreto escaló a un movimiento global de rechazo digital bajo la etiqueta <span class="text-brand-accent font-bold">#UninstallChatGPT</span>.
+                    </p>
+                    <p>
+                        La reacción provocó un éxodo cuantificable de usuarios, evidenciando la frágil frontera entre el progreso tecnológico y la responsabilidad moral en un mundo polarizado.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Visual Concept Sidebar -->
+            <div class="col-span-1 lg:col-span-2 bg-gradient-to-br from-brand-neutral to-brand-void p-1 rounded-3xl">
+                <div class="bg-brand-dark/90 h-full w-full rounded-[1.4rem] p-10 flex flex-col justify-center border border-white/5">
+                    <h3 class="text-brand-accent font-bold uppercase tracking-widest text-sm mb-4">Concepto Visual</h3>
+                    <p class="text-gray-400 italic text-sm leading-relaxed">
+                        "Un campo de batalla digital: a la izquierda, un logo de ChatGPT fracturado en carbón y carmesí metálico con grietas rojas siniestras. A la derecha, el logo de Claude (Anthropic) brilla con un aura etérea de verdes y azules, sugiriendo resiliencia ética. Al fondo, la estructura brutalista del Pentágono bajo una luz de acero frío..."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="col-span-1 lg:col-span-3 glass-card p-10 rounded-3xl overflow-hidden relative">
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div>
+                        <h3 class="text-5xl font-extrabold text-brand-accent mb-2">295%</h3>
+                        <p class="text-gray-400 text-sm uppercase font-bold tracking-widest">Pico de Desinstalaciones</p>
+                        <p class="mt-4 text-gray-500 text-sm">El 28 de febrero marcó el día del veredicto ciudadano contra la militarización de la IA.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-5xl font-extrabold text-brand-accent mb-2">775%</h3>
+                        <p class="text-gray-400 text-sm uppercase font-bold tracking-widest">Reseñas de 1 Estrella</p>
+                        <p class="mt-4 text-gray-500 text-sm">Un crecimiento exponencial del sentimiento negativo en las tiendas de aplicaciones globales.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-5xl font-extrabold text-brand-ethical mb-2">+51%</h3>
+                        <p class="text-gray-400 text-sm uppercase font-bold tracking-widest">Crecimiento de Claude</p>
+                        <p class="mt-4 text-gray-500 text-sm">El "Efecto Claude" demuestra que la ética es ahora un factor determinante de mercado.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Small Info Block -->
+            <div class="col-span-1 glass-card p-8 rounded-3xl flex items-center justify-center text-center">
+                <p class="text-brand-ethical font-bold text-xl leading-tight italic">
+                    "La confianza se construye sobre transparencia y valores."
+                </p>
+            </div>
+
+            <!-- Altman's Perspective -->
+            <div class="col-span-1 lg:col-span-2 p-10 rounded-3xl bg-white text-brand-dark">
+                <h2 class="text-3xl font-display font-bold mb-6">Altman en la Mira</h2>
+                <div class="space-y-4 text-brand-dark/80 text-lg">
+                    <p>Sam Altman, CEO de OpenAI, calificó el anuncio como <span class="font-bold">"apresurado"</span>. Defendió la decisión como necesaria para "desescalar tensiones".</p>
+                    <p class="border-l-4 border-brand-accent pl-6 py-2 italic font-medium">
+                        "OpenAI no tiene autoridad para dictar cómo el Pentágono utilizará su tecnología de IA en sus decisiones operacionales."
+                    </p>
+                    <p>Esta declaración profundiza la inquietud: si no hay garantía del uso final, ¿cuán genuino es el compromiso ético de la corporación?</p>
+                </div>
+            </div>
+
+            <!-- The Ethical Rival -->
+            <div class="col-span-1 lg:col-span-2 glass-card p-10 rounded-3xl relative group overflow-hidden">
+                <div class="absolute -right-20 -top-20 w-64 h-64 bg-brand-ethical/10 rounded-full blur-3xl group-hover:bg-brand-ethical/20 transition-all duration-500"></div>
+                <h2 class="text-3xl font-display font-bold mb-6 text-white">El Efecto Claude</h2>
+                <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                    Anthropic rechazó el contrato militar por preocupaciones sobre vigilancia masiva y armas autónomas. Esta decisión impulsó su plataforma al <span class="text-brand-ethical font-bold">puesto #1 de la App Store</span> estadounidense por primera vez en su historia.
+                </p>
+                <div class="bg-white/5 border border-white/10 p-4 rounded-2xl">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm font-bold uppercase text-gray-400 tracking-widest">Market Shift</span>
+                        <span class="text-brand-ethical font-bold">+37% Viernes | +51% Sábado</span>
+                    </div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-brand-ethical h-full w-[88%]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conclusion Section -->
+        <section class="mt-24 text-center max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-display font-bold mb-10 text-white">Un Grito en el Ciberespacio</h2>
+            <p class="text-xl text-gray-400 leading-relaxed mb-12">
+                El movimiento <span class="text-brand-accent">#UninstallChatGPT</span> marca un punto de inflexión. La era de la IA ya no permite a las empresas operar sin escrutinio público. La elección de una IA para la guerra o para la paz es, en última instancia, una elección de la humanidad.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div class="p-8 rounded-2xl border border-white/5 bg-white/2">
+                    <h4 class="text-brand-accent font-bold mb-2 uppercase text-xs tracking-widest">Punto de Inflexión</h4>
+                    <p class="text-gray-300">Los usuarios ya no son solo consumidores pasivos, sino vigilantes éticos de la tecnología que utilizan.</p>
+                </div>
+                <div class="p-8 rounded-2xl border border-white/5 bg-white/2">
+                    <h4 class="text-brand-ethical font-bold mb-2 uppercase text-xs tracking-widest">Futuro de la IA</h4>
+                    <p class="text-gray-300">La diferenciación ética será la moneda de cambio más valiosa en la próxima década tecnológica.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Subtle Navigation/Action -->
+    <div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
+        <div class="bg-brand-dark/80 backdrop-blur-xl border border-white/10 px-6 py-3 rounded-full flex gap-8 items-center shadow-2xl">
+            <a href="https://openai.com" target="_blank" class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-brand-accent transition-colors">OpenAI</a>
+            <div class="w-px h-4 bg-white/10"></div>
+            <a href="https://anthropic.com" target="_blank" class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-brand-ethical transition-colors">Anthropic</a>
+            <div class="w-px h-4 bg-white/10"></div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-brand-accent animate-pulse">#UninstallChatGPT</span>
+        </div>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 -z-10 pointer-events-none">
+        <div class="absolute top-0 left-0 w-full h-full opacity-30 mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+    </div>
+
+</body>
+</html>
