@@ -1,0 +1,258 @@
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waymo’s Austin Taxis Under Scrutiny - IASimov Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@400;700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            accent: '#334155',
+                            highlight: '#f43f5e',
+                            muted: '#64748b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .prose h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.875rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            color: #0f172a;
+            letter-spacing: -0.025em;
+        }
+        .prose p {
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+            color: #374151;
+        }
+        .prose ul {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            list-style-type: none;
+        }
+        .prose li {
+            position: relative;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            font-family: 'Outfit', sans-serif;
+        }
+        .prose li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #f43f5e;
+            font-weight: bold;
+        }
+        .dropcap::first-letter {
+            float: left;
+            font-size: 5rem;
+            line-height: 0.8;
+            padding-right: 0.1em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: #0f172a;
+        }
+        .gradient-border {
+            border-image: linear-gradient(to right, #0f172a, #f43f5e) 1;
+        }
+        ::selection {
+            background-color: #f43f5e;
+            color: white;
+        }
+    </style>
+</head>
+<body class="selection:bg-rose-100 selection:text-rose-900">
+
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-brand-dark rounded-full flex items-center justify-center">
+                    <span class="text-white font-bold text-xs">IA</span>
+                </div>
+                <span class="font-display font-extrabold tracking-tighter text-xl">IASIMOV</span>
+            </div>
+            <div class="text-xs uppercase tracking-widest font-semibold text-brand-muted hidden sm:block">
+                Tecnología e Investigación
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 lg:py-24">
+        <!-- Article Header -->
+        <article>
+            <div class="mb-12">
+                <div class="flex items-center space-x-4 mb-6">
+                    <span class="px-3 py-1 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-widest rounded-full">Reporte Especial</span>
+                    <span class="text-sm text-brand-muted font-sans font-medium">8 de Marzo, 2026</span>
+                </div>
+                
+                <h1 class="font-display font-extrabold text-4xl md:text-6xl text-brand-dark leading-tight mb-8 tracking-tight">
+                    Waymo’s Austin Taxis Under Scrutiny for School Bus and Emergency Signal Failures
+                </h1>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between py-6 border-y border-gray-100 gap-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-rose-50 rounded-full flex items-center justify-center text-rose-600 font-bold">
+                            IA
+                        </div>
+                        <div>
+                            <p class="text-xs text-brand-muted uppercase font-bold tracking-wider">Por</p>
+                            <p class="font-bold text-brand-dark">IASimov Technologies</p>
+                        </div>
+                    </div>
+                    <div class="text-sm text-brand-muted">
+                        <p>Publicado el 8 de Marzo, 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual Concept Section -->
+            <div class="mb-16 group">
+                <div class="relative overflow-hidden rounded-2xl bg-slate-900 aspect-video mb-4 shadow-2xl transition-transform duration-700 hover:scale-[1.01]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/40 to-rose-900/40 flex items-center justify-center p-8">
+                        <div class="text-center">
+                            <svg class="w-12 h-12 text-white/50 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <p class="text-white/60 font-sans text-sm italic max-w-lg mx-auto">Visualización conceptual basada en el reporte de incidentes en Austin, Texas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 border-l-4 border-rose-500 p-6 rounded-r-xl">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-rose-600 mb-2">Concepto Visual</h3>
+                    <p class="text-sm text-slate-600 italic leading-relaxed font-sans">
+                        "A hyper-realistic, cinematic wide-angle shot captured during the blue hour in downtown Austin, featuring a sleek, driverless white robotaxi with prominent spinning LIDAR sensors caught in a moment of systemic failure. The vehicle’s polished metallic surface vividly reflects the pulsing crimson strobe lights of a yellow school bus stopped immediately ahead..."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Article Body -->
+            <div class="prose prose-slate lg:prose-xl max-w-none font-serif">
+                <p class="dropcap">En el corazón tecnológico de Austin, Texas, donde las promesas de la inteligencia artificial suelen encontrarse con la realidad del asfalto, un vehículo autónomo de Waymo cometió en enero pasado un error que ha encendido las alarmas en los organismos reguladores federales. No fue un choque a alta velocidad ni un fallo catastrófico de hardware; fue algo más sutil y, por lo mismo, más inquietante: la incapacidad de un algoritmo —y de su supervisor humano— para interpretar un símbolo universal de seguridad escolar.</p>
+
+                <p>El incidente, en el cual un robotaxi rebasó ilegalmente a un autobús escolar mientras los niños subían a la unidad, se ha convertido en la pieza central de una investigación exhaustiva por parte de la Administración Nacional de Seguridad del Tráfico en las Carreteras (NHTSA) y la Junta Nacional de Seguridad en el Transporte (NTSB). Lo que inicialmente se presentó como un futuro de movilidad impecable, hoy enfrenta un escrutinio crítico sobre cómo estas máquinas interpretan el riesgo en entornos humanos impredecibles.</p>
+
+                <div class="my-12 p-8 bg-brand-dark text-white rounded-3xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3L22.017 3V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM2.01697 21L2.01697 18C2.01697 16.8954 2.91241 16 4.01697 16H7.01697C7.56925 16 8.01697 15.5523 8.01697 15V9C8.01697 8.44772 7.56925 8 7.01697 8H4.01697C2.91241 8 2.01697 7.10457 2.01697 6V3L10.017 3V15C10.017 18.3137 7.3307 21 4.01697 21H2.01697Z" /></svg>
+                    </div>
+                    <blockquote class="relative z-10">
+                        <p class="text-2xl font-display font-bold italic leading-tight mb-4 text-rose-400">"Lo que inicialmente se presentó como un futuro de movilidad impecable, hoy enfrenta un escrutinio crítico sobre cómo estas máquinas interpretan el riesgo..."</p>
+                    </blockquote>
+                </div>
+
+                <h2>El Punto Ciego de la Asistencia Remota</h2>
+                
+                <p>La investigación federal, bajo el expediente <strong>PE24-015</strong>, ha revelado un detalle técnico preocupante sobre el incidente de enero. El vehículo no actuó solo en su error. Un agente humano de "Asistencia Remota" (RA) de Waymo, encargado de supervisar la flota desde un centro de control, autorizó erróneamente al vehículo a avanzar, ignorando el brazo de parada extendido y las luces intermitentes del autobús.</p>
+
+                <p>Este fallo pone de relieve la vulnerabilidad del llamado "enlace de retroceso" o <em>fallback</em>. La NHTSA está evaluando la latencia en la toma de decisiones y si los operadores remotos están proporcionando instrucciones que contravienen las leyes de tránsito locales. No es un caso aislado: las cámaras del Distrito Escolar Independiente de Austin (Austin ISD) han captado aproximadamente dos docenas de violaciones similares por parte de vehículos de Waymo desde septiembre. La pregunta que flota en el aire es si el sistema depende excesivamente de una supervisión humana que, en el momento crítico, carece de la conciencia situacional necesaria.</p>
+
+                <h2>Emergencias en el Limbo Digital</h2>
+
+                <p>Si el riesgo para los escolares es la prioridad uno, la interferencia con los servicios de emergencia ocupa un cercano segundo lugar. En un episodio separado que roza lo distópico, un Waymo bloqueó el paso de una ambulancia que se dirigía a la escena de un tiroteo masivo en el centro de Austin. La parálisis del vehículo obligó a un oficial de policía a tomar una medida extrema: abordar el taxi vacío y maniobrarlo manualmente para despejar la vía.</p>
+
+                <p>Los informes de la NHTSA indican que el Sistema de Conducción Automatizada (ADS) de Waymo exhibe un "comportamiento impredecible" ante sirenas y luces de emergencia. En entornos urbanos complejos, la IA parece tener dificultades para procesar las señales acústicas y visuales que los conductores humanos interpretan por instinto, convirtiendo un obstáculo tecnológico en un riesgo de vida o muerte para quienes dependen de una respuesta rápida de los servicios de rescate.</p>
+
+                <div class="bg-rose-50 border-y border-rose-100 py-10 px-8 my-12 rounded-3xl">
+                    <h2 class="mt-0 text-rose-900 font-display">El Escenario de Austin: Un Laboratorio Hostil</h2>
+                    <p class="text-rose-800/80">Austin se ha convertido en el campo de pruebas definitivo para Waymo, pero la ciudad no se lo está poniendo fácil. El crecimiento explosivo de la capital texana trae consigo zonas de construcción constantes y señalización temporal que el software de Waymo a menudo no logra descifrar. La investigación ha documentado:</p>
+                    
+                    <ul class="text-rose-900 font-medium">
+                        <li><strong>Incursiones en Carriles Contrarios:</strong> Vehículos que invaden el sentido opuesto para esquivar obras, poniendo en riesgo colisiones frontales.</li>
+                        <li><strong>Puntos Muertos en Construcción:</strong> "Bloqueos" donde los vehículos quedan estacionarios al no poder interpretar las señales manuales de los banderilleros humanos, requiriendo una recuperación física.</li>
+                    </ul>
+                </div>
+
+                <h2>Hacia una Regulación de "Caja Negra"</h2>
+
+                <p>Hasta principios de 2026, la NHTSA ha expandido su investigación para cubrir más de 30 incidentes específicos en las áreas de servicio de Waymo, que incluyen Phoenix y San Francisco, además de Austin. El organismo ha exigido a la empresa registros detallados sobre cómo su sistema categoriza a los usuarios vulnerables de la vía y la lógica exacta utilizada para identificar señales de emergencia.</p>
+
+                <p>Waymo, que emitió un retiro de software voluntario a principios de 2024 tras una colisión previa, se encuentra ahora bajo una presión regulatoria sin precedentes. La posibilidad de un retiro obligatorio de mayor alcance pende sobre la compañía, lo que obligaría a una reconfiguración profunda de su arquitectura de toma de decisiones.</p>
+
+                <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent my-16"></div>
+
+                <h2>Conclusión: El Desafío de la Ética Algorítmica</h2>
+
+                <p>Lo que los incidentes en Austin demostraron es que la autonomía total no es solo un problema de sensores y potencia de cómputo; es un problema de juicio. Cuando un vehículo autónomo ignora un autobús escolar o detiene una ambulancia, está fallando en el contrato social implícito de la conducción.</p>
+
+                <p>Para que los ciudadanos de Austin —y del mundo— acepten plenamente la presencia de estos conductores invisibles, las empresas de tecnología deben demostrar que sus sistemas no solo pueden seguir reglas, sino que pueden entender la prioridad de la vida humana en toda su complejidad. Por ahora, el "conductor de Waymo" permanece bajo observación federal, recordándonos que, en la carrera por la innovación, la seguridad no puede ser una actualización de software que llega demasiado tarde.</p>
+            </div>
+        </article>
+
+        <!-- Social Share & End Section -->
+        <section class="mt-20 pt-10 border-t border-gray-100">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex space-x-4">
+                    <button class="px-6 py-2 bg-slate-900 text-white rounded-full font-sans text-sm font-semibold hover:bg-rose-600 transition-colors">Compartir</button>
+                    <button class="px-6 py-2 bg-slate-100 text-slate-600 rounded-full font-sans text-sm font-semibold hover:bg-slate-200 transition-colors">Guardar</button>
+                </div>
+                <div class="text-right">
+                    <p class="text-xs font-bold text-brand-muted uppercase tracking-widest mb-1">Todos los derechos reservados</p>
+                    <p class="text-sm text-slate-400">© 2026 IASimov Technologies. Prohibida su reproducción total o parcial.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scroll Progress Bar -->
+    <div id="progress" class="fixed bottom-0 left-0 h-1.5 bg-rose-500 z-50 transition-all duration-150" style="width: 0%"></div>
+
+    <script>
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progress").style.width = scrolled + "%";
+        };
+
+        // Add smooth reveal for sections
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('h2, .prose p, .bg-rose-50').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
