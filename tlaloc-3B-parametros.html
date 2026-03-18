@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tlaloc: LLM mexicano de 3B parámetros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@300;400;600;800&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mex-teal': '#004d40',
+                        'mex-amber': '#ff8f00',
+                        'deep-space': '#0a0f12',
+                        'glass-white': 'rgba(255, 255, 255, 0.05)',
+                    },
+                    fontFamily: {
+                        header: ['Montserrat', 'sans-serif'],
+                        body: ['Merriweather', 'serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050708;
+            color: #e5e7eb;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #ffc107 0%, #ff8f00 50%, #00bfa5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .dropcap::first-letter {
+            font-family: 'Outfit', sans-serif;
+            float: left;
+            font-size: 5rem;
+            line-height: 1;
+            font-weight: 800;
+            padding-right: 12px;
+            color: #ff8f00;
+        }
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(5, 7, 8, 0.8);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050708;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff8f00;
+        }
+    </style>
+</head>
+<body class="font-body leading-relaxed">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/5">
+        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-gap-2">
+                <div class="w-8 h-8 bg-mex-amber rounded-sm rotate-45 flex items-center justify-center overflow-hidden">
+                    <div class="w-full h-full bg-mex-teal opacity-50 transform -rotate-45"></div>
+                </div>
+                <span class="ml-4 font-display font-bold text-xl tracking-tighter uppercase">IASimov</span>
+            </div>
+            <div class="hidden md:flex gap-8 font-header text-sm font-medium text-gray-400">
+                <span class="hover:text-mex-amber cursor-pointer transition-colors tracking-widest">TECNOLOGÍA</span>
+                <span class="hover:text-mex-amber cursor-pointer transition-colors tracking-widest">CULTURA</span>
+                <span class="hover:text-mex-amber cursor-pointer transition-colors tracking-widest">SOBERANÍA</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-20 px-4 md:px-0">
+        <!-- Hero Section -->
+        <article class="max-w-4xl mx-auto">
+            <header class="mb-16">
+                <div class="mb-6 flex items-center gap-4 text-mex-amber font-header text-xs font-bold uppercase tracking-[0.2em]">
+                    <span class="bg-mex-amber/10 px-3 py-1 rounded">Inteligencia Artificial</span>
+                    <span class="w-12 h-[1px] bg-mex-amber/30"></span>
+                    <span>17 de marzo de 2026</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-7xl font-display font-extrabold leading-[1.1] mb-8 tracking-tight">
+                    Tlaloc: <span class="gradient-text">LLM mexicano</span> de 3B parámetros en español, náhuatl y maya
+                </h1>
+
+                <div class="flex items-center gap-4 mb-12">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-mex-teal to-mex-amber p-[2px]">
+                        <div class="w-full h-full rounded-full bg-black flex items-center justify-center">
+                            <span class="text-xs font-bold font-header">IA</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-sm font-header text-gray-300">Por <span class="text-white font-semibold">IASimov Technologies</span></p>
+                        <p class="text-xs text-gray-500 font-header">Publicado el 17 de marzo, 2026</p>
+                    </div>
+                </div>
+
+                <!-- Visual Concept Box -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-mex-teal to-mex-amber rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="relative glass-card rounded-xl p-8 border border-white/10">
+                        <h3 class="font-header text-xs font-bold text-mex-amber uppercase tracking-widest mb-4">Concepto Visual</h3>
+                        <p class="text-gray-400 text-sm italic leading-relaxed font-light">
+                            "Cinematic, high-tech conceptual art piece portraying the 'Sovereign AI' of Mexico. The central subject is a monumental, ethereal bust of the deity Tlaloc, reimagined as a sentient digital entity. His iconic ringed eyes and fanged mouth are intricately woven from glowing amber neural networks and pulsating fiber-optic filaments..."
+                        </p>
+                        <div class="mt-4 flex justify-end">
+                            <div class="h-1 w-20 bg-gradient-to-r from-transparent to-mex-amber/50"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Article Content -->
+            <div class="prose prose-invert prose-lg max-w-none space-y-8 text-gray-300">
+                <p class="dropcap text-xl leading-relaxed text-gray-200">
+                    En un mundo donde la inteligencia artificial parece hablar con un acento marcadamente anglosajón, la periferia tecnológica ha comenzado a reclamar su voz. Mientras Silicon Valley se obsesiona con modelos de billones de parámetros que requieren granjas de servidores del tamaño de estadios, en México ha surgido una propuesta que prioriza la identidad sobre la escala: <strong>Tlaloc-3B</strong>.
+                </p>
+
+                <p>
+                    Este nuevo modelo de lenguaje de código abierto (<em>open-source</em>), recientemente liberado en la plataforma <strong>Hugging Face</strong>, no es simplemente una herramienta técnica más. Es, en esencia, un manifiesto político y cultural envuelto en una arquitectura de <em>transformers</em>. Tlaloc-3B representa el primer paso firme hacia lo que los expertos denominan "Soberanía Tecnológica", un esfuerzo por descolonizar los algoritmos y dotar a las máquinas de un contexto que el norte global suele ignorar.
+                </p>
+
+                <div class="my-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-8 bg-mex-teal/10 border-l-4 border-mex-teal rounded-r-xl">
+                        <h3 class="font-display font-bold text-mex-teal mb-4 text-xl">Ingeniería de lo Local</h3>
+                        <p class="text-sm text-gray-400">A diferencia de los modelos monolíticos como GPT-4, Tlaloc-3B apuesta por la eficiencia con 3,000 millones de parámetros.</p>
+                    </div>
+                    <div class="p-8 bg-mex-amber/10 border-l-4 border-mex-amber rounded-r-xl">
+                        <h3 class="font-display font-bold text-mex-amber mb-4 text-xl">Diversidad Lingüística</h3>
+                        <p class="text-sm text-gray-400">Integración nativa de Náhuatl y Maya mediante técnicas de Transfer Learning y tokenización optimizada.</p>
+                    </div>
+                </div>
+
+                <h3 class="text-3xl font-display font-bold text-white mt-12 mb-6">La Ingeniería de lo Local: Menos es Más</h3>
+                <p>
+                    Con <strong>3,000 millones de parámetros</strong>, su diseño es una respuesta pragmática a la infraestructura de América Latina. No busca competir en fuerza bruta, sino en agilidad y relevancia.
+                </p>
+
+                <p>
+                    Su arquitectura, basada en estructuras probadas como Llama-3 o Mistral, utiliza una técnica llamada <em>Grouped-Query Attention</em> (GQA), optimizada para ofrecer una inferencia veloz incluso en hardware de consumo o dispositivos de borde (<em>edge devices</em>). Esta decisión técnica permite que universidades y pequeñas empresas operen el modelo localmente sin depender de la nube extranjera.
+                </p>
+
+                <h3 class="text-3xl font-display font-bold text-white mt-12 mb-6">El Reto de la Lengua: Del Español al Náhuatl</h3>
+                <p>
+                    Mientras los modelos genéricos suelen tratar el español de México como una variante genérica cargada de modismos externos, el equipo detrás de Tlaloc ha realizado una adaptación de dominio profundo. El <em>corpus</em> de entrenamiento incluye desde la Constitución Política hasta archivos históricos y literatura local contemporánea.
+                </p>
+
+                <blockquote class="border-l-4 border-mex-amber pl-8 py-4 my-10 bg-white/5 italic text-xl text-gray-200">
+                    "Tlaloc-3B nivela el campo de juego lingüístico al eliminar el 'token tax' para nuestras lenguas originarias."
+                </blockquote>
+
+                <p>
+                    El hito más disruptivo es la integración de lenguas indígenas. Mediante una metodología de <strong>Cross-Lingual Transfer Learning</strong>, el modelo comprende y genera textos en <strong>náhuatl y maya</strong>. Los desarrolladores expandieron el tokenizador para incluir estructuras lingüísticas únicas que suelen ser penalizadas en modelos extranjeros.
+                </p>
+
+                <h3 class="text-3xl font-display font-bold text-white mt-12 mb-6">Soberanía Digital: Los Datos como Territorio</h3>
+                <div class="space-y-6">
+                    <div class="flex gap-6 items-start">
+                        <span class="font-display text-4xl font-bold text-mex-amber/40">01</span>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">Privacidad de Datos</h4>
+                            <p class="text-gray-400">Hospedaje local para evitar que información sensible cruce fronteras bajo jurisdicciones ajenas.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-start">
+                        <span class="font-display text-4xl font-bold text-mex-amber/40">02</span>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">Mitigación de Sesgos</h4>
+                            <p class="text-gray-400">Ajuste fino (Fine-Tuning) con prompts "mexicanizados" para entender regionalismos y contextos sociales.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-start">
+                        <span class="font-display text-4xl font-bold text-mex-amber/40">03</span>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">Reducción de Dependencia</h4>
+                            <p class="text-gray-400">Minimiza la necesidad de APIs propietarias, evitando obsolescencia programada por decisiones geopolíticas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-3xl font-display font-bold text-white mt-12 mb-6">Casos de Uso: De la Administración a la Educación Rural</h3>
+                <p>
+                    El potencial de Tlaloc-3B trasciende el laboratorio. En el sector público, se perfila como la herramienta ideal para automatizar consultas ciudadanas en lenguas originarias, permitiendo que un habitante de la zona maya reciba asesoría legal o administrativa en su propia lengua.
+                </p>
+                
+                <p>
+                    En el ámbito educativo, su capacidad para ejecutarse con cuantización de 4 u 8 bits abre la puerta a asistentes de aprendizaje instalados en computadoras de bajo costo en escuelas rurales. Las pruebas de rendimiento son reveladoras: en evaluaciones de "Contexto Mexicano", Tlaloc-3B supera consistentemente a modelos generalistas que le doblan el tamaño.
+                </p>
+
+                <h3 class="text-3xl font-display font-bold text-white mt-12 mb-6">Un Futuro de Pesos Abiertos</h3>
+                <p>
+                    La llegada de Tlaloc-3B a Hugging Face marca un punto de inflexión. México ha dejado de ser solo un consumidor de inteligencia artificial para convertirse en un arquitecto de la misma. Tlaloc no solo llueve datos; siembra la posibilidad de un futuro digital donde nuestra identidad sea el código fuente de nuestra propia tecnología.
+                </p>
+            </div>
+
+            <!-- Author Bio / Footer area -->
+            <div class="mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-gray-500 text-sm font-header">
+                    &copy; 2024 IASimov Technologies. Todos los derechos reservados.
+                </div>
+                <div class="flex gap-4">
+                    <button class="px-6 py-2 rounded-full border border-mex-amber text-mex-amber text-xs font-bold font-header hover:bg-mex-amber hover:text-black transition-all">
+                        COMPARTIR
+                    </button>
+                    <button class="px-6 py-2 rounded-full bg-mex-teal text-white text-xs font-bold font-header hover:brightness-110 transition-all">
+                        DESCARGAR MODELO
+                    </button>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Background Decorative Elements -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden">
+        <div class="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-mex-teal/10 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-mex-amber/5 blur-[120px] rounded-full animate-pulse-slow"></div>
+        <div class="absolute top-[20%] left-[5%] w-[1px] h-[300px] bg-gradient-to-b from-transparent via-mex-amber/20 to-transparent"></div>
+    </div>
+
+    <script>
+        // Smooth scroll interaction or basic animations can be added here
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
