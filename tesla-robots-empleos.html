@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robots Humanoides: La Revolución de 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        cyber: {
+                            black: '#0a0a0c',
+                            dark: '#121217',
+                            accent: '#3b82f6',
+                            neon: '#60a5fa',
+                            surface: 'rgba(255, 255, 255, 0.05)',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0c;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        .gradient-border {
+            position: relative;
+            border-radius: 24px;
+        }
+        .gradient-border::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(45deg, #3b82f6, transparent, #3b82f6);
+            border-radius: 25px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto text-center">
+            <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider text-blue-400 uppercase glass border border-blue-500/30">
+                Perspectiva Global 2026
+            </span>
+            <h1 class="font-display text-5xl md:text-8xl font-extrabold mb-8 tracking-tight leading-tight">
+                Robots <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 glow-text">Humanoides</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
+                ¿Abundancia económica o desplazamiento laboral? La convergencia de la IA Física redefine el futuro del trabajo humano.
+            </p>
+            <div class="mt-12 flex flex-wrap justify-center gap-4">
+                <a href="#analisis" class="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25">
+                    Explorar Análisis
+                </a>
+                <a href="#sectores" class="px-8 py-4 glass text-white rounded-full font-bold hover:bg-white/10 transition-all border border-white/20">
+                    Sectores en Riesgo
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </section>
+
+    <!-- Bento Grid Context -->
+    <section id="analisis" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            
+            <!-- Advantage Card -->
+            <div class="md:col-span-8 glass p-8 md:p-12 hover:border-blue-500/50 transition-colors group">
+                <h2 class="font-display text-3xl font-bold mb-6 text-blue-400">La Ventaja Antropomórfica</h2>
+                <p class="text-slate-300 text-lg leading-relaxed mb-8">
+                    El diseño humano no es solo estético; es funcional. Permite a las máquinas operar en infraestructuras existentes sin modificaciones costosas. La "Physical AI" ha alcanzado su punto de inflexión.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div class="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-blue-500/5 transition-colors">
+                        <div class="text-blue-400 font-bold text-2xl mb-2">-40%</div>
+                        <div class="text-sm text-slate-400 uppercase tracking-tighter">Costos de Fabricación</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-blue-500/5 transition-colors">
+                        <div class="text-blue-400 font-bold text-2xl mb-2">20h</div>
+                        <div class="text-sm text-slate-400 uppercase tracking-tighter">Autonomía Operativa</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-blue-500/5 transition-colors">
+                        <div class="text-blue-400 font-bold text-2xl mb-2">$15k</div>
+                        <div class="text-sm text-slate-400 uppercase tracking-tighter">Precio Unitree Inicial</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Reason Card -->
+            <div class="md:col-span-4 glass p-8 bg-gradient-to-br from-indigo-900/20 to-transparent flex flex-col justify-center">
+                <div class="w-12 h-12 bg-indigo-500/20 rounded-full flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="font-display text-2xl font-bold mb-4">Razonamiento VLA</h3>
+                <p class="text-slate-400 leading-relaxed">
+                    Modelos Vision-Language-Action (como Google Gemini Robotics) permiten a los robots comprender comandos vagos como "limpiar un derrame" sin código previo.
+                </p>
+            </div>
+
+            <!-- Industry Titans -->
+            <div class="md:col-span-12 mt-6">
+                <h2 class="font-display text-4xl font-bold text-center mb-12">Titanes en la Arena</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Tesla -->
+                    <div class="glass p-8 group hover:-translate-y-2 transition-transform duration-500">
+                        <div class="flex justify-between items-start mb-6">
+                            <h4 class="text-xl font-bold">Tesla Optimus</h4>
+                            <span class="text-xs font-mono px-2 py-1 bg-blue-500/20 text-blue-300 rounded">GEN 3</span>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-6">Apuesta total por la "Era de la Abundancia". Musk proyecta que el negocio robótico superará al automotriz.</p>
+                        <div class="text-sm font-bold text-blue-400">Objetivo: Ingreso Universal Alto</div>
+                    </div>
+                    <!-- NVIDIA -->
+                    <div class="glass p-8 group hover:-translate-y-2 transition-transform duration-500">
+                        <div class="flex justify-between items-start mb-6">
+                            <h4 class="text-xl font-bold">NVIDIA Project GR00T</h4>
+                            <span class="text-xs font-mono px-2 py-1 bg-green-500/20 text-green-300 rounded">JETSON THOR</span>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-6">Estandarizando el "cerebro" robótico para startups globales. Plataforma fundacional de la industria.</p>
+                        <div class="text-sm font-bold text-green-400">Infraestructura Crítica</div>
+                    </div>
+                    <!-- China -->
+                    <div class="glass p-8 group hover:-translate-y-2 transition-transform duration-500">
+                        <div class="flex justify-between items-start mb-6">
+                            <h4 class="text-xl font-bold">Dominio Chino</h4>
+                            <span class="text-xs font-mono px-2 py-1 bg-red-500/20 text-red-300 rounded">80% CUOTA</span>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-6">Unitree y BYD lideran la producción masiva, respondiendo a su crisis demográfica con tecnología.</p>
+                        <div class="text-sm font-bold text-red-400">Liderazgo en Manufactura</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Displacement Stats Section -->
+    <section id="sectores" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-blue-600/5 skew-y-3 origin-right"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-extrabold mb-4">La Paradoja Laboral</h2>
+                <p class="text-slate-400 text-lg max-w-2xl mx-auto">Dos visiones, una sola realidad: el trabajo está cambiando para siempre.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Visual Data -->
+                <div class="space-y-6">
+                    <div class="glass p-6 border-l-4 border-l-red-500">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold">Desplazamiento Proyectado (2030)</span>
+                            <span class="text-red-400">800M empleos</span>
+                        </div>
+                        <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden">
+                            <div class="bg-red-500 h-full w-[80%]"></div>
+                        </div>
+                        <p class="mt-2 text-xs text-slate-500">Fuente: McKinsey Global Institute</p>
+                    </div>
+                    <div class="glass p-6 border-l-4 border-l-blue-500">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold">Nuevos Roles Creados</span>
+                            <span class="text-blue-400">170M roles</span>
+                        </div>
+                        <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden">
+                            <div class="bg-blue-500 h-full w-[17%]"></div>
+                        </div>
+                        <p class="mt-2 text-xs text-slate-500">Fuente: WEF 2025</p>
+                    </div>
+                    <div class="glass p-6 border-l-4 border-l-yellow-500">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold">Umbral de Irresistibilidad Económica</span>
+                            <span class="text-yellow-400">&lt; $17,000 / robot</span>
+                        </div>
+                        <p class="mt-2 text-sm text-slate-400 italic">BofA Global Research advierte que este precio hace inevitable el reemplazo en sectores de baja calificación.</p>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="space-y-8">
+                    <div class="flex gap-6 items-start">
+                        <div class="flex-shrink-0 w-12 h-12 glass flex items-center justify-center text-blue-400 font-bold">1</div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Fase de Cuello Blanco (2023-2025)</h4>
+                            <p class="text-slate-400">La IA generativa inicial desplazó roles cognitivos y administrativos.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-start">
+                        <div class="flex-shrink-0 w-12 h-12 glass flex items-center justify-center text-indigo-400 font-bold">2</div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Fase de Cuello Azul (2026+)</h4>
+                            <p class="text-slate-400">Desplazamiento físico en entornos estructurados: almacenes, manufactura y logística.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectores Vulnerables vs Nuevos Horizontes -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Vulnerability -->
+            <div class="space-y-6">
+                <h3 class="font-display text-3xl font-bold text-red-400 flex items-center gap-3">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    Sectores en la Mira
+                </h3>
+                <div class="space-y-4">
+                    <div class="glass p-5 flex items-center justify-between hover:bg-red-500/5 transition-colors cursor-default">
+                        <span>Manufactura & Ensamble</span>
+                        <span class="text-xs bg-red-500/20 text-red-400 px-3 py-1 rounded-full uppercase">Crítico</span>
+                    </div>
+                    <div class="glass p-5 flex items-center justify-between hover:bg-red-500/5 transition-colors cursor-default">
+                        <span>Almacenamiento & Logística</span>
+                        <span class="text-xs bg-red-500/20 text-red-400 px-3 py-1 rounded-full uppercase">Crítico</span>
+                    </div>
+                    <div class="glass p-5 flex items-center justify-between hover:bg-red-500/5 transition-colors cursor-default">
+                        <span>Agricultura & Cosecha</span>
+                        <span class="text-xs bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full uppercase">Alto</span>
+                    </div>
+                    <div class="glass p-5 flex items-center justify-between hover:bg-red-500/5 transition-colors cursor-default">
+                        <span>Comercio & Comida Rápida</span>
+                        <span class="text-xs bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full uppercase">Alto</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opportunities -->
+            <div class="space-y-6">
+                <h3 class="font-display text-3xl font-bold text-green-400 flex items-center gap-3">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Nuevos Horizontes
+                </h3>
+                <div class="space-y-4">
+                    <div class="glass p-5 flex items-center justify-between hover:bg-green-500/5 transition-colors cursor-default">
+                        <span>Mantenimiento de Sistemas Robóticos</span>
+                        <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full uppercase">Creciente</span>
+                    </div>
+                    <div class="glass p-5 flex items-center justify-between hover:bg-green-500/5 transition-colors cursor-default">
+                        <span>Entrenadores de Datos de IA</span>
+                        <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full uppercase">Alta Demanda</span>
+                    </div>
+                    <div class="glass p-5 flex items-center justify-between hover:bg-green-500/5 transition-colors cursor-default">
+                        <span>Estrategia & Creatividad Humana</span>
+                        <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full uppercase">Protegido</span>
+                    </div>
+                    <div class="glass p-5 flex items-center justify-between hover:bg-green-500/5 transition-colors cursor-default">
+                        <span>Cuidado Humano & Empatía</span>
+                        <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full uppercase">Estratégico</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional & Policy Analysis -->
+    <section class="py-24 bg-gradient-to-b from-transparent to-cyber-dark px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-display text-4xl font-extrabold mb-16 text-center">Impacto Regional & Político</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-8 glass hover:bg-white/10 transition-colors">
+                    <div class="text-blue-400 font-bold mb-4">EE.UU.</div>
+                    <p class="text-sm text-slate-400">Liderazgo en desarrollo. Riesgo de desigualdad extrema por red de seguridad débil.</p>
+                </div>
+                <div class="p-8 glass hover:bg-white/10 transition-colors">
+                    <div class="text-red-400 font-bold mb-4">China</div>
+                    <p class="text-sm text-slate-400">Integración estatal total. Solución a crisis demográfica y dominio de bajo costo.</p>
+                </div>
+                <div class="p-8 glass hover:bg-white/10 transition-colors">
+                    <div class="text-yellow-400 font-bold mb-4">Japón</div>
+                    <p class="text-sm text-slate-400">Aceptación cultural fluida. Enfoque en cuidado de ancianos y escasez laboral.</p>
+                </div>
+                <div class="p-8 glass hover:bg-white/10 transition-colors">
+                    <div class="text-indigo-400 font-bold mb-4">UE</div>
+                    <p class="text-sm text-slate-400">Enfoque regulatorio (IA Act). Debate intenso sobre "Impuestos a los Robots".</p>
+                </div>
+            </div>
+
+            <!-- LatAm Highlight -->
+            <div class="mt-12 p-8 md:p-12 glass relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl -mr-20 -mt-20 group-hover:bg-yellow-500/20 transition-colors"></div>
+                <div class="relative z-10 flex flex-col md:flex-row gap-12 items-center">
+                    <div class="flex-1">
+                        <h3 class="font-display text-3xl font-bold mb-6">La Encrucijada de América Latina</h3>
+                        <p class="text-slate-300 leading-relaxed mb-6">
+                            Escenario complejo: una oportunidad para saltar en productividad, pero con riesgos sociales masivos debido a la alta informalidad y sistemas educativos rezagados. La transición podría ser dolorosa sin una política de redistribución clara.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0 grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/10 text-center">
+                            <div class="font-bold text-yellow-500">Informalidad</div>
+                            <div class="text-xs text-slate-400">Riesgo #1</div>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/10 text-center">
+                            <div class="font-bold text-green-500">Productividad</div>
+                            <div class="text-xs text-slate-400">Oportunidad</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Policy Section -->
+    <section class="py-24 px-6 max-w-5xl mx-auto text-center">
+        <h2 class="font-display text-4xl font-extrabold mb-12">Redefiniendo el Contrato Social</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div class="p-8 glass border-t-4 border-t-blue-500">
+                <h4 class="font-bold text-xl mb-4">Ingreso Básico Universal</h4>
+                <p class="text-slate-400 text-sm">Central para redistribuir la riqueza generada por la automatización masiva.</p>
+            </div>
+            <div class="p-8 glass border-t-4 border-t-indigo-500">
+                <h4 class="font-bold text-xl mb-4">Beneficios Portables</h4>
+                <p class="text-slate-400 text-sm">Salud y jubilación que siguen al trabajador, sin importar el empleador o si es independiente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Verdict -->
+    <section class="py-24 px-6 relative">
+        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-blue-900/10 to-transparent"></div>
+        <div class="max-w-4xl mx-auto glass p-12 md:p-20 text-center relative z-10">
+            <h2 class="font-display text-4xl md:text-6xl font-extrabold mb-8 tracking-tighter">Veredicto <span class="text-blue-400 italic">Final</span></h2>
+            <p class="text-xl md:text-2xl text-slate-300 leading-relaxed mb-10 italic">
+                "La historia enseña que las revoluciones tecnológicas generan prosperidad a largo plazo, pero la transición puede ser brutal."
+            </p>
+            <div class="h-1 w-24 bg-blue-600 mx-auto mb-10"></div>
+            <p class="text-slate-400 leading-relaxed max-w-2xl mx-auto">
+                Las decisiones actuales determinarán si la revolución de los humanoides potencia el ingenio humano o deja a millones atrás. Es un llamado a la acción para redefinir qué significa trabajar en el siglo XXI.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Smooth reveal animations on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+
