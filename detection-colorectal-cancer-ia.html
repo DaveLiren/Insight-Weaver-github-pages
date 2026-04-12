@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detección No Invasiva de Cáncer Colorrectal mediante IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Montserrat:wght@300;400;600;700;800&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            gold: '#d4af37',
+                            cyan: '#06b6d4',
+                            midnight: '#0f172a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fdfdfd;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #0c4a6e 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .drop-cap::first-letter {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 5rem;
+            float: left;
+            line-height: 1;
+            padding-right: 12px;
+            color: #0c4a6e;
+        }
+
+        .content-shadow {
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .article-body h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.75rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #0c4a6e;
+            letter-spacing: -0.025em;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.125rem;
+            color: #334155;
+        }
+
+        .article-body b, .article-body strong {
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .article-body ol, .article-body ul {
+            margin-bottom: 2rem;
+            padding-left: 1.25rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .article-body li::marker {
+            color: #0ea5e9;
+            font-weight: bold;
+        }
+
+        .scroll-indicator {
+            height: 4px;
+            background: linear-gradient(to right, #0ea5e9, #d4af37);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            z-index: 100;
+            transition: width 0.1s;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div id="progress" class="scroll-indicator"></div>
+
+    <!-- Minimalist Header -->
+    <header class="py-6 px-6 lg:px-12 flex justify-between items-center border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-brand-900 rounded-full flex items-center justify-center">
+                <span class="text-white font-bold text-xs">IA</span>
+            </div>
+            <span class="font-display font-extrabold tracking-tighter text-xl text-brand-900">IASIMOV</span>
+        </div>
+        <div class="text-xs font-display font-semibold uppercase tracking-widest text-slate-500">
+            Ciencia & Tecnología
+        </div>
+    </header>
+
+    <main class="max-w-screen-xl mx-auto px-6 pt-16 pb-24">
+        <!-- Hero Section -->
+        <article class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <header class="lg:col-span-12 mb-8">
+                <div class="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-500 text-xs font-bold uppercase tracking-widest">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                    </span>
+                    Medicina del Futuro
+                </div>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold text-slate-900 leading-[1.1] mb-8">
+                    Detección No Invasiva de Cáncer Colorrectal mediante <span class="gradient-text">IA y Análisis Fecal</span>
+                </h1>
+                
+                <div class="flex flex-wrap items-center gap-6 text-sm font-sans text-slate-500 border-y border-slate-100 py-6">
+                    <div>
+                        <span class="uppercase tracking-widest text-[10px] font-bold block mb-1">Autor</span>
+                        <span class="text-slate-900 font-semibold">IASimov Technologies</span>
+                    </div>
+                    <div class="h-8 w-[1px] bg-slate-200 hidden sm:block"></div>
+                    <div>
+                        <span class="uppercase tracking-widest text-[10px] font-bold block mb-1">Publicado el</span>
+                        <span class="text-slate-900 font-semibold">12 de abril de 2026</span>
+                    </div>
+                    <div class="h-8 w-[1px] bg-slate-200 hidden sm:block"></div>
+                    <div>
+                        <span class="uppercase tracking-widest text-[10px] font-bold block mb-1">Lectura</span>
+                        <span class="text-slate-900 font-semibold">6 min aprox.</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Visual Concept / Illustration Prompt -->
+            <section class="lg:col-span-12">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-900 to-accent-midnight rounded-3xl transform -rotate-1 group-hover:rotate-0 transition-transform duration-500"></div>
+                    <div class="relative bg-slate-900 p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl overflow-hidden">
+                        <!-- Abstract BG Decoration -->
+                        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-accent-cyan/10 rounded-full blur-3xl"></div>
+                        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 bg-accent-gold/10 rounded-full blur-3xl"></div>
+                        
+                        <h4 class="text-accent-gold font-display font-bold text-xs uppercase tracking-[0.3em] mb-4">Concepto Visual</h4>
+                        <p class="text-slate-300 font-serif italic text-lg md:text-xl leading-relaxed relative z-10">
+                            "Cinematic macro-perspective of a 'metagenomic digital ecosystem' representing the human gut microbiome as a vast, bioluminescent library of life. In the foreground, hyper-detailed, iridescent textures of organic intestinal folds transition into a sprawling landscape of shimmering DNA helices and microbial clusters..."
+                        </p>
+                        <div class="mt-6 flex justify-end">
+                            <span class="text-[10px] font-sans text-slate-500 uppercase tracking-widest border border-slate-700 px-2 py-1 rounded">Visualización Conceptual AI</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Article Body -->
+            <section class="lg:col-span-8 lg:col-start-3 article-body font-serif">
+                <div class="drop-cap">
+                    En los pliegues microscópicos de nuestro sistema digestivo habita un ecosistema más denso y complejo que cualquier selva tropical. Durante décadas, este "segundo cerebro" ha guardado secretos que la medicina tradicional solo lograba arrancar mediante procedimientos invasivos, preparaciones extenuantes y, a menudo, diagnósticos que llegaban demasiado tarde. Sin embargo, en los laboratorios de la Universidad de Ginebra (UNIGE), el silencio de este ecosistema ha sido finalmente traducido a un lenguaje que las máquinas pueden entender.
+                </div>
+
+                <p>
+                    Estamos ante un cambio de paradigma: la transición del diagnóstico basado en el síntoma —la presencia de sangre— al diagnóstico basado en la "firma biológica". Un equipo de investigadores de la UNIGE, en colaboración con los Hospitales Universitarios de Ginebra (HUG), ha perfeccionado una herramienta de Inteligencia Artificial capaz de detectar el cáncer colorrectal (CCR) con una precisión del 90%, analizando únicamente la composición genética de los desechos humanos.
+                </p>
+
+                <h3>La Metagenómica: Leer el Diario del Intestino</h3>
+
+                <p>
+                    El método convencional para el cribado no invasivo, la prueba inmunoquímica fecal (FIT), busca rastros de hemoglobina. Es un sistema reactivo; el cáncer debe estar lo suficientemente avanzado como para sangrar. La propuesta de Ginebra, en cambio, es detectivesca. Utiliza la <strong>metagenómica</strong> para secuenciar el ADN de bacterias, virus y hongos presentes en la microbiota intestinal.
+                </p>
+
+                <p>
+                    La premisa es fascinante: el tumor no es un actor solitario. A medida que una lesión precancerosa o un tumor maligno se desarrolla, altera su entorno. Al igual que una especie invasora cambia la flora de un bosque, el cáncer modifica el equilibrio microbiano. La IA de la UNIGE no busca el cáncer per se, sino las huellas dactilar que este deja en el ecosistema bacteriano.
+                </p>
+
+                <div class="my-12 p-8 bg-slate-50 rounded-2xl border-l-4 border-brand-500 content-shadow">
+                    <p class="font-display font-bold text-slate-900 mb-2 italic">"La IA de la UNIGE no busca el cáncer per se, sino las huellas que este deja en el ecosistema bacteriano."</p>
+                </div>
+
+                <h3>El Aprendizaje Profundo contra el Sesgo de Datos</h3>
+
+                <p>
+                    Uno de los mayores obstáculos históricos en la IA médica ha sido el sesgo demográfico. Un algoritmo entrenado solo con pacientes europeos rara vez es efectivo en poblaciones latinoamericanas o asiáticas debido a las marcadas diferencias en la dieta y el estilo de vida.
+                </p>
+
+                <p>
+                    Para solventar esto, el equipo de la UNIGE sometió a sus algoritmos de <em>deep learning</em> a un entrenamiento masivo con conjuntos de datos metagenómicos globales. A lo largo de 2024 y 2025, la IA aprendió a distinguir entre perfiles microbianos saludables, pólipos benignos y adenocarcinomas malignos en una diversidad étnica sin precedentes. Este refinamiento ha permitido que la herramienta mantenga su eficacia del 90% sin importar si el paciente consume una dieta mediterránea o una basada en granos y proteínas de los Andes.
+                </p>
+
+                <h3>2026: La Frontera de la Multi-Ómica</h3>
+
+                <p>
+                    A fecha de abril de 2026, la investigación ha dado un salto cualitativo. Según los últimos reportes, la Universidad de Ginebra está integrando la <strong>metabolómica</strong> —el estudio de los procesos químicos que involucran metabolitos— con la IA metagenómica existente. Esta integración "multi-ómica" busca elevar la precisión diagnóstica por encima del 92%.
+                </p>
+
+                <p>
+                    No se trata solo de saber quiénes habitan en el intestino (bacterias), sino de qué están haciendo (procesos químicos). Esta profundidad analítica es lo que permite detectar el cáncer en sus etapas I y II, momentos en los que la enfermedad es altamente curable pero virtualmente invisible para los métodos de detección tradicionales no invasivos.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-10">
+                    <div class="bg-brand-900 text-white p-6 rounded-xl flex flex-col justify-center">
+                        <span class="text-4xl font-display font-bold text-accent-cyan">92%</span>
+                        <span class="text-xs uppercase tracking-widest font-sans opacity-70">Precisión Proyectada</span>
+                    </div>
+                    <div class="bg-accent-midnight text-white p-6 rounded-xl flex flex-col justify-center">
+                        <span class="text-4xl font-display font-bold text-accent-gold">Etapa I</span>
+                        <span class="text-xs uppercase tracking-widest font-sans opacity-70">Capacidad de Detección</span>
+                    </div>
+                </div>
+
+                <h3>Implicaciones Clínicas y el Fin de la Colonoscopia Innecesaria</h3>
+
+                <p>
+                    El impacto en los sistemas de salud pública es incalculable. Actualmente, la colonoscopia se considera el "estándar de oro", pero su naturaleza invasiva y su costo limitan su implementación masiva como primera línea de defensa. Además, un alto porcentaje de las colonoscopias resultan negativas, sobrecargando los recursos hospitalarios.
+                </p>
+
+                <p>
+                    El sistema de la UNIGE actúa como un filtro de alta fidelidad. Al reducir drásticamente los falsos positivos, permite que solo aquellos pacientes con una firma microbiana de alto riesgo sean sometidos a procedimientos invasivos. 
+                </p>
+
+                <ul class="list-none space-y-4">
+                    <li class="flex items-start gap-4">
+                        <span class="bg-brand-100 text-brand-900 font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">1</span>
+                        <span><strong>Detección Precoz:</strong> Identifica pólipos precancerosos que el FIT suele ignorar.</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="bg-brand-100 text-brand-900 font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">2</span>
+                        <span><strong>Cumplimiento del Paciente:</strong> Al requerir solo una muestra fecal estándar, se eliminan las barreras psicológicas y físicas del paciente frente al examen.</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="bg-brand-100 text-brand-900 font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">3</span>
+                        <span><strong>Eficiencia de Recursos:</strong> Optimiza las listas de espera para procedimientos endoscópicos.</span>
+                    </li>
+                </ul>
+
+                <h3>El Camino hacia la Estandarización</h3>
+
+                <p>
+                    La tecnología se encuentra actualmente en la fase final de ensayos clínicos expandidos para obtener el marcado CE en Europa, con miras a integrarse en los protocolos de cuidado estándar para finales de este año. 
+                </p>
+
+                <p>
+                    La historia de la medicina recordará este momento no solo como un avance tecnológico, sino como el día en que dejamos de esperar a que la enfermedad se manifestara físicamente para empezar a buscarla en los datos. La IA en Ginebra ha demostrado que la respuesta a uno de los desafíos más letales de la oncología no estaba oculta en una cámara dentro del colon, sino en la compleja y vibrante biblioteca genética que llevamos dentro.
+                </p>
+            </section>
+        </article>
+        
+        <!-- Interactive "Next" or Call to action area -->
+        <section class="max-w-2xl mx-auto mt-20 p-8 border-2 border-dashed border-slate-200 rounded-3xl text-center">
+            <h5 class="font-display font-bold text-slate-800 mb-2">¿Interesado en más avances?</h5>
+            <p class="text-sm text-slate-500 mb-6">Suscríbete para recibir las últimas noticias sobre IA médica y biotecnología.</p>
+            <div class="flex gap-2 max-w-sm mx-auto">
+                <input type="email" placeholder="tu@email.com" class="flex-1 px-4 py-3 rounded-xl bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+                <button class="bg-brand-900 text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-brand-500 transition-colors">Unirse</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-12">
+        <div class="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2 grayscale opacity-50">
+                <div class="w-6 h-6 bg-brand-900 rounded-full flex items-center justify-center">
+                    <span class="text-white font-bold text-[8px]">IA</span>
+                </div>
+                <span class="font-display font-extrabold tracking-tighter text-md text-brand-900">IASIMOV</span>
+            </div>
+            
+            <div class="text-slate-400 text-sm font-sans">
+                &copy; 24 de Mayo, 2024. Todos los derechos reservados.
+            </div>
+
+            <div class="flex gap-4">
+                <a href="#" class="text-slate-400 hover:text-brand-500 transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                </a>
+                <a href="#" class="text-slate-400 hover:text-brand-500 transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Update reading progress bar
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress").style.width = scrolled + "%";
+        };
+
+        // Subtle animation for elements on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('h3, .article-body p, .article-body ul').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
