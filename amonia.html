@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammonia Ahoy: Hito en la descarbonización del transporte marítimo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@300;400;600;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0a0f1a',
+                            navy: '#121d2f',
+                            teal: '#14b8a6',
+                            emerald: '#10b981',
+                            indigo: '#4338ca',
+                            accent: '#6ee7b7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1.2s ease-out forwards',
+                        'scroll-down': 'scrollDown 2s infinite',
+                        'glow': 'glow 4s linear infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        scrollDown: {
+                            '0%': { transform: 'translateY(0)', opacity: '0' },
+                            '50%': { opacity: '1' },
+                            '100%': { transform: 'translateY(10px)', opacity: '0' },
+                        },
+                        glow: {
+                            '0%, 100%': { textShadow: '0 0 10px rgba(20, 184, 166, 0.5)' },
+                            '50%': { textShadow: '0 0 25px rgba(20, 184, 166, 0.8)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0f1a;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(18, 29, 47, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #6ee7b7 0%, #14b8a6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .prose h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #6ee7b7;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        .prose p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+            color: #cbd5e1;
+        }
+
+        .prose strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .prose ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 2rem;
+        }
+
+        .prose li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 2px solid #14b8a6;
+            background: rgba(20, 184, 166, 0.05);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .spotlight {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, rgba(10, 15, 26, 0) 70%);
+            top: -200px;
+            right: -200px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .reading-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(to right, #14b8a6, #6ee7b7);
+            width: 0%;
+            z-index: 100;
+            transition: width 0.1s;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-brand-teal selection:text-brand-dark">
+
+    <div id="reading-progress" class="reading-bar"></div>
+    <div class="spotlight"></div>
+
+    <!-- Header -->
+    <header class="py-6 px-6 md:px-12 flex justify-between items-center border-b border-white/5 sticky top-0 bg-brand-dark/80 backdrop-blur-md z-50">
+        <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 bg-brand-teal rounded-full flex items-center justify-center animate-pulse">
+                <svg class="w-5 h-5 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <span class="font-display font-extrabold tracking-tighter text-xl uppercase italic">Maritime<span class="text-brand-teal">Next</span></span>
+        </div>
+        <div class="hidden md:block text-xs font-semibold tracking-widest text-slate-500 uppercase">
+            Sostenibilidad & Tecnología
+        </div>
+    </header>
+
+    <main class="max-w-screen-xl mx-auto px-6 pt-12 md:pt-24">
+        
+        <!-- Article Header -->
+        <header class="max-w-4xl mx-auto mb-16 text-center md:text-left">
+            <div class="inline-block px-3 py-1 bg-brand-teal/10 border border-brand-teal/30 rounded-full text-brand-teal text-xs font-bold tracking-widest uppercase mb-6 animate-fade-in">
+                Ingeniería Naval
+            </div>
+            
+            <h1 class="font-display font-extrabold text-4xl md:text-6xl lg:text-7xl leading-tight mb-8 animate-fade-in tracking-tight text-white">
+                Ammonia Ahoy: Hito en la descarbonización del transporte marítimo con <span class="text-gradient">emisiones cercanas a cero</span>
+            </h1>
+
+            <div class="flex flex-wrap items-center gap-6 text-sm text-slate-400 font-medium animate-fade-in" style="animation-delay: 0.2s">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center overflow-hidden">
+                        <span class="text-indigo-300 font-bold">IA</span>
+                    </div>
+                    <div>
+                        <p class="text-white">Por IASimov Technologies</p>
+                        <p class="text-xs text-slate-500 uppercase tracking-wider">Publicado el 12 de abril, 2026</p>
+                    </div>
+                </div>
+                <div class="h-8 w-px bg-white/10 hidden md:block"></div>
+                <div class="flex flex-col">
+                    <span class="text-xs uppercase tracking-widest text-slate-500">Lectura estimada</span>
+                    <span class="text-white">8 minutos</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Visual Concept Section -->
+        <section class="max-w-5xl mx-auto mb-20 group relative overflow-hidden rounded-3xl animate-fade-in" style="animation-delay: 0.4s">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent z-10 opacity-60"></div>
+            
+            <!-- Box for Illustration Prompt -->
+            <div class="relative z-20 p-8 md:p-12 glass-panel border-l-4 border-l-brand-teal">
+                <div class="flex items-center space-x-2 mb-4">
+                    <svg class="w-5 h-5 text-brand-teal" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path></svg>
+                    <h2 class="font-display font-bold text-sm uppercase tracking-[0.2em] text-brand-teal">Concepto Visual</h2>
+                </div>
+                <p class="text-lg md:text-xl font-serif italic text-slate-200 leading-relaxed">
+                    "Cinematic editorial illustration of a futuristic ammonia-powered cargo ship, the 'Ammonia Ahoy!', navigating a vast deep-blue ocean at dusk. The ship's sleek, industrial hull features a sophisticated, semi-transparent schematic overlay revealing high-tech nickel-steel spherical tanks..."
+                </p>
+                <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-slate-400 font-mono">8k resolution</span>
+                    <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-slate-400 font-mono">16:9 Aspect</span>
+                    <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-slate-400 font-mono">Teal & Indigo Palette</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <div class="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-12 mb-24">
+            
+            <!-- Sidebar for Desktop -->
+            <aside class="hidden lg:block w-1/4 sticky top-32 h-fit">
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-brand-teal mb-4">Puntos Clave</h4>
+                        <ul class="space-y-4 text-sm text-slate-400">
+                            <li class="flex items-start space-x-2">
+                                <span class="text-brand-teal">●</span>
+                                <span>Amoníaco como vector energético</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="text-brand-teal">●</span>
+                                <span>Tecnología de Doble Pared</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="text-brand-teal">●</span>
+                                <span>Reducción de CO2 hasta el 95%</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-brand-navy rounded-2xl border border-white/5">
+                        <p class="text-sm font-serif italic text-slate-300">"El amoníaco dejará de ser recordado solo por su olor, para convertirse en el aliento limpio de la economía."</p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Text Column -->
+            <article class="w-full lg:w-3/4 prose max-w-none font-serif">
+                <div class="bg-gradient-to-r from-brand-teal/20 to-transparent p-1 mb-12 rounded-lg">
+                    <div class="bg-brand-dark p-6 md:p-8 rounded-lg">
+                        <p class="text-2xl font-light text-slate-100 leading-relaxed first-letter:text-6xl first-letter:font-display first-letter:font-bold first-letter:text-brand-teal first-letter:mr-3 first-letter:float-left">
+                            El transporte marítimo es, por definición, el gigante invisible de la globalización. Cerca del 90% del comercio mundial se mueve sobre cascos de acero que surcan los océanos, consumiendo en el proceso millones de toneladas de combustibles fósiles pesados.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="max-w-3xl mx-auto">
+                    <p>Sin embargo, en los astilleros de Japón y las mesas de diseño de consorcios industriales, se gesta una transformación que promete alterar la química misma de la logística global. El proyecto <strong>"Ammonia Ahoy!"</strong> no es solo un hito de ingeniería; es una apuesta audaz por utilizar una sustancia conocida históricamente como fertilizante o refrigerante —el amoníaco— para alimentar los motores de los barcos más grandes del mundo.</p>
+
+                    <h3>El reto del "combustible imposible"</h3>
+                    <p>Durante décadas, la industria marítima ha buscado una alternativa al <em>Very Low Sulfur Fuel Oil</em> (VLSFO). Mientras que el sector automotriz ha encontrado en la electrificación una vía clara, los buques transoceánicos enfrentan un problema de densidad energética. Las baterías actuales simplemente no pueden mover un carguero de 200,000 toneladas a través del Pacífico.</p>
+
+                    <p>Aquí entra el amoníaco ($NH_3$). A diferencia del hidrógeno, que requiere temperaturas criogénicas extremas para su almacenamiento, el amoníaco es relativamente fácil de licuar y transportar. Pero el desafío no es solo logístico. El amoníaco es una sustancia caprichosa: es altamente corrosiva, tóxica para los seres humanos en bajas concentraciones y difícil de encender. El éxito del consorcio formado por <em>Mitsui O.S.K. Lines</em> (MOL), <em>Mitsui & Co.</em> y <em>Mitsubishi Shipbuilding</em> radica en haber domesticado esta molécula para convertirla en un combustible viable.</p>
+
+                    <div class="my-12 p-8 glass-panel rounded-2xl relative overflow-hidden group">
+                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-teal/10 rounded-full blur-3xl group-hover:bg-brand-teal/20 transition-all"></div>
+                        <h3 class="mt-0 text-white font-display">Ingeniería de precisión: El corazón del buque</h3>
+                        <p>El prototipo del proyecto, un transportador de gas licuado de gran escala (VLGC), utiliza un motor de combustión interna de dos tiempos, específicamente diseñado por MAN Energy Solutions. El sistema opera bajo un esquema de combustible dual (<em>dual-fuel</em>): una pequeña cantidad de gasóleo marino o biocombustible actúa como "piloto" para iniciar la combustión, mientras que el amoníaco asume la carga principal del trabajo.</p>
+                        <p>Desde una perspectiva técnica, el avance más crítico se encuentra en los materiales. El amoníaco induce el llamado "agrietamiento por corrosión bajo tensión" (<em>Stress Corrosion Cracking</em>) en el acero convencional. Para mitigar esto, los tanques del "Ammonia Ahoy!" han sido construidos con aleaciones especiales de níquel-acero.</p>
+                    </div>
+
+                    <h3>La seguridad como imperativo ético y técnico</h3>
+                    <p>En el periodismo de investigación, solemos decir que la tecnología es tan buena como sus fallos. En el caso del amoníaco, un derrame o una fuga en alta mar podría ser catastrófico para la tripulación. Conscientes de este "talón de Aquiles", los ingenieros han implementado protocolos de redundancia que parecen sacados de una central nuclear:</p>
+                    
+                    <ul>
+                        <li><strong>Tuberías de doble pared:</strong> Todas las líneas de combustible cuentan con una cámara de vacío o gas inerte monitorizada las 24 horas.</li>
+                        <li><strong>Zonas de exclusión:</strong> Se han establecido "Zonas Rojas" en cubierta, con acceso restringido durante las operaciones de <em>bunkering</em> (suministro de combustible).</li>
+                        <li><strong>Lavadores de gases (Scrubbers):</strong> En caso de una fuga detectada por los sensores ópticos instalados cada 1.5 metros, los sistemas de ventilación redirigen el gas hacia cortinas de agua diseñadas para neutralizar el amoníaco.</li>
+                    </ul>
+
+                    <h3>El "Precio Verde": El obstáculo económico</h3>
+                    <p>A pesar del brillo tecnológico, la descarbonización absoluta (una reducción del 95% de CO2 si se utiliza amoníaco "verde" producido mediante electrólisis renovable) enfrenta una realidad económica cruda. El amoníaco verde es sustancialmente más caro que el combustible tradicional.</p>
+                    <p>El informe estratégico del proyecto subraya que la viabilidad comercial a largo plazo depende de factores externos a la ingeniería. La industria necesita "Contratos por Diferencia de Carbono" (CCfD) o un impuesto global al carbono que nivela el campo de juego. Sin estos mecanismos, el "Amonio Ahoy!" corre el riesgo de ser una maravilla tecnológica reservada para unos pocos.</p>
+
+                    <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-teal/40 to-transparent my-12"></div>
+
+                    <h3>Hacia un horizonte de cero emisiones</h3>
+                    <p>Con el nivel de madurez tecnológica (TRL) alcanzado (7-8), el consorcio planea completar las pruebas de mar para finales de 2026. La meta es ambiciosa: escalar de un solo barco de demostración a una flota de 50 buques para el año 2035.</p>
+                    <p>El proyecto "Ammonia Ahoy!" representa una síntesis de pragmatismo y visión. Aprovecha la infraestructura existente de GLP (Gas Licuado de Petróleo) pero la transforma para un futuro post-fósil. Si esta apuesta japonesa rinde frutos, el amoníaco se convertirá en el aliento limpio que impulsa la economía del siglo XXI a través de los océanos.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-24 py-12 px-6 border-t border-white/5 bg-black/40">
+        <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center space-x-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-default">
+                <div class="w-6 h-6 bg-brand-teal rounded-full flex items-center justify-center">
+                    <svg class="w-4 h-4 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <span class="font-display font-extrabold tracking-tighter text-lg uppercase italic text-white">MaritimeNext</span>
+            </div>
+            
+            <div class="text-slate-500 text-sm font-medium">
+                © 2024 IASimov Technologies. Todos los derechos reservados.
+            </div>
+
+            <div class="flex space-x-6">
+                <a href="https://google.com" target="_blank" class="text-slate-400 hover:text-brand-teal transition-colors uppercase text-[10px] font-bold tracking-[0.2em]">Referencia</a>
+                <a href="https://wikipedia.org" target="_blank" class="text-slate-400 hover:text-brand-teal transition-colors uppercase text-[10px] font-bold tracking-[0.2em]">Archivo</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Reading progress bar
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("reading-progress").style.width = scrolled + "%";
+        };
+
+        // Reveal on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    entry.target.style.opacity = "1";
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('h3, .prose p, ul li').forEach(el => {
+            el.style.opacity = "0";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
