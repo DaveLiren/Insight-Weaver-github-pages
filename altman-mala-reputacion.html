@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam Altman y OpenAI: Reporte de Daño Reputacional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Montserrat:wght@300;400;600;800;900&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0a0a0c',
+                            accent: '#10b981',
+                            muted: '#64748b',
+                            paper: '#fdfdfd',
+                        }
+                    },
+                    fontFamily: {
+                        header: ['Montserrat', 'sans-serif'],
+                        body: ['Merriweather', 'serif'],
+                        ui: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0c;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 1.5rem;
+        }
+
+        .article-card {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            border-radius: 2px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .dropcap::first-letter {
+            font-family: 'Montserrat', sans-serif;
+            float: left;
+            font-size: 5rem;
+            line-height: 0.8;
+            padding-top: 4px;
+            padding-right: 12px;
+            font-weight: 900;
+            color: #0a0a0c;
+        }
+
+        .visual-prompt-box {
+            background: linear-gradient(to right, #111827, #1f2937);
+            border-left: 4px solid #10b981;
+        }
+
+        .scroll-indicator {
+            height: 4px;
+            background: #10b981;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+
+        h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            margin-bottom: 1.8rem;
+            line-height: 1.8;
+            font-size: 1.125rem;
+        }
+
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="selection:bg-emerald-500 selection:text-white">
+
+    <div id="progress" class="scroll-indicator"></div>
+
+    <!-- Header Navigation -->
+    <header class="py-6 px-8 flex justify-between items-center fixed w-full z-50 bg-brand-dark/80 backdrop-blur-md border-b border-white/5">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-white flex items-center justify-center rounded-sm">
+                <span class="text-black font-black text-xl">I</span>
+            </div>
+            <span class="font-ui font-bold tracking-tighter text-xl uppercase italic">IASimov <span class="font-light text-muted">Technologies</span></span>
+        </div>
+        <div class="hidden md:flex gap-8 font-ui text-sm uppercase tracking-widest text-muted">
+            <span class="hover:text-white transition-colors cursor-pointer">Investigación</span>
+            <span class="hover:text-white transition-colors cursor-pointer">Reportes</span>
+            <span class="hover:text-white transition-colors cursor-pointer text-emerald-500">Exclusivo</span>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+        <!-- Hero Section -->
+        <section class="mb-16 lg:mb-24">
+            <div class="grid lg:grid-cols-12 gap-8 items-end">
+                <div class="lg:col-span-8">
+                    <div class="mb-4 font-ui text-emerald-500 font-semibold tracking-widest uppercase text-sm animate-pulse">
+                        Informe Especial • Reputación Digital
+                    </div>
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-header font-black leading-[0.9] tracking-tighter mb-8 gradient-text">
+                        Sam Altman y OpenAI: Reporte de Daño Reputacional
+                    </h1>
+                    <div class="flex flex-wrap gap-6 items-center font-ui text-muted text-sm border-t border-white/10 pt-6">
+                        <div>
+                            <span class="uppercase tracking-tighter block text-[10px]">Por</span>
+                            <span class="text-white font-semibold text-lg">IASimov Technologies</span>
+                        </div>
+                        <div class="w-px h-10 bg-white/10"></div>
+                        <div>
+                            <span class="uppercase tracking-tighter block text-[10px]">Publicado el</span>
+                            <span class="text-white font-semibold text-lg" id="current-date"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 hidden lg:block">
+                    <div class="glass-panel p-6 floating-element">
+                        <p class="font-ui text-xs text-muted mb-4 uppercase tracking-widest">Resumen Ejecutivo</p>
+                        <p class="text-sm italic text-gray-300 leading-relaxed m-0">
+                            "Un análisis profundo sobre la erosión de la confianza en el liderazgo de la IA y el impacto sistémico de las crisis de gobernanza corporativa en 2026."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visual Concept Section -->
+        <section class="mb-16">
+            <div class="visual-prompt-box p-8 rounded-2xl shadow-2xl overflow-hidden relative group">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <svg width="120" height="120" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+                </div>
+                <h4 class="font-ui font-bold text-emerald-500 uppercase tracking-widest text-xs mb-4">Concepto Visual</h4>
+                <p class="font-ui text-lg md:text-xl text-gray-200 leading-relaxed mb-0 italic">
+                    "A dramatic, stylized depiction of a colossal digital mask of a smiling Sam Altman, dominating the foreground. The mask is visibly cracking and fragmenting into sharp, angular shards, with pieces falling away to reveal a chaotic, intricate network of exposed, faulty circuitry, tangled wires, and shadowy, unidentifiable mechanisms beneath..."
+                </p>
+                <div class="mt-4 flex items-center gap-2">
+                    <div class="h-px flex-1 bg-white/10"></div>
+                    <span class="text-[10px] text-muted uppercase font-bold">IA Visual Prompt</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <section class="grid lg:grid-cols-12 gap-12">
+            <!-- Sidebar (Table of Contents / Metadata) -->
+            <aside class="lg:col-span-3 hidden lg:block">
+                <div class="sticky top-32 space-y-8">
+                    <div>
+                        <h5 class="text-xs font-bold uppercase tracking-widest text-muted mb-4">Secciones</h5>
+                        <ul class="space-y-4 font-ui text-sm text-gray-400">
+                            <li class="hover:text-emerald-500 transition-colors cursor-pointer flex items-center gap-2">
+                                <span class="w-4 h-[1px] bg-emerald-500"></span> Desmitificación
+                            </li>
+                            <li class="hover:text-emerald-500 transition-colors cursor-pointer flex items-center gap-2">
+                                <span class="w-4 h-[1px] bg-white/20"></span> Sombra de Decepción
+                            </li>
+                            <li class="hover:text-emerald-500 transition-colors cursor-pointer flex items-center gap-2">
+                                <span class="w-4 h-[1px] bg-white/20"></span> Riesgo Sistémico
+                            </li>
+                            <li class="hover:text-emerald-500 transition-colors cursor-pointer flex items-center gap-2">
+                                <span class="w-4 h-[1px] bg-white/20"></span> Gobernanza
+                            </li>
+                            <li class="hover:text-emerald-500 transition-colors cursor-pointer flex items-center gap-2">
+                                <span class="w-4 h-[1px] bg-white/20"></span> Consecuencias
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-8 border-t border-white/5">
+                        <p class="text-xs text-muted leading-relaxed">
+                            Este reporte contiene datos analíticos basados en la publicación de The New Yorker y memorandos internos filtrados.
+                        </p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Text Column -->
+            <article class="lg:col-span-8 article-card p-8 md:p-16 lg:p-20">
+                <div class="prose prose-xl prose-slate max-w-none">
+                    <p class="dropcap font-body text-gray-800 leading-relaxed mb-12">
+                        La reputación de Sam Altman, el rostro público de la revolución de la inteligencia artificial y CEO de OpenAI, se ha desmoronado bajo el peso de un devastador informe de investigación. Publicado en abril de 2026 por <span class="italic text-emerald-700 font-bold">The New Yorker</span>, y firmado por los aclamados Ronan Farrow y Andrew Marantz, este extenso exposé de 17,000 palabras no solo cuestiona la competencia técnica de Altman, sino que dibuja el perfil de un liderazgo marcado por la "decepción sistémica" y una alarmante falta de ética.
+                    </p>
+
+                    <div class="my-12 p-6 bg-gray-50 border-l-4 border-black">
+                        <p class="font-body italic text-gray-600 mb-0">
+                            "A través de más de 100 entrevistas y memorandos internos hasta ahora confidenciales, el artículo ha encendido una crisis de confianza que trasciende a OpenAI..."
+                        </p>
+                    </div>
+
+                    <h2 class="text-3xl font-header font-bold text-gray-900 mt-16 mb-8 uppercase tracking-tight border-b-2 border-gray-100 pb-2">El Arquitecto sin Cimientos: Desmitificando al Visionario Técnico</h2>
+                    <p class="font-body text-gray-800">
+                        Durante años, Sam Altman ha sido presentado como el arquetipo del visionario de Silicon Valley: un genio técnico egresado de Stanford, el arquitecto principal detrás de ChatGPT y un adelantado a su tiempo. Sin embargo, la realidad expuesta por <em>The New Yorker</em> pinta un cuadro radicalmente diferente. Contrario a la narrativa oficial, Altman abandonó su carrera en Ciencias de la Computación, y fuentes cercanas a sus propios ingenieros revelan su confusión con términos básicos de <em>Machine Learning</em>.
+                    </p>
+                    <p class="font-body text-gray-800">
+                        El informe detalla cómo Altman habría "mentido repetidamente" no solo sobre las prácticas de seguridad de OpenAI, sino también sobre las capacidades técnicas reales de sus productos. Esta brecha entre el mito y la realidad técnica es preocupante, especialmente considerando que la tecnología de OpenAI ya no es una simple <em>startup</em>, sino que está profundamente integrada en sectores críticos como la salud, la educación y la infraestructura gubernamental.
+                    </p>
+
+                    <h2 class="text-3xl font-header font-bold text-gray-900 mt-16 mb-8 uppercase tracking-tight border-b-2 border-gray-100 pb-2">La Sombra de la Decepción: Ecos de Bankman-Fried y Madoff</h2>
+                    <p class="font-body text-gray-800">
+                        Quizás el aspecto más corrosivo del informe es la audaz comparación de Sam Altman con figuras infames como Sam Bankman-Fried (SBF) y Bernie Madoff, símbolos de los mayores fraudes éticos y financieros de la era digital. Un alto ejecutivo de Microsoft, socio principal de OpenAI, habría expresado a los autores: <span class="bg-yellow-100 px-1">"Creo que hay una pequeña pero real posibilidad de que finalmente se le recuerde como un estafador del nivel de Bernie Madoff o Sam Bankman-Fried"</span>.
+                    </p>
+                    <p class="font-body text-gray-800">
+                        Esta comparación no se basa en errores técnicos, sino en un patrón de comportamiento. Al igual que SBF, Altman es acusado de cultivar una imagen pública de liderazgo ético mientras, en privado, "tergiversaba, distorsionaba e incumplía" acuerdos. Sus llamados públicos a la regulación de la IA son calificados de "astutos" y "engañosos", buscando más una "captura regulatoria" que una genuina búsqueda de la seguridad.
+                    </p>
+
+                    <div class="my-16 bg-brand-dark text-white p-10 rounded-lg relative">
+                        <svg class="absolute top-4 left-4 opacity-20" width="40" height="40" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11.5M4.017 21L4.017 18C4.017 16.8954 4.91243 16 6.017 16H9.017C9.56928 16 10.017 15.5523 10.017 15V9C10.017 8.44772 9.56928 8 9.017 8H5.017C4.46472 8 4.017 8.44772 4.017 9V11.5"/></svg>
+                        <p class="font-header text-xl md:text-2xl italic leading-relaxed relative z-10">
+                            "Desprovisto de la verdad y con una falta sociopática de preocupación por las consecuencias de sus engaños."
+                        </p>
+                        <p class="mt-4 font-ui text-emerald-500 text-sm font-bold uppercase">— Miembro de la junta directiva de OpenAI</p>
+                    </div>
+
+                    <h2 class="text-3xl font-header font-bold text-gray-900 mt-16 mb-8 uppercase tracking-tight border-b-2 border-gray-100 pb-2">Riesgo Sistémico y la Erosión de la Confianza en la IA</h2>
+                    <p class="font-body text-gray-800">
+                        El comportamiento de Altman, según el informe, no es un asunto menor; genera un "riesgo sistémico" para toda la industria de la IA, socavando la "confianza en la IA" a nivel global. Los memorandos internos alegan que Altman engañó a la junta directiva sobre las pruebas de seguridad para acelerar el lanzamiento de productos, una acción percibida como una traición a la misión fundacional de OpenAI.
+                    </p>
+                    <p class="font-body text-gray-800">
+                        La visión de Altman es comparada con J. Robert Oppenheimer, el "padre de la bomba atómica". Esta analogía subraya la magnitud del riesgo: la falta de escrúpulos de un líder en un campo con el potencial transformador de la IA es una bomba de tiempo.
+                    </p>
+
+                    <h2 class="text-3xl font-header font-bold text-gray-900 mt-16 mb-8 uppercase tracking-tight border-b-2 border-gray-100 pb-2">Gobernanza Corporativa Bajo la Lupa</h2>
+                    <p class="font-body text-gray-800">
+                        El informe expone fisuras en la gobernanza corporativa de OpenAI. Detalla cómo Altman habría presionado para la salida de la CFO Sarah Friar. Las preocupaciones de Friar sobre el plan de gastos de la compañía (600 mil millones de dólares) y la insostenibilidad financiera, habrían chocado directamente con la visión acelerada de Altman.
+                    </p>
+
+                    <h2 class="text-3xl font-header font-bold text-gray-900 mt-16 mb-8 uppercase tracking-tight border-b-2 border-gray-100 pb-2">Las Consecuencias Inmediatas: Un Éxodo de Confianza</h2>
+                    <p class="font-body text-gray-800">
+                        La publicación tuvo repercusiones inmediatas. Worldcoin (WLD) experimentó una fuerte caída tras las acusaciones. Más allá de lo financiero, el informe reveló un acuerdo secreto de 50 mil millones de dólares con el Pentágono, negociado mientras Altman clamaba públicamente solidaridad con quienes se resisten a la IA militar. 
+                    </p>
+                    <p class="font-body text-gray-800">
+                        Estos eventos son señales de la profunda desalineación entre la ética pública de OpenAI y la cultura de liderazgo interna. En este contexto, la falta de transparencia representa un riesgo existencial para la estabilidad de OpenAI y, por extensión, para el futuro de la inteligencia artificial.
+                    </p>
+
+                    <div class="mt-20 pt-8 border-t border-gray-100 flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            </button>
+                            <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                            </button>
+                        </div>
+                        <span class="font-ui text-[10px] uppercase font-bold tracking-widest text-muted">Fin del Reporte #41426</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer Copyright -->
+    <div class="py-12 border-t border-white/5 bg-brand-dark flex flex-col items-center">
+        <div class="w-12 h-[1px] bg-emerald-500 mb-6"></div>
+        <p class="font-ui text-xs text-muted tracking-widest uppercase">
+            © 2026 IASimov Technologies. Todos los derechos reservados.
+        </p>
+    </div>
+
+    <script>
+        // Progress Bar logic
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress").style.width = scrolled + "%";
+        };
+
+        // Date logic in Spanish
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
+        const today = new Date();
+        const formattedDate = today.toLocaleDateString('es-ES', options);
+        document.getElementById('current-date').innerText = formattedDate;
+
+        // Smooth interaction for floating elements
+        document.addEventListener('mousemove', (e) => {
+            const panels = document.querySelectorAll('.glass-panel');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            panels.forEach(panel => {
+                panel.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
