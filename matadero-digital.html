@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAsimov Technologies | El Matadero Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'noir-bg': '#0a0a0a',
+                        'noir-panel': '#171717',
+                        'accent-gold': '#d4af37',
+                        'accent-crimson': '#991b1b',
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Lora', 'serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-noir-bg text-gray-100 antialiased selection:bg-accent-crimson selection:text-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10 px-6 py-4 flex justify-between items-center">
+        <div class="font-display text-xl tracking-tight text-white uppercase">IAsimov <span class="text-accent-gold italic">Technologies</span></div>
+        <div class="text-[10px] uppercase tracking-widest text-gray-500 font-mono hidden md:block">
+            Por IAsimov Technologies • Publicado el 17 de Junio, 2026
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[85vh] w-full flex items-end overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- Provided media 1 -->
+            <img src="https://opal.google/board/blobs/380d333b-a954-4206-8919-e2734309c5d2" alt="Industria de estafas" class="w-full h-full object-cover brightness-50 contrast-125 saturate-50">
+            <div class="absolute inset-0 bg-gradient-to-t from-noir-bg via-transparent to-transparent"></div>
+        </div>
+        <div class="relative z-10 container mx-auto px-6 pb-20">
+            <h1 class="font-display text-5xl md:text-8xl leading-tight max-w-4xl text-white shadow-2xl">
+                La Industrialización del Engaño: El Matadero Digital
+            </h1>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16 max-w-3xl">
+        <article class="prose prose-invert prose-lg prose-headings:font-display prose-headings:text-white">
+            <p class="text-xl leading-relaxed text-gray-300 italic mb-12">
+                En los últimos 24 meses, el ecosistema criminal en el Sudeste Asiático ha sufrido una mutación radical. La integración de la Inteligencia Artificial ha escalado la estafa a niveles transnacionales, eliminando barreras y creando una crisis de seguridad global.
+            </p>
+
+            <h2 class="text-3xl text-accent-gold mt-12 mb-6">Integración de Herramientas IA</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+                <img src="https://opal.google/board/blobs/d623d63b-fe57-4b83-967f-4deabb387275" alt="Análisis de datos" class="rounded-lg shadow-xl border border-white/5">
+                <img src="https://opal.google/board/blobs/0ee40e25-8c80-4e28-9414-ff36624cc1c2" alt="Interfaz de fraude" class="rounded-lg shadow-xl border border-white/5">
+            </div>
+
+            <p>Las organizaciones criminales han adoptado modelos de lenguaje masivos (LLMs) para generar guiones de persuasión técnica, eliminando las barreras lingüísticas. Ahora, un estafador en Myanmar puede mantener una conversación emocionalmente resonante en español fluido.</p>
+            
+            <h3 class="text-2xl mt-8">Deepfakes y Clonación</h3>
+            <p>La síntesis de voz y la generación de identidad en tiempo real han invalidado los métodos tradicionales de autenticación. Ya no es posible confiar en la verificación biométrica ni en la voz de un familiar al otro lado del teléfono.</p>
+        </article>
+
+        <!-- Social Critique Section -->
+        <section class="mt-20 p-8 border-l-4 border-accent-crimson bg-white/5 backdrop-blur-sm rounded-r-2xl shadow-2xl">
+            <h2 class="font-display text-3xl mb-6 text-accent-crimson uppercase tracking-wider">La Deshumanización en la Era del Algoritmo</h2>
+            <div class="font-mono text-sm leading-relaxed space-y-4 text-gray-300">
+                <p>Es verdaderamente aterrador ver cómo la tecnología terminó convirtiéndose en el arma perfecta para las mafias. Lo que ocurre en Myanmar y Camboya no es solo ciberseguridad; es una tragedia humana de dimensiones industriales.</p>
+                <p class="font-bold text-white border-t border-white/10 pt-4">La pregunta ya no es si te pueden estafar, sino cuándo va a ser tu turno en este matadero digital.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12 text-center bg-black">
+        <div class="font-display text-2xl text-white mb-4">IAsimov Technologies</div>
+        <p class="text-gray-500 font-mono text-xs max-w-sm mx-auto px-6">
+            Comprometidos con el periodismo automatizado de alta fidelidad. Analizando la intersección entre la ética humana y la evolución algorítmica.
+        </p>
+    </footer>
+
+    <script>
+        // Smooth scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-black/95');
+            } else {
+                header.classList.remove('bg-black/95');
+            }
+        });
+    </script>
+</body>
+</html>
