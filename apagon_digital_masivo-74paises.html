@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apagón Digital 2026 | IAsimov Engine Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accent-blue': '#0078D4',
+                        'midnight': '#0a0c10',
+                        'charcoal': '#161b22',
+                        'border-gray': '#30363d'
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-gradient { background: linear-gradient(to bottom, rgba(10, 12, 16, 0.2) 0%, rgba(10, 12, 16, 0.95) 100%); }
+    </style>
+</head>
+<body class="bg-midnight text-gray-200 font-body antialiased selection:bg-accent-blue selection:text-white">
+
+    <!-- Progress Bar -->
+    <div id="progress" class="fixed top-0 left-0 h-1 bg-accent-blue z-50 transition-all duration-300" style="width: 0%;"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-40 glass p-4 flex justify-between items-center px-6 md:px-12">
+        <div class="font-display font-bold text-xl tracking-tighter text-white">IAsimov<span class="text-accent-blue">Engine</span></div>
+        <div class="hidden md:flex gap-6 text-sm font-medium opacity-80">
+            <span>Tech Insights</span>
+            <span>Global Impact</span>
+            <span>Status: Critical</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative h-[80vh] flex items-end">
+        <div class="absolute inset-0">
+            <img src='https://opal.google/board/blobs/6b886bca-e491-4048-97f4-4826cb301df5' alt='Microsoft Global Outage' class="w-full h-full object-cover" />
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl px-6 md:px-12 pb-16">
+            <span class="inline-block py-1 px-3 bg-accent-blue text-white text-xs font-bold uppercase tracking-widest mb-4">Breaking News</span>
+            <h1 class="font-display text-5xl md:text-7xl font-black text-white leading-tight mb-6">Apagón digital masivo: La falla que paralizó 74 países</h1>
+            <p class="text-xl md:text-2xl text-gray-300 font-light max-w-2xl">Un colapso sistémico en la infraestructura de Microsoft desata una crisis global sin precedentes.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto px-6 py-20">
+        
+        <article class="prose prose-invert prose-lg max-w-none">
+            <p class="text-xl text-gray-400 mb-12"><strong>MADRID</strong> – El mundo enfrenta este 13 de noviembre de 2026 una de las interrupciones tecnológicas más severas de la década. Lo que comenzó como una degradación intermitente el jueves 12 ha escalado hasta convertirse en un colapso sistémico de los servicios de Microsoft.</p>
+
+            <h2 class="font-display text-3xl font-bold text-white mb-6">Servicios críticos fuera de línea</h2>
+            <p>El epicentro del fallo se encuentra en la suite de productividad <strong>Microsoft 365</strong>. La infraestructura ha sufrido una interrupción casi total:</p>
+            
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+                <li class="glass p-4 rounded-xl"><strong>Outlook:</strong> Imposibilidad de gestión de correo y calendarios.</li>
+                <li class="glass p-4 rounded-xl"><strong>Teams:</strong> Comunicaciones inhabilitadas a nivel global.</li>
+                <li class="glass p-4 rounded-xl"><strong>Copilot:</strong> Asistente de IA fuera de servicio.</li>
+                <li class="glass p-4 rounded-xl"><strong>OneDrive/SharePoint:</strong> Acceso a la nube bloqueado.</li>
+            </ul>
+
+            <div class="my-12 p-8 border-l-4 border-accent-blue bg-white/5">
+                <p class="text-2xl italic font-serif">"Aunque la infraestructura de Azure se mantiene operando, el exceso de carga en los procesos de autenticación provocó un efecto dominó insostenible."</p>
+            </div>
+
+            <h2 class="font-display text-3xl font-bold text-white mb-6">Origen del fallo: Crisis interna</h2>
+            <p>Microsoft ha descartado un ciberataque externo. Se trata de una <strong>sobrecarga masiva en servidores críticos</strong>. Los protocolos de mitigación fallaron, creando un ciclo de inestabilidad donde los nodos, al reiniciarse, colapsaban inmediatamente ante la demanda acumulada.</p>
+
+            <h2 class="font-display text-3xl font-bold text-white mb-6">Impacto en infraestructuras</h2>
+            <p>El apagón ha trascendido el ámbito corporativo, golpeando sectores estratégicos:</p>
+            <div class="space-y-4">
+                <div class="flex items-center gap-4 p-4 bg-charcoal rounded-lg">
+                    <div class="w-2 h-12 bg-red-500 rounded"></div>
+                    <p class="m-0"><strong>Salud:</strong> Dificultades críticas en el acceso a registros médicos del NHS y otros sistemas globales.</p>
+                </div>
+                <div class="flex items-center gap-4 p-4 bg-charcoal rounded-lg">
+                    <div class="w-2 h-12 bg-amber-500 rounded"></div>
+                    <p class="m-0"><strong>Gobierno:</strong> Agencias estatales en Australia y Japón con canales de atención al ciudadano interrumpidos.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer Stats -->
+    <footer class="border-t border-border-gray py-12 text-center text-gray-500">
+        <p class="text-sm">IAsimov Engine • Monitoreo en tiempo real • Última actualización: 13 Nov 2026, 18:45 UTC</p>
+    </footer>
+
+    <script>
+        // Progress bar scroll logic
+        window.onscroll = function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progress").style.width = scrolled + "%";
+        };
+    </script>
+</body>
+</html>
